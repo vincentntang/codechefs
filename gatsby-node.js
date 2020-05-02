@@ -5,6 +5,9 @@ const _ = require("lodash");
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
 
+/**
+ * From Starter Files
+ */
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
@@ -39,6 +42,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
+/**
+ * From Starter Files
+ * This generates the pages from the templates
+ */
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postPage = path.resolve("src/templates/post.jsx");
