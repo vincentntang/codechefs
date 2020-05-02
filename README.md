@@ -3,9 +3,13 @@ A quick guide through on how this gatsby-advanced starter works:
 ## BACKEND
 
 - gatsby-config.js -> this is your plugins, similar to wordpress plugins
+  - When you run the backend to create `public and .cache`, these plugins are being looked at for generating graphql assets
+  - When you run the frontend to consume it, it's using those same assets from `public and .cache`. It's also bundling a javascript library to frontend (imageResharp -> lazy loading images)
 - gatsby-node.js -> this is the settings to point your data sources, 
   - also includes graphql setup
 - data/siteConfig.js -> backend file configs
+
+gatsby-node.js -> gatsby-config.js (middleware plugins - backend processing, and JS library frontend) -> frontend
 
 ## DATA
 
