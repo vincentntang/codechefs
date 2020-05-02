@@ -28,11 +28,12 @@ gatsby-node.js -> gatsby-config.js (middleware plugins - backend processing, and
   - templates -> base styling/html for tags/categories/posts
   - components -> dumb reusable react components
 
-## COMMANDS / WORKFLOW / GENERAL IDEAS
+## DEV WORKFLOW
 
 - anytime you modify backend files (gatsby-config.js, gatsby-node.js, siteConfig.js) -> you need to clean cache using `$ npm run clean` and then `$ npm run dev`
 - basically the 3 backend files are generating data to `public` and `.cache` that the frontend references.
 - basically when you deploy the website, there's no backend running
+- If you change frontmatter on `md`, you need to run `$ npm run clean` again
 
 ## HOW GRAPHQL STUFF WORKS
 
@@ -42,3 +43,17 @@ Frontend components automatically have graphql results set into props
 
 - `$ npm install`
 - `$ npm run dev`
+
+## TODO
+
+- slugname frontmatter?
+- audioUrl frontmatter to be consumed for each podcast episode (hosted on google cloud)
+- Make cover frontmatter optional (b/c not all podcast have images maybe?)
+- figure out how audio timestamps work (when you click shows notes at that time URL, it automatically plays podcast at that time-stamp)
+
+## PODCAST WORKFLOW & TOOLING
+
+- Trello
+  - for episode planning (top most is highest priority in swimlane) - avoid putting images, podcast raw files, shownotes, (no attachments)
+- Google Drive
+  - One folder = one episode, same namimg conventions as `01-01-20
