@@ -29,6 +29,12 @@ export default class PostTemplate extends React.Component {
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
+          {/* Start - Test Example */}
+          {/* <div>
+            <p>Hello world</p> */}
+            {/* <img src={post.cover} alt="Arnold S"/> */}
+          {/* </div> */}
+          {/* End - Test Example */}
           <div>
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
