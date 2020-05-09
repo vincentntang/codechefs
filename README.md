@@ -48,6 +48,7 @@ Frontend components automatically have graphql results set into props
 
 - Trello
   - for episode planning (top most is highest priority in swimlane) - avoid putting images, podcast raw files, shownotes, (no attachments)
+  - Green label just for development only
 - Google Drive
   - One folder = one episode, same namimg conventions minus `01-01-20` dates, same as `slug` frontmatter
 - Zencast / Or Similar
