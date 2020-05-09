@@ -44,16 +44,35 @@ Frontend components automatically have graphql results set into props
 - `$ npm install`
 - `$ npm run dev`
 
+## PODCAST WORKFLOW & TOOLING
+
+- Trello
+  - for episode planning (top most is highest priority in swimlane) - avoid putting images, podcast raw files, shownotes, (no attachments)
+- Google Drive
+  - One folder = one episode, same namimg conventions minus `01-01-20` dates, same as `slug` frontmatter
+- Zencast / Or Similar
+  - Isolated voice for you and me + joint file (backup or maybe main)
+- Slack
+  - communication text and images
+- Zoom
+  - video sharing / screenshare
+- Audacity
+  - postprocessing / slap intro & outro
+
+## Dev Tools
+
+- Firebase
+  - hosting mp3 files and possibly lambda functions (emails) / mini backend
+- Netlify
+  - Deploying gatsby site off `master` branch
+- Github
+  - Github issues for dev specific issues
+- Figma (design)
+
 ## TODO
 
 - slugname frontmatter?
 - audioUrl frontmatter to be consumed for each podcast episode (hosted on google cloud)
 - Make cover frontmatter optional (b/c not all podcast have images maybe?)
 - figure out how audio timestamps work (when you click shows notes at that time URL, it automatically plays podcast at that time-stamp)
-
-## PODCAST WORKFLOW & TOOLING
-
-- Trello
-  - for episode planning (top most is highest priority in swimlane) - avoid putting images, podcast raw files, shownotes, (no attachments)
-- Google Drive
-  - One folder = one episode, same namimg conventions as `01-01-20
+- Firebase add mp3 file + preview that file into website in gatsby + try timestamps
