@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./UserLinks.css";
 
-class UserLinks extends Component {
-  getLinkElements() {
-    const { userLinks } = this.props.config;
-    const { labeled } = this.props;
+const UserLinks = (props) => {
+  const getLinkElements = () => {
+    const { userLinks } = props.config;
+    const { labeled } = props;
     return userLinks.map(link => (
       <a href={link.url}>
         <button type="button" key={link.label}>
@@ -14,13 +14,11 @@ class UserLinks extends Component {
     ));
   }
 
-  render() {
-    const { userLinks } = this.props.config;
-    if (!userLinks) {
-      return null;
-    }
-    return <div className="user-links">{this.getLinkElements()}</div>;
+  const { userLinks } = props.config;
+  if (!userLinks) {
+    return null;
   }
+  return <div className="user-links">{getLinkElements()}</div>;
 }
 
 export default UserLinks;
