@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import UserLinks from "../UserLinks/UserLinks";
+import UserLinks from "./UserLinks";
 
 const Footer = (props) => {
   const { config } = props;

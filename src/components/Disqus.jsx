@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDisqusComments from "react-disqus-comments";
 import urljoin from "url-join";
-import config from "../../../data/SiteConfig";
+import config from "../../data/SiteConfig";
 
 class Disqus extends Component {
   constructor(props) {
