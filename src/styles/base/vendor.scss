@@ -1,3 +1,123 @@
+// index.jsx
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+#___gatsby #gatsby-focus-wrapper {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.layout-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  padding: 20px;
+}
+
+
+// About.jsx
+.about {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+// Footer.jsx
+.footer {
+  justify-content: center;
+  align-content: center;
+  padding: 10px 5px 5px;
+}
+
+.notice-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+@media (max-width: 640px - 1px) {
+  .notice-container {
+    justify-content: space-around;
+  }
+}
+
+.notice-container h4 {
+  text-align: center;
+  margin: 0;
+}
+
+// SocialLinks.jsx
+.social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.social-links > div {
+  margin: 5px 15px;
+  cursor: pointer;
+}
+
+.share-count {
+  text-align: center;
+}
+
+// UserLinks.jsx
+.user-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+// Templates/Listing.scss
+.listing-container {
+  min-height: 100%;
+  min-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paging-container {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+// Templates/Post.css
+.post-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// Templates/b16-tomorrow-dark.css
 code[class*="language-"],
 pre[class*="language-"] {
   font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",

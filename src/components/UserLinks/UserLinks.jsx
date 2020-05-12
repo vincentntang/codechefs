@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./UserLinks.css";
 
 const UserLinks = (props) => {
   const getLinkElements = () => {
