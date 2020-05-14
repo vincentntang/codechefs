@@ -24,7 +24,7 @@ const SocialLinks = (props) => {
     const filter = count => (count > 0 ? count : "");
     const renderShareCount = count => (
       <div className="share-count">{filter(count)}</div>
-  );
+  ); 
 
   return (
     <div className="social-links">
