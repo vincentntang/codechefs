@@ -11,7 +11,10 @@ const MainLayout = (props) => {
         <meta name="description" content={config.siteDescription} />
         <html lang="en" />
       </Helmet>
-      {children}
+      {/* {children} */}
+      <div className="">
+        Hello World
+      </div>
     </div>
   );
 }
