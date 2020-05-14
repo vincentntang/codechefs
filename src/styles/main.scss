@@ -3,14 +3,17 @@
 
 //==============================================================================
 // Configuration
+// - Styles that are global or utilitarian in nature
 //==============================================================================
 
+@import 'base/utilities';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/vendor';
 
 //==============================================================================
-// Components
+// Modules
+// - Specific styles to pages or components
 //==============================================================================
 
-@import 'components/home';
+@import 'modules/home';
