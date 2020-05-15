@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import {Row, Col} from 'reactstrap';
 import config from "../../data/SiteConfig";
 import "../styles/main.scss";
 
@@ -12,8 +13,12 @@ const MainLayout = (props) => {
         <html lang="en" />
       </Helmet>
       {/* {children} */}
-      <div className="">
-        Hello World
+      <div class="container">
+        <Row>
+          <Col>
+            Hello World
+          </Col>
+        </Row>
       </div>
     </div>
   );
