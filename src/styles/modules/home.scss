@@ -2,3 +2,29 @@ body {
   background-color: $black;
   color: white;
 }
+
+.custom-menu {
+  margin-top: 200px;
+  background-color: darkgray;
+  &__header {
+    border: 1px solid red;
+  }
+  &__panes {
+    display: flex;
+  }
+  &__left {
+    width: 40%;
+    border: 1px solid blue;
+  }
+  .podcast-episode {
+    display: flex;
+    border: 1px solid green;
+  }
+  &__right {
+    width: 60%;
+    border: 1px solid blue;
+  }
+  .podcast-shownotes {
+
+  }
+}
