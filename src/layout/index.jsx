@@ -3,41 +3,47 @@ import Helmet from "react-helmet";
 import {Row, Col, Container} from 'reactstrap';
 import config from "../../data/SiteConfig";
 import "../styles/main.scss";
+import dinerLogo from "../assets/diner_logo.svg";
 
 const fakeData= [
   {
     id: "1",
-    episodeName: "Intro to Data Science",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   },
   {
     id: "2",
-    episodeName: "Intro to IoT Development with X name",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   },
   {
     id: "3",
-    episodeName: "Intro to Data Science",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   },
   {
     id: "4",
-    episodeName: "Intro to Data Science",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   },
   {
     id: "5",
-    episodeName: "Intro to Data Science",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   }
 ]
@@ -69,10 +75,23 @@ const MainLayout = (props) => {
         </Row>
         <div className="custom-menu">
           <div className="custom-menu__header">
-            Podcast Episodes Menu
+            <div className="custom-menu__sticker">
+              {/* <img src={dinerLogo} alt="diner sticker"/> */}
+              <div className="header">Code Chefs</div>
+              <div className="subheader">EPISODES</div>
+              {/* <div className="minorheader">Code */}
+            </div>
+            <div className="custom-menu__lines">
+              <hr/>
+              <hr/>
+              <hr/>
+              <hr/>
+              <hr/>
+              <hr/>
+            </div>
           </div>
           <div className="custom-menu__panes">
-            <div className="custom-menu__left">
+            {/* <div className="custom-menu__left"> */}
               {fakeData.map(item => {
                 return (
                   <div className="podcast-episode">
@@ -82,10 +101,9 @@ const MainLayout = (props) => {
                   </div>
                 )
               })}
-            </div>
-            <div className="custom-menu__right">
-              {}
-            </div>
+            {/* </div> */}
+            {/* <div className="custom-menu__right">
+            </div> */}
           </div>
         </div>
         {/* <Row className="custom-menu border-red">
