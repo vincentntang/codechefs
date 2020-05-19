@@ -12,12 +12,17 @@ body {
 }
 
 // 320px, 576px, 768px, 992px, 1200px, 1440px
-
+.cc-container {
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+}
 .cc-header {
   // border: 2px solid $yellow-6;
   border: 3px solid gray;
   border-radius: 20px;
   background-color: black;
+  max-width: 700px
 }
 .cc-intro {
   border-top-right-radius: 20px;
@@ -40,6 +45,7 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top: 1px dotted white;
+  padding-top: 20px;
 }
 .cc-portrait:first-of-type {
   border-bottom-left-radius: 20px;
@@ -53,25 +59,33 @@ body {
   min-height: 100px;
   // padding-bottom: 50px;
   flex-direction: column;
+  align-items: center;
   @include screen-max(768px){
     // flex-direction: column;
   }
-  .left{
-    max-width: 100px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-  }
+  // .left{
+  //   max-width: 100px;
+  //   margin-right: 20px;
+  //   margin-bottom: 10px;
+  //   display: flex;
+  //   justify-content: center;
+  // }
   img {
     width: 100%;
     // max-width: 100%;
     height: auto;
     border-radius: 50%;
+    margin-bottom: 15px;
   }
-  .right {
-    width: 100%;
-    margin-bottom: 10px;
+  // .right {
+  //   width: 100%;
+  //   margin-bottom: 10px;
+  // }
+  .img-wrapper {
+    max-width: 200px;
+  }
+  .desc-wrapper {
+
   }
   .footer {
     height: 50px;

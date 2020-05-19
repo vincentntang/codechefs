@@ -89,33 +89,35 @@ const MainLayout = (props) => {
        
         </Row>
         {/* <h1 class="text-center mb-3">Hosts</h1> */}
-        <div className="cc-header">
-          <div className="cc-card cc-intro">
-            <p className="mb-0"><span>🎤 </span>Code chefs is a podcast for developers seeking to learn more about webdevelopment. Whether your a fresh out of bootcamp graduate, or a fullstack veteran,
-              we do topics ranging for all levels. As developers who love learning, we hope you enjoy the content here</p>
-          </div>
-          <div className="cc-portraits">
-            <div className="cc-card cc-portrait">
-              <div className="header">
-              </div> 
-              <div className="left">
-                <img src={vincentntang} alt="vincent tang"/>
-              </div>
-              <div className="right">
-                <div className="description">👨‍🍳 Vincent Tang is a fullstack developer from Orlando, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
-              </div>
-              {/* <div className="footer">
-              </div> */}
+        <div className="cc-container">
+          <div className="cc-header">
+            <div className="cc-card cc-intro">
+              <p className="mb-0"><span>🎤 </span>Code chefs is a podcast for developers seeking to learn more about webdevelopment. Whether your a fresh out of bootcamp graduate, or a fullstack veteran,
+                we do topics ranging for all levels. As developers who love learning, we hope you enjoy the content here</p>
             </div>
-            <div className="cc-card cc-portrait">
-              <div className="left">
-                <img src={germangamboa} alt="german gamboa"/>
+            <div className="cc-portraits">
+              <div className="cc-card cc-portrait">
+                <div className="header">
+                </div> 
+                <div className="img-wrapper">
+                  <img src={vincentntang} alt="vincent tang"/>
+                </div>
+                <div className="desc-wrapper">
+                  <div className="description">👨‍🍳 Vincent Tang is a fullstack developer from Orlando, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
+                </div>
+                {/* <div className="footer">
+                </div> */}
               </div>
-              <div className="right">
-                <div className="description">👨‍🍳 German Gamboa is a fullstack developer from Orlando, FL. Formerly a general manager for a restaurant chain. Likes to learn new things</div>
+              <div className="cc-card cc-portrait">
+                <div className="img-wrapper">
+                  <img src={germangamboa} alt="german gamboa"/>
+                </div>
+                <div className="desc-wrapper">
+                  <div className="description">👨‍🍳 German Gamboa is a fullstack developer from Orlando, FL. Formerly a general manager for a restaurant chain. Likes to learn new things</div>
+                </div>
+                {/* <div className="footer">
+                </div> */}
               </div>
-              {/* <div className="footer">
-              </div> */}
             </div>
           </div>
         </div>
