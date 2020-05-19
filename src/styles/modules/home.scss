@@ -12,32 +12,56 @@ body {
 }
 
 // 320px, 576px, 768px, 992px, 1200px, 1440px
+
 .cc-header {
-  margin-bottom: 30px;
+  // border: 2px solid $yellow-6;
+  border: 3px solid gray;
+  border-radius: 20px;
+  background-color: black;
+}
+.cc-intro {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  // margin-bottom: 30px;
 }
 .cc-card {
   display: flex;
   position: relative;
-  border-radius: 5px;
   padding: 15px;
   font-size: 14px;
-  background-color: black;
   // border: 2px solid #47CAB0;
 }
 
 .mb-0 {
   margin-bottom: 0px;
 }
+.cc-portraits {
+  display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top: 1px dotted white;
+}
+.cc-portrait:first-of-type {
+  border-bottom-left-radius: 20px;
+}
+.cc-portrait:last-of-type {
+  border-bottom-right-radius: 20px;
+}
 .cc-portrait {
+  display: flex;
+  width: 50%;
   min-height: 100px;
   // padding-bottom: 50px;
+  flex-direction: column;
   @include screen-max(768px){
-    flex-direction: column;
+    // flex-direction: column;
   }
   .left{
     max-width: 100px;
     margin-right: 20px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
   }
   img {
     width: 100%;
@@ -57,6 +81,9 @@ body {
     bottom: 0px;
     background-color: rgb(56,56,56);
     display: flex;
+  }
+  .header {
+
   }
 }
 
