@@ -25,9 +25,10 @@ body {
 }
 .cc-card {
   // border: 2px solid $yellow-6;
-  border: 3px solid gray;
+  border: 3px solid black;
   border-radius: 20px;
-  background-color: black;
+  background-color: hsl(10,10,10);
+  // background-color: darkgray;
   max-width: 700px
 }
 
@@ -162,10 +163,10 @@ body {
  */
 .cc-menu {
   // border: 2px solid $yellow-6;
-  border: 3px solid gray;
-  border-radius: 20px;
-  background-color: black;
-  max-width: 700px;
+  // border: 3px solid gray;
+  // border-radius: 20px;
+  // background-color: black;
+  // max-width: 700px;
   .menu-header {
     hr {
       width: 100%;

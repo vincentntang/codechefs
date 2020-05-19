@@ -8,6 +8,7 @@ import logo from "../assets/code_chefs_transparent.svg";
 import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
+import Audio from "../components/audio/Audio";
 
 const fakeData= [
   {
@@ -131,6 +132,7 @@ const MainLayout = (props) => {
                     <div>{item.id}</div>
                     <div>{item.episodeName}</div>
                     <div>{item.episodeLength}</div>
+                    <Audio key={`podcast-${index}`} />
                     <audio controls>
                       <source src={sampleMp3} type="audio/ogg" />
                       <source src={sampleMp3} type="audio/mpeg"/>
