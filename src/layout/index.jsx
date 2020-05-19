@@ -5,6 +5,7 @@ import config from "../../data/SiteConfig";
 import "../styles/main.scss";
 import dinerLogo from "../assets/diner_logo.svg";
 import logo from "../assets/code_chefs_transparent.svg";
+import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
 
@@ -61,29 +62,35 @@ const MainLayout = (props) => {
         <html lang="en" />
       </Helmet>
       {/* {children} */}
-      <nav className="cc-navbar">
-        <div className="cc-navitem">
-          <div className="cc-navlink">Home</div>
+      <div className="cc-navbar-background">
+        <div className="cc-container">
+          <nav className="cc-navbar">
+            <div className="cc-navitem">
+              <div className="cc-navlink">Home</div>
+            </div>
+            <div className="cc-navitem">
+              <div className="cc-navlink">Episodes</div>
+            </div>
+            <div className="cc-navitem">
+              <div className="cc-navlink">Contact</div>
+            </div>
+          </nav>
         </div>
-        <div className="cc-navitem">
-          <div className="cc-navlink">Episodes</div>
-        </div>
-        <div className="cc-navitem">
-          <div className="cc-navlink">Contact</div>
-        </div>
-      </nav>
-      <div className="cc-logo-hero">
-        <img src={logo} alt="logo"/>
       </div>
+      <section className="cc-container">
+        <div className="cc-logo-hero">
+          <img src={logo} alt="logo"/>
+        </div>
+      </section>
         {/* <h1 class="text-center mb-3">Hosts</h1> */}
-      <div className="cc-section">
-        <div className="cc-header">
-          <div className="cc-card cc-intro">
-            <p className="mb-0"><span>🎤 </span>Code chefs is a podcast for developers seeking to learn more about webdevelopment. Whether your a fresh out of bootcamp graduate, or a fullstack veteran,
+      <section className="cc-container">
+        <div className="cc-header cc-card">
+          <div className="cc-padding cc-intro">
+            <p className="my-0"><span>🎤 </span>Code chefs is a podcast for developers seeking to learn more about webdevelopment. Whether your a fresh out of bootcamp graduate, or a fullstack veteran,
               we do topics ranging for all levels. As developers who love learning, we hope you enjoy the content here</p>
           </div>
           <div className="cc-portraits">
-            <div className="cc-card cc-portrait">
+            <div className="cc-padding cc-portrait">
               <div className="header">
               </div> 
               <div className="img-wrapper">
@@ -95,7 +102,7 @@ const MainLayout = (props) => {
               {/* <div className="footer">
               </div> */}
             </div>
-            <div className="cc-card cc-portrait">
+            <div className="cc-padding cc-portrait">
               <div className="img-wrapper">
                 <img src={germangamboa} alt="german gamboa"/>
               </div>
@@ -107,8 +114,34 @@ const MainLayout = (props) => {
             </div>
           </div>
         </div>
-      </div>
-      <h1 class="text-center mb-3">Episodes</h1>
+      </section>
+      <section className="cc-container mt-30">
+        <h1 class="text-center mb-2">Episodes</h1>
+        <div className="cc-menu cc-padding cc-card">
+          <div className="menu-header">
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+          </div>
+          <div className="podcast-wrapper">
+            {fakeData.map((item,index) => {
+              return (
+                  <div key={`podcast-${index}`}className="podcast-episode">
+                    <div>{item.id}</div>
+                    <div>{item.episodeName}</div>
+                    <div>{item.episodeLength}</div>
+                    <audio controls>
+                      <source src={sampleMp3} type="audio/ogg" />
+                      <source src={sampleMp3} type="audio/mpeg"/>
+                      <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                  </div>
+                )
+              })}
+          </div>
+        </div>
+      </section>
         {/* <div className="custom-menu">
           <div className="custom-menu__header">
             <div className="custom-menu__sticker">

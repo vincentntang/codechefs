@@ -44,12 +44,13 @@
 // - Styles that are global or utilitarian in nature
 //==============================================================================
 
+@import 'base/variables';
 @import 'base/normalize';
 @import 'base/typography';
-@import 'base/utilities';
-@import 'base/variables';
+@import 'base/utility-single';
 @import 'base/mixins';
 @import 'base/vendor';
+@import 'base/utility-multi';
 
 //==============================================================================
 // Modules

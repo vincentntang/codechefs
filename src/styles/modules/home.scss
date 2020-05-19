@@ -4,18 +4,66 @@ body {
   color: white;
 }
 
-.topnav {
-  // background-color: #131313;
+/**
+ * UTILITY
+ */
+// 320px, 576px, 768px, 992px, 1200px, 1440px
+.cc-container {
+  margin: 0 auto;
+  width: 100%; /* was 550px*/
+  @include screen-min(576px){max-width: 500px;}
+  @include screen-min(768px){max-width: 700px;}
+  @include screen-min(992px){max-width: 900px;}
+  @include screen-min(1200px){max-width: 1100px;}
 }
-.logo-hero {
+.cc-padding {
+  // display: flex;
+  // position: relative;
+  padding: 15px;
+  font-size: 16px;
+  // border: 2px solid #47CAB0;
+}
+.cc-card {
+  // border: 2px solid $yellow-6;
+  border: 3px solid gray;
+  border-radius: 20px;
+  background-color: black;
+  max-width: 700px
+}
+
+/**
+ * HEADER SPECIFIC
+ */
+
+// .topnav {
+//   // background-color: #131313;
+// }
+.cc-logo-hero {
+  // display: flex;
+  // width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+  }
   // background-color: #202020;
+}
+.cc-logo-wrapper {
+  // width: 500px;
+  // height: auto;
 }
 .cc-navbar {
   display: flex;
   height: 40px;
-  background-color: black;
+  // background-color: black;
   width: 100%;
   justify-content: space-between;
+}
+.cc-navbar-background {
+  background-color: rgba(black,0.4);
 }
 .cc-navitem:first-of-type {
   flex-grow: 1;
@@ -31,38 +79,18 @@ body {
     background-color: gray;
   }
 }
-.cc-logo-hero {
-  width: 500px;
-  height: auto;
-}
-// 320px, 576px, 768px, 992px, 1200px, 1440px
-.cc-container {
-  margin: 0 auto;
-  width: 100%; /* was 550px*/
-  @include screen-min(576px){max-width: 576px;}
-  @include screen-min(768px){max-width: 768px;}
-}
-.cc-section {
-  max-width: 900px;
-}
-.cc-header {
-  // border: 2px solid $yellow-6;
-  border: 3px solid gray;
-  border-radius: 20px;
-  background-color: black;
-  max-width: 700px
-}
+
+// .cc-section {
+//   max-width: 900px;
+// }
+
+/**
+ * THE PEOPLE AND INTRO
+ */
 .cc-intro {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   // margin-bottom: 30px;
-}
-.cc-card {
-  display: flex;
-  position: relative;
-  padding: 15px;
-  font-size: 14px;
-  // border: 2px solid #47CAB0;
 }
 
 .mb-0 {
@@ -128,6 +156,37 @@ body {
 
   }
 }
+
+/**
+ * THE MENU
+ */
+.cc-menu {
+  // border: 2px solid $yellow-6;
+  border: 3px solid gray;
+  border-radius: 20px;
+  background-color: black;
+  max-width: 700px;
+  .menu-header {
+    hr {
+      width: 100%;
+      background-color: white;
+    }    
+  }
+  .podcast-wrapper {
+  }
+  .podcast-episode {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+  }
+}
+
+
+
+
+
+
+
 
 // body {
 //   background-color: $black;
