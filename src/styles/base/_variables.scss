@@ -1,9 +1,21 @@
 // Color Pallete based on https://coolors.co/0b132b-1c2541-3a506b-5bc0be-6fffe9;
-$oxford-blue: hsl(225, 40, 18);
-$space-cadet: hsl(225, 40, 18);
-$independence: hsl(213, 30, 32);
-$max-blue-green: hsl(179, 44, 55);
-$turquoise-blue: hsl(171, 100, 72);
+$black: hsl(225, 40, 18);
+$blue-8: hsl(225, 40, 18);
+$blue-5: hsl(213, 30, 32);
+$teal-7: hsl(179, 44, 55);
+$teal-5: hsl(171, 100, 72);
+
+// Additional Colors
+$beige-5: rgb(248,247,227);
+$pink-5: rgb(240,80,113);
+$gray-8: rgb(58,58,60);
+$gray-5: rgb(126,127,128);
+
+// More Colors
+$dark-9: rgb(19,20,23);
+$dark-6: rgb(44,48,58);
+$dark-7: rgb(30,31,38);
+
 
 // Screen Sizes
 $xxsmall-min: 0px;
@@ -33,9 +45,9 @@ $xlarge-down: "screen and (min-width: #{$xsmall-min})";
 // 10 = darkest
 // 1 = lightest
 $colors: (
-  "black": $oxford-blue,
-  "blue-8": $space-cadet,
-  "blue-5": $independence,
-  "teal-7": $max-blue-green,
-  "teal-5": $turquoise-blue,
+  "black": $black,
+  "blue-8": $blue-8,
+  "blue-5": $blue-5,
+  "teal-7": $teal-7,
+  "teal-5": $teal-5,
 )

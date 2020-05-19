@@ -3,41 +3,50 @@ import Helmet from "react-helmet";
 import {Row, Col, Container} from 'reactstrap';
 import config from "../../data/SiteConfig";
 import "../styles/main.scss";
+import dinerLogo from "../assets/diner_logo.svg";
+import logo from "../assets/code_chefs_transparent.svg";
+import vincentntang from "../assets/vincentntang.png";
+import germangamboa from "../assets/germangamboa.jpeg";
 
 const fakeData= [
   {
     id: "1",
-    episodeName: "Intro to Data Science",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   },
   {
     id: "2",
-    episodeName: "Intro to IoT Development with X name",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   },
   {
     id: "3",
-    episodeName: "Intro to Data Science",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   },
   {
     id: "4",
-    episodeName: "Intro to Data Science",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   },
   {
     id: "5",
-    episodeName: "Intro to Data Science",
-    details: "Details",
+    episodeName: "Intro to Data Science w/ Michael Dupont",
+    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
     episodeLength: "50:00",
+    audioFile: "../assets/file_example.mp3",
     showNotes: "<p>Welcome to the podcast blah blah blah</p>"
   }
 ]
@@ -53,12 +62,9 @@ const MainLayout = (props) => {
       </Helmet>
       {/* {children} */}
       <Container>
-        <Row className="justify-content-space-between">
+        <Row className="topnav justify-content-space-between">
           <Col>
-            👨‍🍳 Code Chefs
-          </Col>
-          <Col xs="auto">
-            Episodes
+            👨‍🍳 Home
           </Col>
           <Col xs="auto">
             Episodes
@@ -67,12 +73,66 @@ const MainLayout = (props) => {
             About
           </Col>
         </Row>
-        <div className="custom-menu">
+        <Row className="logo-hero mt-5 justify-content-center">
+          <Col xs="auto" style={{width:"500px"}}>
+            <img src={logo} alt="logo"/>    
+          </Col>
+        </Row>
+        {/* Brief Introduction to Code Chefs */}
+        <Row className="mt-5">
+          <Col xs="12">
+            
+          </Col>
+        </Row>
+        {/* Episode Introduction */}
+        <Row>
+          <Col xs="12">
+            <div className="cc-card cc-header">
+              
+            </div>
+          </Col>
+          <Col xs="6">
+            <div className="cc-card cc-portrait">
+              <div className="left">
+                <img src={vincentntang} alt="vincent tang"/>
+              </div>
+              <div className="right">
+                <div className="description">Vincent Tang is a fullstack developer from Orlando, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
+              </div>
+              <div className="footer">
+
+              </div>
+            </div>
+          </Col>
+          <Col xs="6">
+            <div className="cc-card cc-portrait">
+              <div className="left">
+                <img src={germangamboa} alt="german gamboa"/>
+              </div>
+              <div className="right">
+                <div className="description">German Gamboa is a fullstack developer from Orlando, FL. Formerly a general manager for a restaurant chain. Likes to learn new things</div>
+              </div>
+              <div className="footer">
+              </div>
+            </div>
+          </Col>
+        </Row>
+        {/* <div className="custom-menu">
           <div className="custom-menu__header">
-            Podcast Episodes Menu
+            <div className="custom-menu__sticker">
+              <div className="header">Code Chefs</div>
+              <div className="subheader">EPISODES</div>
+            </div>
+            <div className="custom-menu__lines">
+              <hr/>
+              <hr/>
+              <hr/>
+              <hr/>
+              <hr/>
+              <hr/>
+            </div>
           </div>
           <div className="custom-menu__panes">
-            <div className="custom-menu__left">
               {fakeData.map(item => {
                 return (
                   <div className="podcast-episode">
@@ -82,12 +142,8 @@ const MainLayout = (props) => {
                   </div>
                 )
               })}
-            </div>
-            <div className="custom-menu__right">
-              {}
-            </div>
           </div>
-        </div>
+        </div> */}
         {/* <Row className="custom-menu border-red">
           <Col>
             <Row>
