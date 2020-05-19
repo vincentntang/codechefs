@@ -61,67 +61,54 @@ const MainLayout = (props) => {
         <html lang="en" />
       </Helmet>
       {/* {children} */}
-      <Container>
-        <Row className="topnav justify-content-space-between">
-          <Col>
-            👨‍🍳 Home
-          </Col>
-          <Col xs="auto">
-            Episodes
-          </Col>
-          <Col xs="auto">
-            About
-          </Col>
-        </Row>
-        <Row className="logo-hero mt-5 justify-content-center">
-          <Col xs="auto" style={{width:"500px"}}>
-            <img src={logo} alt="logo"/>    
-          </Col>
-        </Row>
-        {/* Brief Introduction to Code Chefs */}
-        <Row className="mt-5">
-          <Col xs="12">
-            
-          </Col>
-        </Row>
-        {/* Episode Introduction */}
-        <Row>
-       
-        </Row>
+      <nav className="cc-navbar">
+        <div className="cc-navitem">
+          <div className="cc-navlink">Home</div>
+        </div>
+        <div className="cc-navitem">
+          <div className="cc-navlink">Episodes</div>
+        </div>
+        <div className="cc-navitem">
+          <div className="cc-navlink">Contact</div>
+        </div>
+      </nav>
+      <div className="cc-logo-hero">
+        <img src={logo} alt="logo"/>
+      </div>
         {/* <h1 class="text-center mb-3">Hosts</h1> */}
-        <div className="cc-container">
-          <div className="cc-header">
-            <div className="cc-card cc-intro">
-              <p className="mb-0"><span>🎤 </span>Code chefs is a podcast for developers seeking to learn more about webdevelopment. Whether your a fresh out of bootcamp graduate, or a fullstack veteran,
-                we do topics ranging for all levels. As developers who love learning, we hope you enjoy the content here</p>
+      <div className="cc-section">
+        <div className="cc-header">
+          <div className="cc-card cc-intro">
+            <p className="mb-0"><span>🎤 </span>Code chefs is a podcast for developers seeking to learn more about webdevelopment. Whether your a fresh out of bootcamp graduate, or a fullstack veteran,
+              we do topics ranging for all levels. As developers who love learning, we hope you enjoy the content here</p>
+          </div>
+          <div className="cc-portraits">
+            <div className="cc-card cc-portrait">
+              <div className="header">
+              </div> 
+              <div className="img-wrapper">
+                <img src={vincentntang} alt="vincent tang"/>
+              </div>
+              <div className="desc-wrapper">
+                <div className="description">👨‍🍳 Vincent Tang is a fullstack developer from Orlando, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
+              </div>
+              {/* <div className="footer">
+              </div> */}
             </div>
-            <div className="cc-portraits">
-              <div className="cc-card cc-portrait">
-                <div className="header">
-                </div> 
-                <div className="img-wrapper">
-                  <img src={vincentntang} alt="vincent tang"/>
-                </div>
-                <div className="desc-wrapper">
-                  <div className="description">👨‍🍳 Vincent Tang is a fullstack developer from Orlando, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
-                </div>
-                {/* <div className="footer">
-                </div> */}
+            <div className="cc-card cc-portrait">
+              <div className="img-wrapper">
+                <img src={germangamboa} alt="german gamboa"/>
               </div>
-              <div className="cc-card cc-portrait">
-                <div className="img-wrapper">
-                  <img src={germangamboa} alt="german gamboa"/>
-                </div>
-                <div className="desc-wrapper">
-                  <div className="description">👨‍🍳 German Gamboa is a fullstack developer from Orlando, FL. Formerly a general manager for a restaurant chain. Likes to learn new things</div>
-                </div>
-                {/* <div className="footer">
-                </div> */}
+              <div className="desc-wrapper">
+                <div className="description">👨‍🍳 German Gamboa is a fullstack developer from Orlando, FL. Formerly a general manager for a restaurant chain. Likes to learn new things</div>
               </div>
+              {/* <div className="footer">
+              </div> */}
             </div>
           </div>
         </div>
-        <h1 class="text-center mb-3">Episodes</h1>
+      </div>
+      <h1 class="text-center mb-3">Episodes</h1>
         {/* <div className="custom-menu">
           <div className="custom-menu__header">
             <div className="custom-menu__sticker">
@@ -173,7 +160,6 @@ const MainLayout = (props) => {
             </Row>
           </Col>
         </Row> */}
-      </Container>
     </div>
   );
 }

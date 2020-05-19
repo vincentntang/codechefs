@@ -10,12 +10,40 @@ body {
 .logo-hero {
   // background-color: #202020;
 }
+.cc-navbar {
+  display: flex;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  justify-content: space-between;
+}
+.cc-navitem:first-of-type {
+  flex-grow: 1;
+}
+.cc-navitem {
 
+}
+.cc-navlink {
+  display: inline-block;
+  padding: 10px;
+  height: 100%;
+  &:hover {
+    background-color: gray;
+  }
+}
+.cc-logo-hero {
+  width: 500px;
+  height: auto;
+}
 // 320px, 576px, 768px, 992px, 1200px, 1440px
 .cc-container {
+  margin: 0 auto;
+  width: 100%; /* was 550px*/
+  @include screen-min(576px){max-width: 576px;}
+  @include screen-min(768px){max-width: 768px;}
+}
+.cc-section {
   max-width: 900px;
-  display: flex;
-  justify-content: center;
 }
 .cc-header {
   // border: 2px solid $yellow-6;
