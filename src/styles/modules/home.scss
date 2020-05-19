@@ -13,7 +13,7 @@ body {
 
 // 320px, 576px, 768px, 992px, 1200px, 1440px
 .cc-header {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .cc-card {
   display: flex;
@@ -22,11 +22,15 @@ body {
   padding: 15px;
   font-size: 14px;
   background-color: black;
-  border: 3px solid #47CAB0;
-  min-height: 100px;
-  padding-bottom: 50px;
+  // border: 2px solid #47CAB0;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 .cc-portrait {
+  min-height: 100px;
+  // padding-bottom: 50px;
   @include screen-max(768px){
     flex-direction: column;
   }
@@ -51,7 +55,7 @@ body {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    background-color: red;
+    background-color: rgb(56,56,56);
     display: flex;
   }
 }

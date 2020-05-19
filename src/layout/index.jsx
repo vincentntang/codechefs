@@ -86,11 +86,10 @@ const MainLayout = (props) => {
         </Row>
         {/* Episode Introduction */}
         <Row>
-          <Col xs="12">
-            <div className="cc-card cc-header">
-              
-            </div>
-          </Col>
+       
+        </Row>
+        {/* <h1 class="text-center mb-3">Hosts</h1> */}
+        <Row>
           <Col xs="6">
             <div className="cc-card cc-portrait">
               <div className="left">
@@ -99,9 +98,9 @@ const MainLayout = (props) => {
               <div className="right">
                 <div className="description">Vincent Tang is a fullstack developer from Orlando, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
               </div>
-              <div className="footer">
+              {/* <div className="footer">
 
-              </div>
+              </div> */}
             </div>
           </Col>
           <Col xs="6">
@@ -112,11 +111,18 @@ const MainLayout = (props) => {
               <div className="right">
                 <div className="description">German Gamboa is a fullstack developer from Orlando, FL. Formerly a general manager for a restaurant chain. Likes to learn new things</div>
               </div>
-              <div className="footer">
-              </div>
+              {/* <div className="footer">
+              </div> */}
+            </div>
+          </Col>
+          <Col xs="12">
+            <div className="cc-card cc-header">
+              <p className="mb-0">Code chefs is a podcast for developers seeking to learn more about webdevelopment. Whether your a fresh out of bootcamp graduate, or a fullstack veteran,
+                we do topics ranging for all levels. As developers who love learning, we hope you enjoy the content here</p>
             </div>
           </Col>
         </Row>
+        <h1 class="text-center mb-3">Episodes</h1>
         {/* <div className="custom-menu">
           <div className="custom-menu__header">
             <div className="custom-menu__sticker">
