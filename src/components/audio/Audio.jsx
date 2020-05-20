@@ -4,19 +4,20 @@ import Song from "./Song";
 import Play from "./Play";
 import Pause from "./Pause";
 import Bar from "./Bar";
-import sampleMp3 from "../../assets/file_example.mp3"
+// import sampleMp3 from "../../assets/file_example.mp3"
 
 // import useAudioPlayer from './useAudioPlayer';
 
-function Audio() {
+const Audio = props => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
   const [playing, setPlaying] = useState(false);
   const [clickedTime, setClickedTime] = useState();
+  const {mp3,name} = props;
 
   useEffect(() => {
-    const audio = document.getElementById("audio");
+    const audio = document.getElementById(name);
 
     // state setters wrappers
     const setAudioData = () => {
@@ -46,10 +47,12 @@ function Audio() {
     }
   });
 
+  console.log(mp3,"MP3");
+
   return (
     <div className="player">
-      <audio id="audio">
-        <source src={sampleMp3} />
+      <audio id={name}>
+        <source src={mp3} />
         Your browser does not support the <code>audio</code> element.
       </audio>
       <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" />

@@ -13,8 +13,8 @@ body {
   width: 100%; /* was 550px*/
   @include screen-min(576px){max-width: 500px;}
   @include screen-min(768px){max-width: 700px;}
-  @include screen-min(992px){max-width: 900px;}
-  @include screen-min(1200px){max-width: 1100px;}
+  @include screen-min(992px){max-width: 700px;}
+  @include screen-min(1200px){max-width: 700px;}
 }
 .cc-padding {
   // display: flex;
@@ -29,7 +29,7 @@ body {
   border-radius: 20px;
   background-color: hsl(10,10,10);
   // background-color: darkgray;
-  max-width: 700px
+  width: 100%;
 }
 
 /**

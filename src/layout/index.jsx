@@ -126,13 +126,15 @@ const MainLayout = (props) => {
             <hr/>
           </div>
           <div className="podcast-wrapper">
+           <Audio id="1" name="1" key="1" mp3={sampleMp3} />
+          <Audio id="2" name="2" key="2" mp3='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'/>
             {fakeData.map((item,index) => {
               return (
                   <div key={`podcast-${index}`}className="podcast-episode">
                     <div>{item.id}</div>
                     <div>{item.episodeName}</div>
                     <div>{item.episodeLength}</div>
-                    <Audio key={`podcast-${index}`} />
+                    {/* <Audio key={`podcast-${index}`} mp3={sampleMp3} /> */}
                     <audio controls>
                       <source src={sampleMp3} type="audio/ogg" />
                       <source src={sampleMp3} type="audio/mpeg"/>
