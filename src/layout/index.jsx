@@ -11,7 +11,6 @@ import germangamboa from "../assets/germangamboa.jpeg";
 import Menu from "./Menu";
 
 const MainLayout = (props) => {
-  const [selectedEpisode, setSelectedEpisode] = useState(0); // default selectedState to 0
   const { children } = props;
   return (
     <div className="layout-container">

@@ -8,13 +8,12 @@ import Bar from "./Bar";
 
 // import useAudioPlayer from './useAudioPlayer';
 
-const Audio = props => {
+const Audio = ({currentVolume, setCurrentVolume, currentTrack, setCurrentTrack, isPlaying, setIsPlaying, mp3, name}) => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
   const [playing, setPlaying] = useState(false);
   const [clickedTime, setClickedTime] = useState();
-  const {mp3,name} = props;
 
   useEffect(() => {
     const audio = document.getElementById(name);
@@ -47,6 +46,10 @@ const Audio = props => {
     }
   });
 
+  const setCurrentShowPlaying = () => {
+    
+  }
+
   console.log(mp3,"MP3");
 
   return (
@@ -57,10 +60,13 @@ const Audio = props => {
       </audio>
       <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" />
       <div className="controls">
-        {playing ? 
+        {/* {playing ? 
           <Pause handleClick={() => setPlaying(false)} /> :
           <Play handleClick={() => setPlaying(true)} />
-        }
+        } */}
+        <button className="player__button" onClick={() => setPlaying(!playing)}>
+          <div style={{ color: "white" }}> {playing ? "PAUSE" : "START"}</div>
+        </button>
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
       </div>
     </div>

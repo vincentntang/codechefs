@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Helmet from "react-helmet";
 import {Row, Col, Container} from 'reactstrap';
 import config from "../../data/SiteConfig";
@@ -10,8 +10,23 @@ import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
 import Audio from "../components/audio/Audio";
 import fakeData from "./fakeData";
+import PropTypes from "prop-types";
+
+// Inputform.propTypes = {
+//   onSubmit: PropTypes.func.isRequired
+// };
+
 
 const Menu = (props) => {
+
+  const [currentTrack, setCurrentTrack] = useState();
+  const [isPlaying, setIsPlaying] = useState(false); //if the user presses the start icon, it turns off setPlaying
+  const [currentVolume, setCurrentVolume] = useState();
+  // const [lastPlaybackSpeed, setPlaybackSpeed] = useState(false);
+  // const [lastAudioLevel, setAudioLevel] = useState();
+
+  useEffect(() => {
+  },[])
 
   return (<section className="cc-container mt-30">
     <h1 class="text-center mb-2">Episodes</h1>
@@ -23,20 +38,29 @@ const Menu = (props) => {
         <hr />
       </div>
       <div className="podcast-wrapper">
-        <Audio id="1" name="1" key="1" mp3={sampleMp3} />
-        <Audio id="2" name="2" key="2" mp3='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' />
         {fakeData.map((item, index) => {
           return (
             <div key={`podcast-${index}`} className="podcast-episode">
               <div>{item.id}</div>
               <div>{item.episodeName}</div>
               <div>{item.episodeLength}</div>
+              <Audio 
+                id={index} 
+                name={index} 
+                mp3={item.audioFile} 
+                currentTrack={currentTrack} 
+                setCurrentTrack={setCurrentTrack}
+                currentVolume={currentVolume}
+                setCurrentVolume={setCurrentVolume}
+                isPlaying={isPlaying}
+                setIsPlaying={setIsPlaying}
+              />
               {/* <Audio key={`podcast-${index}`} mp3={sampleMp3} /> */}
-              <audio controls>
+              {/* <audio controls>
                 <source src={sampleMp3} type="audio/ogg" />
                 <source src={sampleMp3} type="audio/mpeg" />
                 <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
-              </audio>
+              </audio> */}
             </div>
           )
         })}
