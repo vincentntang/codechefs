@@ -24,6 +24,14 @@ const Menu = (props) => {
   const [currentVolume, setCurrentVolume] = useState();
   // const [lastPlaybackSpeed, setPlaybackSpeed] = useState(false);
   // const [lastAudioLevel, setAudioLevel] = useState();
+  const setTrackPlayed = (index) => {
+    if(index === currentTrack && isPlaying) {
+      setIsPlaying(false);
+    } else {
+      setIsPlaying(true);
+    }
+    setCurrentTrack(index);
+  }
 
   useEffect(() => {
   },[])
@@ -41,19 +49,19 @@ const Menu = (props) => {
         {fakeData.map((item, index) => {
           return (
             <div key={`podcast-${index}`} className="podcast-episode">
-              <div>{item.id}</div>
-              <div>{item.episodeName}</div>
-              <div>{item.episodeLength}</div>
+              {/* <div>{item.id} - {item.episodeName}</div> */}
+              {/* <div>{item.episodeLength}</div> */}
               <Audio 
                 id={index} 
-                name={index} 
+                index={index} 
                 mp3={item.audioFile} 
                 currentTrack={currentTrack} 
-                setCurrentTrack={setCurrentTrack}
-                currentVolume={currentVolume}
-                setCurrentVolume={setCurrentVolume}
+                // setCurrentTrack={setCurrentTrack}
+                // currentVolume={currentVolume}
+                // setCurrentVolume={setCurrentVolume}
                 isPlaying={isPlaying}
                 setIsPlaying={setIsPlaying}
+                setTrackPlayed={setTrackPlayed}
               />
               {/* <Audio key={`podcast-${index}`} mp3={sampleMp3} /> */}
               {/* <audio controls>

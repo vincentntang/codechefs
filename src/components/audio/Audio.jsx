@@ -8,7 +8,14 @@ import Bar from "./Bar";
 
 // import useAudioPlayer from './useAudioPlayer';
 
-const Audio = ({currentVolume, setCurrentVolume, currentTrack, setCurrentTrack, isPlaying, setIsPlaying, mp3, name}) => {
+const Audio = ({
+  currentVolume, 
+  setCurrentVolume, 
+  currentTrack, 
+  setCurrentTrack, 
+  isPlaying, 
+  setIsPlaying, 
+  setTrackPlayed, mp3, index}) => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
@@ -16,7 +23,7 @@ const Audio = ({currentVolume, setCurrentVolume, currentTrack, setCurrentTrack, 
   const [clickedTime, setClickedTime] = useState();
 
   useEffect(() => {
-    const audio = document.getElementById(name);
+    const audio = document.getElementById(index);
 
     // state setters wrappers
     const setAudioData = () => {
@@ -32,7 +39,12 @@ const Audio = ({currentVolume, setCurrentVolume, currentTrack, setCurrentTrack, 
     audio.addEventListener("timeupdate", setAudioTime);
 
     // React state listeners: update DOM on React state changes
-    playing ? audio.play() : audio.pause();
+    if(index === currentTrack && isPlaying){
+      audio.play();
+    } else {
+      audio.pause();
+    }
+    // playing ? audio.play() : audio.pause();
 
     if (clickedTime && clickedTime !== curTime) {
       audio.currentTime = clickedTime;
@@ -46,15 +58,11 @@ const Audio = ({currentVolume, setCurrentVolume, currentTrack, setCurrentTrack, 
     }
   });
 
-  const setCurrentShowPlaying = () => {
-    
-  }
-
   console.log(mp3,"MP3");
 
   return (
     <div className="player">
-      <audio id={name}>
+      <audio id={index}>
         <source src={mp3} />
         Your browser does not support the <code>audio</code> element.
       </audio>
@@ -64,8 +72,9 @@ const Audio = ({currentVolume, setCurrentVolume, currentTrack, setCurrentTrack, 
           <Pause handleClick={() => setPlaying(false)} /> :
           <Play handleClick={() => setPlaying(true)} />
         } */}
-        <button className="player__button" onClick={() => setPlaying(!playing)}>
-          <div style={{ color: "white" }}> {playing ? "PAUSE" : "START"}</div>
+        <button className="player__button" onClick={() => setTrackPlayed(index)}>
+        {/* <button className="player__button" onClick={() => setPlaying(!playing)}> */}
+          <div style={{ color: "white" }}> {currentTrack === index && isPlaying ? "PAUSE" : "START"}</div>
         </button>
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
       </div>
