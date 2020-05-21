@@ -1,8 +1,8 @@
 import React , {useEffect,useState}from "react";
 
-import Song from "./Song";
-import Play from "./Play";
-import Pause from "./Pause";
+// import Song from "./Song";
+// import Play from "./Play";
+// import Pause from "./Pause";
 import Bar from "./Bar";
 // import sampleMp3 from "../../assets/file_example.mp3"
 
@@ -58,7 +58,7 @@ const Audio = ({currentVolume, setCurrentVolume, currentTrack, setCurrentTrack, 
         <source src={mp3} />
         Your browser does not support the <code>audio</code> element.
       </audio>
-      <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" />
+      {/* <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" /> */}
       <div className="controls">
         {/* {playing ? 
           <Pause handleClick={() => setPlaying(false)} /> :
