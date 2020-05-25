@@ -1,6 +1,9 @@
 ---
-title: "The Fairy's Witches"
-cover: "3.jpg"
+title: "The Fairy's Witches God"
+slug: "fairy-witches-vincent"
+# cover: "img/arnold.jpeg"
+cover: "https://i.imgur.com/ciA5u0F.png"
+# cover: ""
 category: "something"
 date: "2017-04-02"
 ---

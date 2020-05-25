@@ -30,6 +30,7 @@
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "netlify-cms-app": "^2.12.3",
+    "node-sass": "^4.14.0",
     "prismjs": "^1.19.0",
     "react": "^16.13.1",
     "react-disqus-comments": "^1.4.0",
@@ -37,6 +38,7 @@
     "react-helmet": "^5.2.1",
     "react-share": "^4.1.0",
     "react-twitter-widgets": "^1.7.1",
+    "reactstrap": "^8.4.1",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
