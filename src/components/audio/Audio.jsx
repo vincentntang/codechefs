@@ -1,12 +1,5 @@
 import React , {useEffect,useState}from "react";
-
-// import Song from "./Song";
-// import Play from "./Play";
-// import Pause from "./Pause";
 import Bar from "./Bar";
-// import sampleMp3 from "../../assets/file_example.mp3"
-
-// import useAudioPlayer from './useAudioPlayer';
 
 const Audio = ({
   currentVolume, 
