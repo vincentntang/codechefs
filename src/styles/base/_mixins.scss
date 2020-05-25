@@ -1,0 +1,20 @@
+// For Mobile-First Design
+@mixin screen-min($min) { 
+  @media (min-width: $min) { 
+    @content 
+  } 
+};
+
+// For Desktop-First Design
+@mixin screen-max($max) { 
+  @media (max-width: $max - 1) { 
+    @content 
+  } 
+};
+
+// For Hybrid Design
+@mixin screen-minmax($min, $max){ 
+  @media (min-width: $min) and (max-width: $max - 1){ 
+    @content 
+  }
+};

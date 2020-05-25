@@ -2,10 +2,9 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
+import PostListing from "../components/PostListing";
+import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
-import "./listing.css";
 
 class Listing extends React.Component {
   renderPaging() {
