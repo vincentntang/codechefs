@@ -8,52 +8,9 @@ import logo from "../assets/code_chefs_transparent.svg";
 import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
-
-const fakeData= [
-  {
-    id: "1",
-    episodeName: "Intro to Data Science w/ Michael Dupont",
-    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
-    episodeLength: "50:00",
-    audioFile: "../assets/file_example.mp3",
-    showNotes: "<p>Welcome to the podcast blah blah blah</p>"
-  },
-  {
-    id: "2",
-    episodeName: "Intro to Data Science w/ Michael Dupont",
-    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
-    episodeLength: "50:00",
-    audioFile: "../assets/file_example.mp3",
-    showNotes: "<p>Welcome to the podcast blah blah blah</p>"
-  },
-  {
-    id: "3",
-    episodeName: "Intro to Data Science w/ Michael Dupont",
-    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
-    episodeLength: "50:00",
-    audioFile: "../assets/file_example.mp3",
-    showNotes: "<p>Welcome to the podcast blah blah blah</p>"
-  },
-  {
-    id: "4",
-    episodeName: "Intro to Data Science w/ Michael Dupont",
-    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
-    episodeLength: "50:00",
-    audioFile: "../assets/file_example.mp3",
-    showNotes: "<p>Welcome to the podcast blah blah blah</p>"
-  },
-  {
-    id: "5",
-    episodeName: "Intro to Data Science w/ Michael Dupont",
-    shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more",
-    episodeLength: "50:00",
-    audioFile: "../assets/file_example.mp3",
-    showNotes: "<p>Welcome to the podcast blah blah blah</p>"
-  }
-]
+import Menu from "./Menu";
 
 const MainLayout = (props) => {
-  const [selectedEpisode, setSelectedEpisode] = useState(0); // default selectedState to 0
   const { children } = props;
   return (
     <div className="layout-container">
@@ -115,33 +72,7 @@ const MainLayout = (props) => {
           </div>
         </div>
       </section>
-      <section className="cc-container mt-30">
-        <h1 class="text-center mb-2">Episodes</h1>
-        <div className="cc-menu cc-padding cc-card">
-          <div className="menu-header">
-            <hr/>
-            <hr/>
-            <hr/>
-            <hr/>
-          </div>
-          <div className="podcast-wrapper">
-            {fakeData.map((item,index) => {
-              return (
-                  <div key={`podcast-${index}`}className="podcast-episode">
-                    <div>{item.id}</div>
-                    <div>{item.episodeName}</div>
-                    <div>{item.episodeLength}</div>
-                    <audio controls>
-                      <source src={sampleMp3} type="audio/ogg" />
-                      <source src={sampleMp3} type="audio/mpeg"/>
-                      <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
-                    </audio>
-                  </div>
-                )
-              })}
-          </div>
-        </div>
-      </section>
+      <Menu/>
         {/* <div className="custom-menu">
           <div className="custom-menu__header">
             <div className="custom-menu__sticker">

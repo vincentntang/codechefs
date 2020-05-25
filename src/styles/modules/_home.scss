@@ -1,0 +1,136 @@
+/**
+ * UTILITY
+ */
+// 320px, 576px, 768px, 992px, 1200px, 1440px
+.cc-container {
+  margin: 0 auto;
+  width: 100%; 
+  @include screen-min(576px){max-width: 500px;}
+  @include screen-min(768px){max-width: 700px;}
+  @include screen-min(992px){max-width: 700px;}
+  @include screen-min(1200px){max-width: 700px;}
+}
+.cc-padding {
+  padding: 15px;
+  font-size: 16px;
+}
+.cc-card {
+  border: 3px solid black;
+  border-radius: 20px;
+  background-color: hsl(10,10,10);
+  width: 100%;
+}
+
+/**
+ * HEADER SPECIFIC
+ */
+.cc-logo-hero {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+  }
+}
+.cc-navbar {
+  display: flex;
+  height: 40px;
+  // background-color: black;
+  width: 100%;
+  justify-content: space-between;
+}
+.cc-navbar-background {
+  background-color: rgba(black,0.4);
+}
+.cc-navitem:first-of-type {
+  flex-grow: 1;
+}
+.cc-navitem {
+
+}
+.cc-navlink {
+  display: inline-block;
+  padding: 10px;
+  height: 100%;
+  &:hover {
+    background-color: gray;
+  }
+}
+
+/**
+ * THE PEOPLE AND INTRO
+ */
+.cc-intro {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.cc-portraits {
+  display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top: 1px dotted white;
+  padding-top: 20px;
+}
+.cc-portrait:first-of-type {
+  border-bottom-left-radius: 20px;
+}
+.cc-portrait:last-of-type {
+  border-bottom-right-radius: 20px;
+}
+.cc-portrait {
+  display: flex;
+  width: 50%;
+  min-height: 100px;
+  flex-direction: column;
+  align-items: center;
+  @include screen-max(768px){
+    // flex-direction: column;
+  }
+  img {
+    width: 100%;
+    // max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  .img-wrapper {
+    max-width: 200px;
+  }
+  .desc-wrapper {
+
+  }
+  .footer {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(56,56,56);
+    display: flex;
+  }
+  .header {
+
+  }
+}
+
+/**
+ * THE MENU
+ */
+.cc-menu {
+  .menu-header {
+    hr {
+      width: 100%;
+      background-color: white;
+    }    
+  }
+  .podcast-wrapper {
+  }
+  .podcast-episode {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+  }
+}
