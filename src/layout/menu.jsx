@@ -37,7 +37,7 @@ const Menu = (props) => {
   },[])
 
   return (<section className="cc-container mt-30">
-    <h1 class="text-center mb-2">Episodes</h1>
+    <h1 className="text-center mb-2">Episodes</h1>
       {/* <div className="menu-header">
         <hr />
         <hr />
@@ -47,7 +47,7 @@ const Menu = (props) => {
       <div className="podcast-wrapper">
         {fakeData.map((item, index) => {
           return (
-            <div className="cc-menu cc-padding cc-card mb-7">
+            <div key={index} className="cc-menu cc-padding cc-card mb-7">
               <div key={`podcast-${index}`} className="podcast-episode">
                 <div>{item.id} - {item.episodeName}</div>
                 <div>{item.episodeLength}</div>
