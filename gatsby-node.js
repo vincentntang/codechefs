@@ -68,6 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
               tags
               category
               date
+              shortDescription
             }
           }
         }
@@ -152,6 +153,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: edge.node.fields.slug,
       component: postPage,
       context: {
+        shortDescription: edge.node.frontmatter.shortDescription,
         slug: edge.node.fields.slug,
         nexttitle: nextEdge.node.frontmatter.title,
         nextslug: nextEdge.node.fields.slug,

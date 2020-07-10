@@ -1,9 +1,9 @@
 ---
-title: "Fitness 101 for developers"
+title: "Bold Mage 2-01"
 slug: "bold-mages-vincent"
 # cover: "img/arnold.jpeg"
 cover: "8.jpg"
-date: "2017-01-01"
+date: "2017-02-01"
 audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
 category: "tech"
 shortDescription: "How do you get started in data science? In this interview with Michael Dupont, a data scientist at Disney, we cover what is it, what are its applications, and more"

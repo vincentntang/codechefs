@@ -1,6 +1,6 @@
 ---
-title: "Fitness 101 for developers"
-slug: "bold-mages-vincent"
+title: "Bold Mage3"
+slug: "bold-mages-vincent3"
 # cover: "img/arnold.jpeg"
 cover: "8.jpg"
 date: "2017-01-01"

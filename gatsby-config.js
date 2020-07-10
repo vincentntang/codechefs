@@ -173,6 +173,7 @@ module.exports = {
                       date
                       category
                       tags
+                      shortDescription
                     }
                   }
                 }

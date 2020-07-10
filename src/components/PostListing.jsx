@@ -12,7 +12,9 @@ const PostListing = props => {
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
+        timeToRead: postEdge.node.timeToRead,
+        shortDescription: postEdge.node.frontmatter.shortDescription,
+        description: postEdge.node.fields.description,
       });
     });
     return postList;
@@ -29,6 +31,7 @@ const PostListing = props => {
   //     ))}
   //   </div>
   // )
+  console.log(props, "THIS PROPS");
   return (
     <section className="cc-container mt-30">
       <h1 className="text-center mb-2">Episodes</h1>
@@ -44,7 +47,7 @@ const PostListing = props => {
             <div key={index} className="cc-menu cc-padding cc-card mb-7">
               <div key={`podcast-${index}`} className="podcast-episode">
                 <Link to={post.path}>{post.title}</Link>
-                <div>{post.episodeLength}</div>
+                <p className="short-description">{post.shortDescription}</p>
                 {/* <Audio 
                   id={index} 
                   index={index} 
