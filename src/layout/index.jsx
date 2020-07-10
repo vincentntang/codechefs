@@ -9,6 +9,7 @@ import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
 import Menu from "./Menu";
+import Navbar from "../components/Navbar"
 
 const MainLayout = (props) => {
   const { children } = props;
@@ -19,21 +20,7 @@ const MainLayout = (props) => {
         <html lang="en" />
       </Helmet>
       {/* {children} */}
-      <div className="cc-navbar-background">
-        <div className="cc-container">
-          <nav className="cc-navbar">
-            <div className="cc-navitem">
-              <div className="cc-navlink">Home</div>
-            </div>
-            <div className="cc-navitem">
-              <div className="cc-navlink">Episodes</div>
-            </div>
-            <div className="cc-navitem">
-              <div className="cc-navlink">Contact</div>
-            </div>
-          </nav>
-        </div>
-      </div>
+      <Navbar/>
       <section className="cc-container">
         <div className="cc-logo-hero">
           <img src={logo} alt="logo"/>
@@ -73,6 +60,10 @@ const MainLayout = (props) => {
         </div>
       </section>
       <Menu/>
+      <section className="cc-container mt-30">
+      {children}
+
+      </section>
         {/* <div className="custom-menu">
           <div className="custom-menu__header">
             <div className="custom-menu__sticker">

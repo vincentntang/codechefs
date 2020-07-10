@@ -38,35 +38,35 @@ const Menu = (props) => {
 
   return (<section className="cc-container mt-30">
     <h1 class="text-center mb-2">Episodes</h1>
-    <div className="cc-menu cc-padding cc-card">
-      <div className="menu-header">
+      {/* <div className="menu-header">
         <hr />
         <hr />
         <hr />
         <hr />
-      </div>
+      </div> */}
       <div className="podcast-wrapper">
         {fakeData.map((item, index) => {
           return (
-            <div key={`podcast-${index}`} className="podcast-episode">
-              <div>{item.id} - {item.episodeName}</div>
-              <div>{item.episodeLength}</div>
-              <Audio 
-                id={index} 
-                index={index} 
-                mp3={item.audioFile} 
-                currentTrack={currentTrack} 
-                // setCurrentTrack={setCurrentTrack}
-                // currentVolume={currentVolume}
-                // setCurrentVolume={setCurrentVolume}
-                isPlaying={isPlaying}
-                setIsPlaying={setIsPlaying}
-                setTrackPlayed={setTrackPlayed}
-              />
+            <div className="cc-menu cc-padding cc-card mb-7">
+              <div key={`podcast-${index}`} className="podcast-episode">
+                <div>{item.id} - {item.episodeName}</div>
+                <div>{item.episodeLength}</div>
+                {/* <Audio 
+                  id={index} 
+                  index={index} 
+                  mp3={item.audioFile} 
+                  currentTrack={currentTrack} 
+                  // setCurrentTrack={setCurrentTrack}
+                  // currentVolume={currentVolume}
+                  // setCurrentVolume={setCurrentVolume}
+                  isPlaying={isPlaying}
+                  setIsPlaying={setIsPlaying}
+                  setTrackPlayed={setTrackPlayed}
+                /> */}
+              </div>
             </div>
           )
         })}
-      </div>
     </div>
   </section>
   )
