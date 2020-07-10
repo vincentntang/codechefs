@@ -1,12 +1,5 @@
 import React , {useEffect,useState}from "react";
-
-// import Song from "./Song";
-// import Play from "./Play";
-// import Pause from "./Pause";
 import Bar from "./Bar";
-// import sampleMp3 from "../../assets/file_example.mp3"
-
-// import useAudioPlayer from './useAudioPlayer';
 
 const Audio = ({
   currentVolume, 
@@ -68,12 +61,7 @@ const Audio = ({
       </audio>
       {/* <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" /> */}
       <div className="controls">
-        {/* {playing ? 
-          <Pause handleClick={() => setPlaying(false)} /> :
-          <Play handleClick={() => setPlaying(true)} />
-        } */}
         <button className="player__button" onClick={() => setTrackPlayed(index)}>
-        {/* <button className="player__button" onClick={() => setPlaying(!playing)}> */}
           <div style={{ color: "white" }}> {currentTrack === index && isPlaying ? "PAUSE" : "START"}</div>
         </button>
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>

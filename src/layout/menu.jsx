@@ -49,8 +49,8 @@ const Menu = (props) => {
         {fakeData.map((item, index) => {
           return (
             <div key={`podcast-${index}`} className="podcast-episode">
-              {/* <div>{item.id} - {item.episodeName}</div> */}
-              {/* <div>{item.episodeLength}</div> */}
+              <div>{item.id} - {item.episodeName}</div>
+              <div>{item.episodeLength}</div>
               <Audio 
                 id={index} 
                 index={index} 
@@ -63,12 +63,6 @@ const Menu = (props) => {
                 setIsPlaying={setIsPlaying}
                 setTrackPlayed={setTrackPlayed}
               />
-              {/* <Audio key={`podcast-${index}`} mp3={sampleMp3} /> */}
-              {/* <audio controls>
-                <source src={sampleMp3} type="audio/ogg" />
-                <source src={sampleMp3} type="audio/mpeg" />
-                <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
-              </audio> */}
             </div>
           )
         })}
