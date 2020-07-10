@@ -81,7 +81,7 @@ class Listing extends React.Component {
                 </div>
               </div>
             </section>
-            <Menu/>
+            {/* <Menu/> */}
             <PostListing postEdges={postEdges} />
            
           </div>
