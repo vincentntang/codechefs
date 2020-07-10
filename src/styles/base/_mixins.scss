@@ -1,20 +1,53 @@
-// For Mobile-First Design
-@mixin screen-min($min) { 
-  @media (min-width: $min) { 
-    @content 
-  } 
-};
-
-// For Desktop-First Design
-@mixin screen-max($max) { 
-  @media (max-width: $max - 1) { 
-    @content 
-  } 
-};
-
-// For Hybrid Design
-@mixin screen-minmax($min, $max){ 
-  @media (min-width: $min) and (max-width: $max - 1){ 
-    @content 
+// Customizable Breakpoints
+@mixin screen-min($min) {
+  @media (min-width: $min) {
+    @content
   }
 };
+@mixin screen-max($max) {
+  @media (max-width: $max - 1) {
+    @content
+  }
+};
+@mixin screen-minmax($min, $max){
+  @media (min-width: $min) and (max-width: $max - 1){
+    @content
+  }  
+};
+
+// 576, 768, 992, 1200, 1600
+@mixin screen-sm-max {
+    @media (max-width: #{$sm-width}-1){
+        @content
+    }
+};
+
+@mixin screen-md-max {
+    @media (max-width: #{$md-width}-1){
+        @content
+    }
+};
+
+/* Minimum media queries */
+@mixin screen-sm-min {
+    @media (min-width: #{$sm-width}) {
+        @content
+    }
+};
+
+@mixin screen-md-min {
+    @media (min-width: #{$md-width}) {
+        @content
+    }
+};
+
+@mixin screen-lg-min {
+    @media (min-width: #{$lg-width}) {
+        @content
+    }
+};
+@mixin screen-xl-min {
+    @media(min-width: #{$xl-width}){
+        @content
+    }
+}
