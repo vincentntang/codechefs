@@ -11,13 +11,14 @@
   @include screen-min(1200px){max-width: 800px;}
 }
 .cc-padding {
-  padding: 15px;
+  padding: 25px;
   font-size: 16px;
 }
 .cc-card {
   border: 3px solid black;
   border-radius: 20px;
-  background-color: hsl(10,10,10);
+  // background-color: hsl(10,10,10);
+  background-color: hsl(0,0,10);
   width: 100%;
 }
 
@@ -25,8 +26,14 @@
  * HEADER SPECIFIC
  */
 .cc-logo-hero {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top-right-radius: 3px;
+  border-top-left-radius:3px;
+  // background-color: black;
+  img {
+    background-color: hsla(0,0,0,0.5);
+  }
   img {
     display: block;
     margin: 0 auto;
@@ -119,18 +126,39 @@
 /**
  * THE MENU
  */
-.cc-menu {
-  .menu-header {
-    hr {
-      width: 100%;
-      background-color: white;
-    }    
+.cc-podcast-wrapper {
+  // nothing
+}
+.podcast-wrapper {
+  cursor: pointer;
+  position: relative;
+  padding-left: 80px;
+  &:hover {
+    transition: 0.3s;
+    border: 2px solid white;
   }
-  .podcast-wrapper {
-  }
+
+  // .menu-header {
+  //   hr {
+  //     width: 100%;
+  //     background-color: white;
+  //   }    
+  // }
+
   .podcast-episode {
     display: flex;
     flex-direction: column;
-    border: 1px solid gray;
+    // border: 1px solid gray;
+
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .podcast-title {
+    font-size: 24px;
+  }
+  .short-description {
+    font-size: 18px;
   }
 }

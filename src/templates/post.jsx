@@ -22,7 +22,7 @@ export default class PostTemplate extends React.Component {
 
     return (
       <Layout>
-        <div>
+        <div className="cc-card cc-padding">
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
