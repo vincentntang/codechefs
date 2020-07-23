@@ -33,7 +33,7 @@ const PostListing = props => {
   // )
   console.log(props, "THIS PROPS");
   return (
-    <section className="cc-container mt-30">
+    <section className="cc-container mt-30 post-listing-container">
       <h1 className="text-center mb-2">Episodes</h1>
         {/* <div className="menu-header">
           <hr />
@@ -41,13 +41,20 @@ const PostListing = props => {
           <hr />
           <hr />
         </div> */}
-      <div className="podcast-wrapper">
+      <div className="cc-podcast-wrapper">
         {postList.map((post, index) => {
+          const shortDate = new Date(post.date).toLocaleDateString('en-US');
           return (
-            <div key={index} className="cc-menu cc-padding cc-card mb-7">
-              <div key={`podcast-${index}`} className="podcast-episode">
-                <Link to={post.path}>{post.title}</Link>
-                <p className="short-description">{post.shortDescription}</p>
+            <div key={index} className="podcast-wrapper cc-padding cc-card mb-7">
+              <svg>
+                <rect>
+                  
+                </rect>
+              </svg>
+              <Link to={post.path} key={`podcast-${index}`} className="podcast-episode">
+                <div className="podcast-title">{post.title}</div>
+                <p>{shortDate}</p>
+                <p className="mt-0 short-description">{post.shortDescription}</p>
                 {/* <Audio 
                   id={index} 
                   index={index} 
@@ -60,7 +67,7 @@ const PostListing = props => {
                   setIsPlaying={setIsPlaying}
                   setTrackPlayed={setTrackPlayed}
                 /> */}
-              </div>
+              </Link>
             </div>
           )
         })}

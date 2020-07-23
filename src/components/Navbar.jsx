@@ -14,7 +14,9 @@ const Navbar = (props) => {
       <div className="cc-container">
         <nav className="cc-navbar">
           <div className="cc-navitem">
-            <div className="cc-navlink">Home</div>
+            <div className="cc-navlink">
+              <Link to="/">Home</Link>
+            </div>
           </div>
           <div className="cc-navitem">
             <div className="cc-navlink">Episodes</div>
