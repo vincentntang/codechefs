@@ -10,6 +10,7 @@ import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
 import Menu from "./Menu";
 import Navbar from "../components/Navbar"
+import favicon from "../../static/logos/favicon.png"
 
 const MainLayout = (props) => {
   const { children } = props;
@@ -18,6 +19,7 @@ const MainLayout = (props) => {
       <Helmet>
         <meta name="description" content={config.siteDescription} />
         <html lang="en" />
+        <link rel="shortcut icon" type="image/png" href={favicon} />
       </Helmet>
       {/* {children} */}
       <Navbar/>
