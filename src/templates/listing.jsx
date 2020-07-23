@@ -11,6 +11,7 @@ import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
 import Menu from "../layout/Menu";
+import Footer from "../components/Footer";
 
 class Listing extends React.Component {
   renderPaging() {
@@ -84,9 +85,11 @@ class Listing extends React.Component {
             </section>
             {/* <Menu/> */}
             <PostListing postEdges={postEdges} />
-           
+            <section className="cc-container">
+              {this.renderPaging()}
+            </section>
+            <Footer config={config} />
           </div>
-          {this.renderPaging()}
         </div>
       </Layout>
     );

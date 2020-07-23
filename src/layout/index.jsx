@@ -21,10 +21,7 @@ const MainLayout = (props) => {
       </Helmet>
       {/* {children} */}
       <Navbar/>
-      <section className="cc-container mt-15">
       {children}
-
-      </section>
         {/* <div className="custom-menu">
           <div className="custom-menu__header">
             <div className="custom-menu__sticker">

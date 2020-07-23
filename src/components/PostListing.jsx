@@ -33,7 +33,7 @@ const PostListing = props => {
   // )
   console.log(props, "THIS PROPS");
   return (
-    <section className="cc-container mt-30">
+    <section className="cc-container mt-30 post-listing-container">
       <h1 className="text-center mb-2">Episodes</h1>
         {/* <div className="menu-header">
           <hr />
