@@ -149,6 +149,7 @@
     width: 100%;
     height: 100%;
     fill: transparent;
+    z-index: -2; // to make the link clickable above it
   }
 
   svg rect {
@@ -188,5 +189,19 @@
   }
   .short-description {
     font-size: 18px;
+  }
+}
+
+
+
+/* Paging Container */
+
+.paging-container {
+  a {
+    color: white;
+    font-size: 24px;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
   }
 }
