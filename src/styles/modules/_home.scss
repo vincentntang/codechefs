@@ -224,3 +224,8 @@
   padding-bottom: 60px;
   padding-top: 40px;
 }
+
+// Force a min height on all posts if not enough content
+.post-container {
+  min-height: calc(100vh - 350px);
+}

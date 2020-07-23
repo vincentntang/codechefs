@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import Helmet from "react-helmet";
-import {Row, Col, Container} from 'reactstrap';
 import config from "../../data/SiteConfig";
 import "../styles/main.scss";
 import dinerLogo from "../assets/diner_logo.svg";
@@ -8,8 +7,9 @@ import logo from "../assets/code_chefs_transparent.svg";
 import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
-import Menu from "./Menu";
+// import Menu from "./Menu";
 import Navbar from "../components/Navbar"
+import favicon from "../../static/logos/favicon.png"
 
 const MainLayout = (props) => {
   const { children } = props;
@@ -18,6 +18,7 @@ const MainLayout = (props) => {
       <Helmet>
         <meta name="description" content={config.siteDescription} />
         <html lang="en" />
+        <link rel="shortcut icon" type="image/png" href={favicon} />
       </Helmet>
       {/* {children} */}
       <Navbar/>
