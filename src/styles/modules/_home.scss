@@ -52,6 +52,8 @@
   background-color: rgba(black,0.8);
   position: fixed;
   width: 100%;
+  z-index: 50;
+  top: 0;
 }
 .cc-navitem:first-of-type {
   flex-grow: 1;
@@ -68,6 +70,7 @@
   &:hover {
     background-color: gray;
   }
+
 }
 
 /**
