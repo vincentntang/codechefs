@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import Helmet from "react-helmet";
-import {Row, Col, Container} from 'reactstrap';
 import config from "../../data/SiteConfig";
 import "../styles/main.scss";
 import dinerLogo from "../assets/diner_logo.svg";
