@@ -211,11 +211,13 @@
 }
 
 .layout-container {
-  margin-bottom: 60px;
 }
 
 .footer {
-  margin-top: 60px;
+  border-top: 3px solid white;
+  margin-top: 80px;
   background-color: #1a1a1a;
   width: 100%;
+  padding-bottom: 60px;
+  padding-top: 40px;
 }
