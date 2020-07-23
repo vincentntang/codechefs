@@ -1,8 +1,8 @@
 const config = {
-  siteTitle: "Gatsby Advanced Starter", // Site title.
-  siteTitleShort: "GA Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
-  siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
+  siteTitle: "Code Chefs Developer Podcast", // Site title.
+  siteTitleShort: "Code Chefs", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleAlt: "Code Chefs Web Developer Podcast", // Alternative site title for SEO.
+  siteLogo: "/logos/code_chefs_logo.png", // Logo used for SEO and manifest.
   siteUrl: "https://codechefs.dev", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Podcast Site For Hungry Web Developers", // Website description used for RSS feeds/meta description tag.
@@ -16,7 +16,7 @@ const config = {
   postsPerPage: 4, // Amount of posts displayed per listing page.
   userName: "Code Chefs", // Username to display in the author segment.
   userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment
-  userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
+  userTwitter: "codechefsdev", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "North Pole, Earth", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription:
