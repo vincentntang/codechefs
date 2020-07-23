@@ -22,7 +22,7 @@ export default class PostTemplate extends React.Component {
 
     return (
       <Layout>
-        <section className="cc-container mt-15">
+        <section className="cc-container mt-15 post-container">
           <div className="cc-card cc-padding">
             <Helmet>
               <title>{`${post.title} | ${config.siteTitle}`}</title>
