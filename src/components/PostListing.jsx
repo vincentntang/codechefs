@@ -46,6 +46,11 @@ const PostListing = props => {
           const shortDate = new Date(post.date).toLocaleDateString('en-US');
           return (
             <div key={index} className="podcast-wrapper cc-padding cc-card mb-7">
+              <svg>
+                <rect>
+                  
+                </rect>
+              </svg>
               <Link to={post.path} key={`podcast-${index}`} className="podcast-episode">
                 <div className="podcast-title">{post.title}</div>
                 <p>{shortDate}</p>

@@ -133,9 +133,37 @@
   cursor: pointer;
   position: relative;
   padding-left: 80px;
+  // &:hover {
+  //   transition: 0.3s;
+  //   border: 2px solid white;
+  // }
+  transition: 1.2s;
   &:hover {
-    transition: 0.3s;
-    border: 2px solid white;
+    transform: scale(1.05);
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+  }
+
+  svg rect {
+    stroke: white;
+    width: 100%;
+    height: 100%;
+    stroke-width:0;
+    transition: 1.2s;
+    stroke-dasharray: 400%;
+    stroke-dashoffset:900;
+  }
+
+  &:hover svg rect {
+    stroke-width: 6;
+    stroke-dashoffset: 0;
   }
 
   // .menu-header {
