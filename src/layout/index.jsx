@@ -7,7 +7,7 @@ import logo from "../assets/code_chefs_transparent.svg";
 import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.png";
 import germangamboa from "../assets/germangamboa.jpeg";
-import Menu from "./Menu";
+// import Menu from "./Menu";
 import Navbar from "../components/Navbar"
 import favicon from "../../static/logos/favicon.png"
 
