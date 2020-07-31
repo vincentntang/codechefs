@@ -2,13 +2,13 @@ import React, {useState} from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import "../styles/main.scss";
-import dinerLogo from "../assets/diner_logo.svg";
-import logo from "../assets/code_chefs_transparent.svg";
-import sampleMp3 from "../assets/file_example.mp3";
+// import dinerLogo from "../assets/diner_logo.svg";
+// import logo from "../assets/code_chefs_transparent.svg";
+// import sampleMp3 from "../assets/file_example.mp3";
 // import vincentntang from "../assets/vincentntang.jpeg";
 // import germangamboa from "../assets/germangamboa.jpeg";
 // import Menu from "./Menu";
-import Navbar from "../components/Navbar"
+import NavbarHero from "../components/NavbarHero"
 import favicon from "../../static/logos/favicon.png"
 
 const MainLayout = (props) => {
@@ -21,7 +21,7 @@ const MainLayout = (props) => {
         <link rel="shortcut icon" type="image/png" href={favicon} />
       </Helmet>
       {/* {children} */}
-      <Navbar/>
+      <NavbarHero/>
       {children}
         {/* <div className="custom-menu">
           <div className="custom-menu__header">
