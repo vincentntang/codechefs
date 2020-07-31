@@ -21,7 +21,7 @@ const MainLayout = (props) => {
         <link rel="shortcut icon" type="image/png" href={favicon} />
       </Helmet>
       {/* {children} */}
-      <NavbarHero/>
+      <NavbarHero props={props}/>
       {children}
         {/* <div className="custom-menu">
           <div className="custom-menu__header">

@@ -6,6 +6,7 @@ import UserLinks from "./UserLinks";
 // import logo2svg from "../assets/Artboard2.svg";
 // import logo2svga from "../assets/Artboard2a.svg";
 import logo3svg from "../assets/code_chefs_art3.svg";
+import { Location } from '@reach/router';
 
 const Navbar = (props) => {
   // const { config } = props;
@@ -23,13 +24,15 @@ const Navbar = (props) => {
       </div>
       <nav className="cc-navbar">
         <div className="cc-navitem">
-          <Link to="/">Episodes</Link>
+          <Link to="/" activeClassName="active-link">
+            Episodes
+          </Link>
         </div>
         <div className="cc-navitem">
-          <Link to="/about">About</Link>
+          <Link to="/about" activeClassName="active-link">About</Link>
         </div>
         <div className="cc-navitem">
-          <Link to="/support">Support</Link>
+          <Link to="/support" activeClassName="active-link">Support</Link>
         </div>
       </nav>
     </section>
