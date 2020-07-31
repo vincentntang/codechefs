@@ -35,8 +35,8 @@ const Menu = (props) => {
   useEffect(() => {
   },[])
 
-  return (<section className="cc-container mt-30">
-    <h1 className="text-center mb-2">Episodes</h1>
+  return (<section className="cc-container">
+    {/* <h1 className="text-center mb-2">Episodes</h1> */}
       {/* <div className="menu-header">
         <hr />
         <hr />

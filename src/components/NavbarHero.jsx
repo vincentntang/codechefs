@@ -23,7 +23,7 @@ const Navbar = (props) => {
       </div>
       <nav className="cc-navbar">
         <div className="cc-navitem">
-          <Link to="/">Home</Link>
+          <Link to="/">Episodes</Link>
         </div>
         <div className="cc-navitem">
           <Link to="/about">About</Link>

@@ -16,7 +16,7 @@
 }
 .cc-card {
   border: 3px solid black;
-  border-radius: 20px;
+  border-radius: 10px;
   // background-color: hsl(10,10,10);
   background-color: hsl(0,0,10);
   width: 100%;
@@ -26,8 +26,9 @@
  * HEADER SPECIFIC
  */
 .cc-logo-hero {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
   border-top-right-radius: 3px;
   border-top-left-radius:3px;
   // background-color: black;
@@ -46,6 +47,8 @@
   width: 100%;
   justify-content: center ;
   background-color: $gray-8;
+  margin-bottom: 30px;
+  border-radius: 5px;
 }
 // .cc-navbar-background {
 //   background-color: rgba(black,0.8);
@@ -147,7 +150,7 @@
   // }
   transition: 1.2s;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 
   svg {
