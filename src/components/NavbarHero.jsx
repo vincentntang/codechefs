@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
 import UserLinks from "./UserLinks";
-import logo from "../assets/code_chefs_transparent.svg";
+// import logo from "../assets/code_chefs_transparent.svg";
+// import logo2 from "../assets/Artboard2.png";
+// import logo2svg from "../assets/Artboard2.svg";
+// import logo2svga from "../assets/Artboard2a.svg";
+import logo3svg from "../assets/code_chefs_art3.svg";
 
 const Navbar = (props) => {
   // const { config } = props;
@@ -14,7 +18,8 @@ const Navbar = (props) => {
     <>
     <section className="cc-container">
       <div className="cc-logo-hero">
-        <img src={logo} alt="logo"/>
+        {/* <img src={logo} alt="logo"/> */}
+        <img src={logo3svg} alt="logo"/>
       </div>
       <nav className="cc-navbar">
         <div className="cc-navitem">
