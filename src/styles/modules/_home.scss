@@ -82,6 +82,7 @@
 
 .cc-portraits {
   display: flex;
+  flex-wrap: wrap;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top: 1px dotted white;
@@ -100,7 +101,7 @@
   flex-direction: column;
   align-items: center;
   @include screen-max(768px){
-    // flex-direction: column;
+    width: 100%;
   }
   img {
     width: 100%;
