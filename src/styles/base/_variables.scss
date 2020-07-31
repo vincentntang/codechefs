@@ -1,4 +1,6 @@
 // Color Pallete based on https://coolors.co/0b132b-1c2541-3a506b-5bc0be-6fffe9;
+// 1 - 10
+// 10 is darkest, 1 is lightest
 $black: hsl(225, 40, 18);
 $blue-8: hsl(225, 40, 18);
 $blue-5: hsl(213, 30, 32);
@@ -8,8 +10,14 @@ $teal-5: hsl(171, 100, 72);
 // Additional Colors
 $beige-5: rgb(248,247,227);
 $pink-5: rgb(240,80,113);
-$gray-8: rgb(58,58,60);
-$gray-5: rgb(126,127,128);
+$gray-3: hsl(0,0,90);
+$gray-4: hsl(0,0,70);
+$gray-5: hsl(0,0,50);
+$gray-6: hsl(0,0,40);
+$gray-7: hsl(0,0,30);
+$gray-8: hsl(0,0,20);
+$gray-9: hsl(0,0,15);
+$gray-10: hsl(0,0,10);
 
 // More Colors
 $dark-9: rgb(19,20,23);
