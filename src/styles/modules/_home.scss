@@ -32,12 +32,11 @@
   border-top-left-radius:3px;
   // background-color: black;
   img {
+    padding: 0px 20px;
     background-color: hsla(0,0,0,0.5);
-  }
-  img {
+    width: 100%;
     display: block;
     margin: 0 auto;
-    width: 500px;
     text-align: center;
   }
 }
