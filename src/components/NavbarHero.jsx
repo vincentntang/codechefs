@@ -22,6 +22,9 @@ const Navbar = (props) => {
         {/* <img src={logo} alt="logo"/> */}
         <img src={logo3svg} alt="logo"/>
       </div>
+      <div className="cc-hero-description text-center">
+        <p>Vincent Tang and German Gamboa are hungry web developers sharing what they've learned in the software field! Subscribe to the newsletter for more!</p>
+      </div>
       <nav className="cc-navbar">
         <div className="cc-navitem">
           <Link to="/" activeClassName="active-link">
@@ -35,6 +38,7 @@ const Navbar = (props) => {
           <Link to="/support" activeClassName="active-link">Support</Link>
         </div>
       </nav>
+   
     </section>
     {/* <div className="cc-navbar-background">
       <div className="cc-container"> */}

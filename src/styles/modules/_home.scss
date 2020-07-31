@@ -41,6 +41,9 @@
     text-align: center;
   }
 }
+.cc-hero-description {
+  font-size: 20px;
+}
 .cc-navbar {
   display: flex;
   // background-color: black;
@@ -48,7 +51,7 @@
   justify-content: center ;
   background-color: $gray-5;
   // background-color: teal;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   border-radius: 5px;
   padding-bottom: 5px;
 }
@@ -188,7 +191,7 @@
   // }
   transition: 1.2s;
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
 
   svg {
@@ -206,7 +209,7 @@
     width: 100%;
     height: 100%;
     stroke-width:0;
-    transition: 1.2s;
+    transition: 1.5s;
     stroke-dasharray: 400%;
     stroke-dashoffset:900;
   }
