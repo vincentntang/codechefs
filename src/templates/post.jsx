@@ -23,26 +23,28 @@ export default class PostTemplate extends React.Component {
     return (
       <Layout>
         <section className="cc-container mt-15 post-container">
-          <div className="cc-card cc-padding">
-            <Helmet>
-              <title>{`${post.title} | ${config.siteTitle}`}</title>
-            </Helmet>
-            <SEO postPath={slug} postNode={postNode} postSEO />
-            {/* Start - Test Example */}
-            {/* <div>
-              <p>Hello world</p> */}
-              {/* <img src={post.cover} alt="Arnold S"/> */}
-            {/* </div> */}
-            {/* End - Test Example */}
-            <div>
-              <h1>{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-              <div className="post-meta">
-                <PostTags tags={post.tags} />
-                <SocialLinks postPath={slug} postNode={postNode} />
+          <div className="cc-card">
+            <div className="cc-padding">
+              <Helmet>
+                <title>{`${post.title} | ${config.siteTitle}`}</title>
+              </Helmet>
+              <SEO postPath={slug} postNode={postNode} postSEO />
+              {/* Start - Test Example */}
+              {/* <div>
+                <p>Hello world</p> */}
+                {/* <img src={post.cover} alt="Arnold S"/> */}
+              {/* </div> */}
+              {/* End - Test Example */}
+              <div>
+                <h1>{post.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                <div className="post-meta">
+                  <PostTags tags={post.tags} />
+                  <SocialLinks postPath={slug} postNode={postNode} />
+                </div>
+                <UserInfo config={config} />
+                {/* <Disqus postNode={postNode} /> */}
               </div>
-              <UserInfo config={config} />
-              {/* <Disqus postNode={postNode} /> */}
             </div>
           </div>
         </section>

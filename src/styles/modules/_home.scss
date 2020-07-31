@@ -20,6 +20,18 @@
   // background-color: hsl(10,10,10);
   background-color: $gray-10;
   width: 100%;
+  position: relative;
+  @include screen-max(576px){
+    &:before {
+      width: 100%;
+      content: "";
+      position: absolute;
+      background-color: teal;
+      height: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  }
 }
 
 /**
@@ -184,15 +196,17 @@
 .podcast-wrapper {
   cursor: pointer;
   position: relative;
-  padding-left: 80px;
+  // padding-left: 80px;
   // &:hover {
   //   transition: 0.3s;
   //   border: 2px solid white;
   // }
   transition: 1.2s;
-  &:hover {
-    transform: scale(1.01);
-    background-color: $gray-8;
+  @include screen-min(577px){
+    &:hover {
+      transform: scale(1.01);
+      background-color: $gray-8;
+    }  
   }
 
   svg {
@@ -260,8 +274,8 @@
 }
 
 .layout-container {
-  @include screen-max(768px){
-    padding: 30px;
+  @include screen-max(576px){
+    padding: 15px;
   }
 }
 
