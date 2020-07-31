@@ -8,8 +8,8 @@ import config from "../../data/SiteConfig";
 import dinerLogo from "../assets/diner_logo.svg";
 import logo from "../assets/code_chefs_transparent.svg";
 import sampleMp3 from "../assets/file_example.mp3";
-import vincentntang from "../assets/vincentntang.png";
-import germangamboa from "../assets/germangamboa.jpeg";
+// import vincentntang from "../assets/vincentntang.jpeg";
+// import germangamboa from "../assets/germangamboa.jpeg";
 
 /*
  * Landing Page Never Executes if postPerPage on siteConfig.js > 0

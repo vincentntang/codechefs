@@ -16,7 +16,7 @@
 }
 .cc-card {
   border: 3px solid black;
-  border-radius: 20px;
+  border-radius: 10px;
   // background-color: hsl(10,10,10);
   background-color: hsl(0,0,10);
   width: 100%;
@@ -26,52 +26,96 @@
  * HEADER SPECIFIC
  */
 .cc-logo-hero {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
   border-top-right-radius: 3px;
   border-top-left-radius:3px;
   // background-color: black;
   img {
+    // padding: 0px 20px;
     background-color: hsla(0,0,0,0.5);
-  }
-  img {
+    width: 100%;
     display: block;
     margin: 0 auto;
-    width: 500px;
     text-align: center;
   }
 }
+.cc-hero-description {
+  font-size: 20px;
+}
 .cc-navbar {
   display: flex;
-  height: 40px;
   // background-color: black;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center ;
+  background-color: $gray-5;
+  // background-color: teal;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  padding-bottom: 5px;
 }
-.cc-navbar-background {
-  background-color: rgba(black,0.8);
-  position: fixed;
-  width: 100%;
-  z-index: 50;
-  top: 0;
-}
-.cc-navitem:first-of-type {
-  flex-grow: 1;
-}
+// .cc-navbar-background {
+//   background-color: rgba(black,0.8);
+//   position: fixed;
+//   width: 100%;
+//   z-index: 50;
+//   top: 0;
+// }
+// .cc-navitem:first-of-type {
+// }
+// .cc-navitem {
+
+// }
 .cc-navitem {
-
-}
-.cc-navlink {
-  display: inline-block;
-  padding: 10px;
-  height: 100%;
-  cursor: pointer;
-  transition: 0.3s;
-  &:hover {
-    background-color: gray;
+  font-size: 24px;
+  position: relative;
+  a{
+    display: inline-block;
+    padding: 10px;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: gray;
+    }
   }
+  a.active-link {
+    // text-decoration: underline;
+    transition: 0.3s;
+  }
+  // a:hover {
+  //   color: white;
+  // }
+  a:not(.active-link):before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 2px;
+    bottom: 4px;
+    left: 10px;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  a.active-link:before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 3px;
+    bottom: 4px;
+    left: 10px;
+    background-color: white;
+    z-index: 5;
 
+  }
+  a:hover:before{
+    visibility: visible;
+    transform: scaleX(1);  
+  }
 }
+
 
 /**
  * THE PEOPLE AND INTRO
@@ -83,6 +127,7 @@
 
 .cc-portraits {
   display: flex;
+  flex-wrap: wrap;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top: 1px dotted white;
@@ -101,7 +146,7 @@
   flex-direction: column;
   align-items: center;
   @include screen-max(768px){
-    // flex-direction: column;
+    width: 100%;
   }
   img {
     width: 100%;
@@ -146,7 +191,7 @@
   // }
   transition: 1.2s;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
 
   svg {
@@ -164,7 +209,7 @@
     width: 100%;
     height: 100%;
     stroke-width:0;
-    transition: 1.2s;
+    transition: 1.5s;
     stroke-dasharray: 400%;
     stroke-dashoffset:900;
   }
@@ -214,6 +259,9 @@
 }
 
 .layout-container {
+  @include screen-max(768px){
+    padding: 30px;
+  }
 }
 
 .footer {

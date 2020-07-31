@@ -5,8 +5,8 @@ import "../styles/main.scss";
 import dinerLogo from "../assets/diner_logo.svg";
 import logo from "../assets/code_chefs_transparent.svg";
 import sampleMp3 from "../assets/file_example.mp3";
-import vincentntang from "../assets/vincentntang.png";
-import germangamboa from "../assets/germangamboa.jpeg";
+// import vincentntang from "../assets/vincentntang.jpeg";
+// import germangamboa from "../assets/germangamboa.jpeg";
 import Audio from "../components/audio/Audio";
 import fakeData from "./fakeData";
 import PropTypes from "prop-types";
@@ -35,8 +35,8 @@ const Menu = (props) => {
   useEffect(() => {
   },[])
 
-  return (<section className="cc-container mt-30">
-    <h1 className="text-center mb-2">Episodes</h1>
+  return (<section className="cc-container">
+    {/* <h1 className="text-center mb-2">Episodes</h1> */}
       {/* <div className="menu-header">
         <hr />
         <hr />
