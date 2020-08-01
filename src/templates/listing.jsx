@@ -11,7 +11,7 @@ import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.jpeg";
 import germangamboa from "../assets/germangamboa.jpeg";
 // import Menu from "../layout/Menu";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 class Listing extends React.Component {
   renderPaging() {
@@ -24,7 +24,8 @@ class Listing extends React.Component {
     return (
       <div className="paging-container">
         {!isFirstPage && <Link to={prevPage}>Previous</Link>}
-        {[...Array(pageCount)].map((_val, index) => {
+        {/* Controls pagination */}
+        {/* {[...Array(pageCount)].map((_val, index) => {
           const pageNum = index + 1;
           return (
             <Link
@@ -35,7 +36,7 @@ class Listing extends React.Component {
             </Link>
           );
         })}
-        {!isLastPage && <Link to={nextPage}>Next</Link>}
+        {!isLastPage && <Link to={nextPage}>Next</Link>} */}
       </div>
     );
   }
@@ -55,7 +56,7 @@ class Listing extends React.Component {
             <section className="cc-container">
               {this.renderPaging()}
             </section>
-            <Footer config={config} />
+            {/* <Footer config={config} /> */}
           </div>
         </div>
       </Layout>

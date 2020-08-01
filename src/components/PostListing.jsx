@@ -45,29 +45,31 @@ const PostListing = props => {
         {postList.map((post, index) => {
           const shortDate = new Date(post.date).toLocaleDateString('en-US');
           return (
-            <div key={index} className="podcast-wrapper cc-padding cc-card mb-7">
-              <svg>
-                <rect>
-                  
-                </rect>
-              </svg>
-              <Link to={post.path} key={`podcast-${index}`} className="podcast-episode">
-                <div className="podcast-title">{post.title}</div>
-                <p>{shortDate}</p>
-                <p className="mt-0 short-description">{post.shortDescription}</p>
-                {/* <Audio 
-                  id={index} 
-                  index={index} 
-                  mp3={item.audioFile} 
-                  currentTrack={currentTrack} 
-                  // setCurrentTrack={setCurrentTrack}
-                  // currentVolume={currentVolume}
-                  // setCurrentVolume={setCurrentVolume}
-                  isPlaying={isPlaying}
-                  setIsPlaying={setIsPlaying}
-                  setTrackPlayed={setTrackPlayed}
-                /> */}
-              </Link>
+            <div key={index} className="podcast-wrapper cc-card mb-7">
+              <div className="cc-padding">
+                <svg>
+                  <rect>
+                    
+                  </rect>
+                </svg>
+                <Link to={post.path} key={`podcast-${index}`} className="podcast-episode">
+                  <div className="podcast-title">{post.title}</div>
+                  <p>{shortDate}</p>
+                  <p className="mt-0 short-description">{post.shortDescription}</p>
+                  {/* <Audio 
+                    id={index} 
+                    index={index} 
+                    mp3={item.audioFile} 
+                    currentTrack={currentTrack} 
+                    // setCurrentTrack={setCurrentTrack}
+                    // currentVolume={currentVolume}
+                    // setCurrentVolume={setCurrentVolume}
+                    isPlaying={isPlaying}
+                    setIsPlaying={setIsPlaying}
+                    setTrackPlayed={setTrackPlayed}
+                  /> */}
+                </Link>
+              </div>
             </div>
           )
         })}

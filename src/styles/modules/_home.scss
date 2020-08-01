@@ -18,8 +18,20 @@
   border: 3px solid black;
   border-radius: 10px;
   // background-color: hsl(10,10,10);
-  background-color: hsl(0,0,10);
+  background-color: $gray-10;
   width: 100%;
+  position: relative;
+  @include screen-max(576px){
+    &:before {
+      width: 100%;
+      content: "";
+      position: absolute;
+      background-color: teal;
+      height: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  }
 }
 
 /**
@@ -49,7 +61,7 @@
   // background-color: black;
   width: 100%;
   justify-content: center ;
-  background-color: $gray-5;
+  background-color: hsl(240,1,30);
   // background-color: teal;
   margin-bottom: 40px;
   border-radius: 5px;
@@ -76,9 +88,9 @@
     height: 100%;
     cursor: pointer;
     transition: 0.3s;
-    &:hover {
-      background-color: gray;
-    }
+    // &:hover {
+    //   background-color: gray;
+    // }
   }
   a.active-link {
     // text-decoration: underline;
@@ -184,14 +196,17 @@
 .podcast-wrapper {
   cursor: pointer;
   position: relative;
-  padding-left: 80px;
+  // padding-left: 80px;
   // &:hover {
   //   transition: 0.3s;
   //   border: 2px solid white;
   // }
   transition: 1.2s;
-  &:hover {
-    transform: scale(1.01);
+  @include screen-min(577px){
+    &:hover {
+      transform: scale(1.01);
+      background-color: $gray-8;
+    }  
   }
 
   svg {
@@ -205,17 +220,17 @@
   }
 
   svg rect {
-    stroke: white;
+    stroke: $gray-4;
     width: 100%;
     height: 100%;
     stroke-width:0;
-    transition: 1.5s;
+    transition: 1s;
     stroke-dasharray: 400%;
     stroke-dashoffset:900;
   }
 
   &:hover svg rect {
-    stroke-width: 6;
+    stroke-width: 4;
     stroke-dashoffset: 0;
   }
 
@@ -259,8 +274,9 @@
 }
 
 .layout-container {
-  @include screen-max(768px){
-    padding: 30px;
+  min-height: 800px;
+  @include screen-max(576px){
+    padding: 15px;
   }
 }
 
@@ -276,4 +292,21 @@
 // Force a min height on all posts if not enough content
 .post-container {
   min-height: calc(100vh - 350px);
+}
+
+
+.newsletter-link {
+  color: $teal-7;
+  font-weight: bold;
+}
+
+.post-container,
+.post-listing-container,
+.about-container {
+  min-height: 800px;
+  margin-bottom: 50px;
+}
+
+.post-container a {
+  color: $teal-7;
 }
