@@ -274,6 +274,7 @@
 }
 
 .layout-container {
+  min-height: 800px;
   @include screen-max(576px){
     padding: 15px;
   }
@@ -291,4 +292,15 @@
 // Force a min height on all posts if not enough content
 .post-container {
   min-height: calc(100vh - 350px);
+}
+
+
+.newsletter-link {
+  color: $teal-7;
+  font-weight: bold;
+}
+
+.post-listing-container,
+.about-container {
+  min-height: 600px;
 }

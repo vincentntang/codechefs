@@ -23,10 +23,10 @@ const Navbar = (props) => {
         <img src={logo3svg} alt="logo"/>
       </div>
       <div className="social-links">
-        
+
       </div>
       <div className="cc-hero-description text-center">
-        <p>Vincent Tang and German Gamboa discuss hot topics in webdevelopment! Sign up for our newsletter</p>
+        <p>Vincent Tang and German Gamboa discuss hot topics in webdevelopment! Sign up for our <a className="newsletter-link" href="https://tinyletter.com/vincentntang">NEWSLETTER</a></p>
       </div>
       <nav className="cc-navbar">
         <div className="cc-navitem">

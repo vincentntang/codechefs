@@ -6,12 +6,12 @@ import config from "../../data/SiteConfig";
 const AboutPage = () => {
   return (
     <Layout>
-      <div className="about-container">
+      <div className="about-container cc-container">
         <Helmet title={`About | ${config.siteTitle}`} />
         <div className="cc-card">
           <div className="cc-padding cc-intro">
-            <p className="my-0"><span>🎤 </span>Code chefs is a podcast for developers seeking to learn more about webdevelopment. Whether your a fresh out of bootcamp graduate, or a fullstack veteran,
-              we do topics ranging for all levels. As developers who love learning, we hope you enjoy the content here</p>
+            <p>Follow us on <a className="newsletter-link" href="https://twitter.com/codechefsdev">twitter!</a></p>
+            <p>Subscribe to our <a className="newsletter-link" href="https://tinyletter.com/vincentntang">newsletter</a> for future content!</p>
           </div>
         </div>
       </div>
