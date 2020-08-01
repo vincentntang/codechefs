@@ -7,7 +7,7 @@ import Disqus from "../components/Disqus";
 import PostTags from "../components/PostTags";
 import SocialLinks from "../components/SocialLinks";
 import SEO from "../components/SEO";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
 
 export default class PostTemplate extends React.Component {
@@ -38,17 +38,17 @@ export default class PostTemplate extends React.Component {
               <div>
                 <h1>{post.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-                <div className="post-meta">
+                {/* <div className="post-meta">
                   <PostTags tags={post.tags} />
                   <SocialLinks postPath={slug} postNode={postNode} />
                 </div>
-                <UserInfo config={config} />
+                <UserInfo config={config} /> */}
                 {/* <Disqus postNode={postNode} /> */}
               </div>
             </div>
           </div>
         </section>
-        <Footer config={config} />
+        {/* <Footer config={config} /> */}
       </Layout>
     );
   }

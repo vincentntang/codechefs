@@ -300,7 +300,13 @@
   font-weight: bold;
 }
 
+.post-container,
 .post-listing-container,
 .about-container {
-  min-height: 600px;
+  min-height: 800px;
+  margin-bottom: 50px;
+}
+
+.post-container a {
+  color: $teal-7;
 }

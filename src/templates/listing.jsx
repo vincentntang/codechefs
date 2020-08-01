@@ -11,7 +11,7 @@ import sampleMp3 from "../assets/file_example.mp3";
 import vincentntang from "../assets/vincentntang.jpeg";
 import germangamboa from "../assets/germangamboa.jpeg";
 // import Menu from "../layout/Menu";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 class Listing extends React.Component {
   renderPaging() {
@@ -56,7 +56,7 @@ class Listing extends React.Component {
             <section className="cc-container">
               {this.renderPaging()}
             </section>
-            <Footer config={config} />
+            {/* <Footer config={config} /> */}
           </div>
         </div>
       </Layout>
