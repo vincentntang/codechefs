@@ -15,9 +15,9 @@ const config = {
   dateFormat: "MM/DD/YYYY", // Date format for display.
   postsPerPage: 9999, // Amount of posts displayed per listing page.
   userName: "Code Chefs", // Username to display in the author segment.
-  userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment
+  userEmail: "vincentntang@gmail.com", // Email used for RSS feed's author segment
   userTwitter: "codechefsdev", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "North Pole, Earth", // User location to display in the author segment.
+  userLocation: "Florida, USA", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
