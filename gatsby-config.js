@@ -135,6 +135,16 @@ module.exports = {
           }
         }
       `,
+      setup: options => ({
+        ...options,
+        custom_namespaces: {
+          itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+        },
+        custom_elements: [
+          { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
+          { 'itunes:explicit': 'clean'}
+        ],
+      }),
         feeds: [
           {
             serialize(ctx) {
