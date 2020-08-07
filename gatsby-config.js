@@ -142,7 +142,42 @@ module.exports = {
         },
         custom_elements: [
           { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
-          { 'itunes:explicit': 'clean'}
+          { 'itunes:explicit': 'clean'},
+          { 'itunes:subtitle': "Podcast for Hungry Web Developers"},
+          { 'itunes:summary': "Fullstack Developers Vincent Tang and German Gamboa deep dive into topics in web development! They discuss from their own set of experience, and what life is like in tech. Topics range from Javascript, React, Backend Development, Soft Skills, and more! "},
+          { 'itunes:owner': [
+            {'itunes:name': "Vincent Tang"},
+            {'itunes:email': "vincentntang@gmail.com"}
+          ]},
+          {'itunes:category': [
+            {_attr: {
+              text: 'News'
+            }},
+            {'itunes:category': {
+              _attr: {
+                text: 'Tech News'
+              }
+            }}
+          ]},
+          {'itunes:category': [
+            {_attr: {
+              text: 'Technology'
+            }},
+          ]},
+          {'itunes:category': {
+            _attr: {
+              text: 'Education'
+            }
+          }},
+          {'itunes:type': "episodic"},
+          {'itunes:image': [
+            {_attr: {
+              href: 'no-logo-yet.jpg'
+            }},
+          ]},
+          {
+            'itunes:keywords':"javascript, webdevelopment,html,css,js"
+          },
         ],
       }),
         feeds: [
