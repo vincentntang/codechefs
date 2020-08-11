@@ -193,7 +193,19 @@ module.exports = {
                 guid: rssMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
-                  { author: config.userEmail }
+                  // { author: config.userEmail },
+                  { "itunes:author":"Vincent Tang and German Gamboa - Fullstack Developers"},
+                  { "itunes:subtitle": edge.node.excerpt},
+                  { "itunes:duration": 1234},
+                  {"itunes:explicit": "no"},
+                  {'enclosure': [
+                    {_attr: {
+                      url: '12345',
+                      length: "123123123",
+                      type: "audio/mpeg",
+                    }},
+                  ]},
+                  // Do some bit rate calculations   
                 ]
               }));
             },
