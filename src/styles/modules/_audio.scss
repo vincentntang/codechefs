@@ -73,17 +73,28 @@
   .cc-speed {
     border-left: 1px solid black;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .cc-speed-display {
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
   }
   .cc-volume {
     width: 200px; // temp
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     border-left: 1px solid black;
     cursor: pointer;
     .cc-volume-bar-wrapper {
       display: flex;
       align-items: flex-end;
-      height: 100%;
+      height: 50px;
       width: 100%;
       .volume-bar {
         height: 100%;

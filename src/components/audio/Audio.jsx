@@ -131,12 +131,12 @@ const Audio = ({
 
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
         <div className="cc-speed" onClick={()=>changeAudioSpeed()}>
-          <div>Speed</div>
-          <div>{curSpeed}</div>
+          <p className="my-0">Speed</p>
+          <div className="cc-speed-display">{curSpeed}x</div>
         </div>
    
         <div className="cc-volume">
-          <div>Volume</div>
+          <p className="my-0">Volume</p>
           {/* <div>{curVolume}</div> */}
           <div className="cc-volume-bar-wrapper">
             {volumeLevels.map((volume,index) => {
