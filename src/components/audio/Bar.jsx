@@ -15,7 +15,7 @@ export default function Bar(props) {
 
   function calcClickedTime(e) {
     const clickPositionInPage = e.pageX;
-    const bar = document.querySelector(".bar__progress");
+    const bar = document.querySelector(".bar");
     const barStart = bar.getBoundingClientRect().left + window.scrollX;
     const barWidth = bar.offsetWidth;
     const clickPositionInBar = clickPositionInPage - barStart;
@@ -24,6 +24,7 @@ export default function Bar(props) {
   }
 
   function handleTimeDrag(e) {
+    console.log(e,"Eee");
     onTimeUpdate(calcClickedTime(e));
 
     const updateTimeOnMove = eMove => {
@@ -38,19 +39,40 @@ export default function Bar(props) {
   }
 
   return (
-    <div className="bar">
-      {/* <span className="bar__time">{formatDuration(curTime)}</span> */}
+    // <div className="bar" >
+    //   {/* <span className="bar__time">{formatDuration(curTime)}</span> */}
+    //   <div
+    //     className="bar__progress"
+    //     onMouseDown={e => handleTimeDrag(e)}
+    //     style={{
+    //       // background: `linear-gradient(to right, orange ${curPercentage}%, white 0)`
+    //       // background: `linear-gradient(30deg, #d2ff52 50%, #03fff3 100%)`
+    //       width:'${curPercentage}%'
+    //     }}
+    //     // onMouseDown={e => handleTimeDrag(e)}
+    //   >
+    //     <span
+    //       className="bar__progress__knob"
+    //       style={{ left: `${curPercentage - 2}%` }}
+    //     />
+    //   </div>
+    //   {/* <span className="bar__time">{formatDuration(duration)}</span> */}
+    // </div>
+    <div className="bar" onMouseDown={e => handleTimeDrag(e)}>
+    {/* <span className="bar__time">{formatDuration(curTime)}</span> */}
       <div
         className="bar__progress"
         style={{
-          background: `linear-gradient(to right, orange ${curPercentage}%, white 0)`
+          // background: `linear-gradient(to right, orange ${curPercentage}%, white 0)`
+          // background: `linear-gradient(30deg, #d2ff52 50%, #03fff3 100%)`
+          width:`${curPercentage}%`
         }}
-        onMouseDown={e => handleTimeDrag(e)}
+        // onMouseDown={e => handleTimeDrag(e)}
       >
-        <span
+        {/* <span
           className="bar__progress__knob"
           style={{ left: `${curPercentage - 2}%` }}
-        />
+        /> */}
       </div>
       {/* <span className="bar__time">{formatDuration(duration)}</span> */}
     </div>

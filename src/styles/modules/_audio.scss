@@ -141,11 +141,44 @@
   //   }
   // }
 
+  // .bar {
+  //   user-select: none;
+  //   width: 100%;
+  //   display: flex;
+  //   align-items: center;
+
+  //   .bar__time {
+  //     color: white;
+  //     font-size: 16px;
+  //   }
+
+  //   .bar__progress {
+  //     flex: 1;
+  //     border-radius: 5px;
+  //     margin: 0 20px;
+  //     height: 10px;
+  //     display: flex;
+  //     align-items: center;
+  //     cursor: pointer;
+
+  //     .bar__progress__knob {
+  //       position: relative;
+  //       height: 16px;
+  //       width: 16px;
+  //       border: 1.5px solid white;
+  //       border-radius: 50%;
+  //       background-color: orange;
+  //     }
+  //   }
+  // }
+
   .bar {
     user-select: none;
     width: 100%;
+    height: 20px;
+    background-color: white;
     display: flex;
-    align-items: center;
+    position: relative;
 
     .bar__time {
       color: white;
@@ -153,22 +186,24 @@
     }
 
     .bar__progress {
-      flex: 1;
-      border-radius: 5px;
-      margin: 0 20px;
-      height: 10px;
+      // flex: 1;
+      // border-radius: 5px;
+      // margin: 0 20px;
+      position: absolute;
+      height: 20px;
       display: flex;
       align-items: center;
+      background: linear-gradient(30deg, orange 0%, #03fff3 100%);
       cursor: pointer;
 
-      .bar__progress__knob {
-        position: relative;
-        height: 16px;
-        width: 16px;
-        border: 1.5px solid white;
-        border-radius: 50%;
-        background-color: orange;
-      }
+      // .bar__progress__knob {
+      //   position: relative;
+      //   height: 16px;
+      //   width: 16px;
+      //   border: 1.5px solid white;
+      //   border-radius: 50%;
+      //   background-color: orange;
+      // }
     }
   }
 
