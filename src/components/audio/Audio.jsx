@@ -118,7 +118,7 @@ const Audio = ({
       </audio>
       {/* <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" /> */}
       <div className="controls">
-        <div className="cc-play" onClick={() => setPlaying(!playing)}>
+        <div className="cc-play noselect" onClick={() => setPlaying(!playing)}>
           <div className="cc-play_button" >
             <img src={playing ? pauseSvg: playSvg} alt="play button"/>
           </div>
@@ -130,12 +130,12 @@ const Audio = ({
         </div>
 
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
-        <div className="cc-speed" onClick={()=>changeAudioSpeed()}>
+        <div className="cc-speed noselect" onClick={()=>changeAudioSpeed()}>
           <p className="my-0">Speed</p>
           <div className="cc-speed-display">{curSpeed}x</div>
         </div>
    
-        <div className="cc-volume">
+        <div className="cc-volume noselect">
           <p className="my-0">Volume</p>
           {/* <div>{curVolume}</div> */}
           <div className="cc-volume-bar-wrapper">
