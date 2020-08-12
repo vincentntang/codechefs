@@ -21,6 +21,9 @@ const Audio = ({
   const [curTime, setCurTime] = useState();
   const [playing, setPlaying] = useState(false);
   const [clickedTime, setClickedTime] = useState();
+  const [curSpeed, setCurSpeed] = useState(1);
+  
+  
 
   // const setTrackPlayed = (index) => {
   //   if(index === currentTrack && isPlaying) {
@@ -41,7 +44,16 @@ const Audio = ({
   // }
 
   
-  const playAudio =() => {
+  function changeAudioSpeed () {
+    const playBackRates = [0.75,1,1.25,1.5,1.75,2,2.25,2.5];
+    const index = playBackRates.indexOf(curSpeed);
+    if(index==-1){
+      setCurSpeed(1);
+    } else if (index === playBackRates.length - 1){
+      setCurSpeed(playBackRates[0]);
+    } else {
+      setCurSpeed(playBackRates[index+1]);
+    }
     
   }
 
@@ -67,6 +79,7 @@ const Audio = ({
     } else {
       audio.pause();
     }
+    audio.playbackRate=curSpeed;
     playing ? audio.play() : audio.pause();
 
     if (clickedTime && clickedTime !== curTime) {
@@ -103,8 +116,9 @@ const Audio = ({
         </div>
 
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
-        <div className="cc-speed">
-          <p>Speed</p>
+        <div className="cc-speed" onClick={()=>changeAudioSpeed()}>
+          <div>Speed</div>
+          <div>{curSpeed}</div>
         </div>
         <div className="cc-volume">
           <p>Volume</p>
