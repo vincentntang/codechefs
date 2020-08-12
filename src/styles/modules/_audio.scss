@@ -82,6 +82,7 @@
     cursor: pointer;
     .cc-volume-bar-wrapper {
       display: flex;
+      align-items: flex-end;
       height: 100%;
       width: 100%;
       .volume-bar {
@@ -92,6 +93,13 @@
         position: relative;
         &:first-of-type {
           margin-left: 0px;
+        }
+        &:hover {
+          height: 100%;
+          transition: 0.2s;
+          &~.volume-bar {
+            height: calc(100% - 5px);
+          }
         }
       }
       .volume-bar.volume-bar-active {

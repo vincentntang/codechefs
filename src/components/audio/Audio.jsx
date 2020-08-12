@@ -137,7 +137,7 @@ const Audio = ({
    
         <div className="cc-volume">
           <div>Volume</div>
-          <div>{curVolume}</div>
+          {/* <div>{curVolume}</div> */}
           <div className="cc-volume-bar-wrapper">
             {volumeLevels.map((volume,index) => {
               return (
