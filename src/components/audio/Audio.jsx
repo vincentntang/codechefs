@@ -15,6 +15,28 @@ const Audio = ({
   const [playing, setPlaying] = useState(false);
   const [clickedTime, setClickedTime] = useState();
 
+  // const setTrackPlayed = (index) => {
+  //   if(index === currentTrack && isPlaying) {
+  //     setIsPlaying(false);
+  //   } else {
+  //     setIsPlaying(true);
+  //   }
+  //   setCurrentTrack(index);
+  // }
+
+  // const setTrackPlayed = (index) => {
+  //   if(index === currentTrack && isPlaying) {
+  //     setIsPlaying(false);
+  //   } else {
+  //     setIsPlaying(true);
+  //   }
+  //   setCurrentTrack(index);
+  // }
+
+  const playAudio =() => {
+
+  }
+
   useEffect(() => {
     const audio = document.getElementById(index);
 
@@ -37,7 +59,7 @@ const Audio = ({
     } else {
       audio.pause();
     }
-    // playing ? audio.play() : audio.pause();
+    playing ? audio.play() : audio.pause();
 
     if (clickedTime && clickedTime !== curTime) {
       audio.currentTime = clickedTime;
@@ -61,7 +83,7 @@ const Audio = ({
       </audio>
       {/* <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" /> */}
       <div className="controls">
-        <button className="player__button" onClick={() => setTrackPlayed(index)}>
+        <button className="player__button" onClick={() => setPlaying(!playing)}>
           <div style={{ color: "white" }}> {currentTrack === index && isPlaying ? "PAUSE" : "START"}</div>
         </button>
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
