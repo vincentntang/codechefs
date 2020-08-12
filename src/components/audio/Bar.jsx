@@ -39,7 +39,7 @@ export default function Bar(props) {
 
   return (
     <div className="bar">
-      <span className="bar__time">{formatDuration(curTime)}</span>
+      {/* <span className="bar__time">{formatDuration(curTime)}</span> */}
       <div
         className="bar__progress"
         style={{
@@ -52,7 +52,7 @@ export default function Bar(props) {
           style={{ left: `${curPercentage - 2}%` }}
         />
       </div>
-      <span className="bar__time">{formatDuration(duration)}</span>
+      {/* <span className="bar__time">{formatDuration(duration)}</span> */}
     </div>
   );
 }

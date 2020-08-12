@@ -37,7 +37,6 @@ export default class PostTemplate extends React.Component {
               {/* </div> */}
               {/* End - Test Example */}
               <div>
-                <h1>{post.title}</h1>
                 <Audio 
                   id={1} 
                   index={1} 
@@ -50,6 +49,7 @@ export default class PostTemplate extends React.Component {
                   // setIsPlaying={setIsPlaying}
                   // setTrackPlayed={setTrackPlayed}
                 />
+                <h1>{post.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 {/* <div className="post-meta">
                   <PostTags tags={post.tags} />

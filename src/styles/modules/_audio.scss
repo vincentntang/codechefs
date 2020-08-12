@@ -5,73 +5,99 @@
   text-align: center;
 }
 
+.cc-play {
+  border-right: 1px solid black;
+  cursor: pointer;
+  .cc-play_button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+  img {
+    width: 30px;
+  }
+}
+
 .player {
+  // margin-left: -25px;
+  // margin-right: -25px;
+  // margin-top: -15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  // padding: 20px 0;
   background-color: #212527;
+  background-color: $gray-5;
 
-  .song {
-    user-select: none;
-    margin: 0 20px;
-    .song__title {
-      text-align: left;
-      margin: 0;
-      color: white;
-      font-family: "Permanent Marker", cursive;
-      font-weight: normal;
-      font-size: 3.5em;
+  // .song {
+  //   user-select: none;
+  //   margin: 0 20px;
+  //   .song__title {
+  //     text-align: left;
+  //     margin: 0;
+  //     color: white;
+  //     font-family: "Permanent Marker", cursive;
+  //     font-weight: normal;
+  //     font-size: 3.5em;
 
-      &:hover {
-        color: greenyellow;
-      }
-    }
+  //     &:hover {
+  //       color: greenyellow;
+  //     }
+  //   }
 
-    .song__artist {
-      margin: 0;
-      color: white;
-      font-family: "Rock Salt", cursive;
-      font-weight: normal;
-      font-size: 1em;
+  //   .song__artist {
+  //     margin: 0;
+  //     color: white;
+  //     font-family: "Rock Salt", cursive;
+  //     font-weight: normal;
+  //     font-size: 1em;
 
-      &:hover {
-        color: greenyellow;
-        cursor: pointer;
-      }
-    }
-  }
+  //     &:hover {
+  //       color: greenyellow;
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
 
   .controls {
     flex-grow: 1;
-    margin: 0 20px;
+    // margin: 0 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
   }
 
-  .player__button {
-    width: fit-content;
-    margin-bottom: 15px;
-    background-color: transparent;
-    border: none;
-
-    &:focus {
-      outline: none;
-    }
-    &:hover {
-      cursor: pointer;
-      svg {
-        color: greenyellow;
-      }
-    }
-
-    svg {
-      font-size: 4em;
-      color: white;
-    }
+  .cc-speed {
+    border-left: 1px solid black;
   }
+  .cc-volume {
+    border-left: 1px solid black;
+  }
+
+  // .player__button {
+  //   width: fit-content;
+  //   margin-bottom: 15px;
+  //   background-color: transparent;
+  //   border: none;
+
+  //   &:focus {
+  //     outline: none;
+  //   }
+  //   &:hover {
+  //     cursor: pointer;
+  //     svg {
+  //       color: greenyellow;
+  //     }
+  //   }
+
+  //   svg {
+  //     font-size: 4em;
+  //     color: white;
+  //   }
+  // }
 
   .bar {
     user-select: none;
@@ -109,7 +135,7 @@
 
     .controls {
       width: 100%;
-      margin-top: 20px;
+      // margin-top: 20px;
     }
 
     .bar {

@@ -1,5 +1,12 @@
 import React , {useEffect,useState}from "react";
 import Bar from "./Bar";
+import moment from "moment";
+import momentDurationFormatSetup from "moment-duration-format";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import playSvg from "../../assets/play.svg";
+import pauseSvg from "../../assets/pause.svg";
+
 
 const Audio = ({
   currentVolume, 
@@ -33,8 +40,9 @@ const Audio = ({
   //   setCurrentTrack(index);
   // }
 
+  
   const playAudio =() => {
-
+    
   }
 
   useEffect(() => {
@@ -83,13 +91,33 @@ const Audio = ({
       </audio>
       {/* <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" /> */}
       <div className="controls">
-        <button className="player__button" onClick={() => setPlaying(!playing)}>
-          <div style={{ color: "white" }}> {playing ? "PAUSE" : "START"}</div>
-        </button>
+        <div className="cc-play" onClick={() => setPlaying(!playing)}>
+          <div className="cc-play_button" >
+            <img src={playing ? pauseSvg: playSvg} alt="play button"/>
+          </div>
+          {formatDuration(curTime)}/
+          {formatDuration(duration)}
+          {/* <button className="player__button" onClick={() => setPlaying(!playing)}>
+            <div style={{ color: "white" }}> {playing ? "PAUSE" : "START"}</div>
+          </button> */}
+        </div>
+
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
+        <div className="cc-speed">
+          <p>Speed</p>
+        </div>
+        <div className="cc-volume">
+          <p>Volume</p>
+        </div>
       </div>
     </div>
   );
 }
 
 export default Audio;
+
+function formatDuration(duration) {
+  return moment
+    .duration(duration, "seconds")
+    .format("mm:ss", { trim: false });
+}
