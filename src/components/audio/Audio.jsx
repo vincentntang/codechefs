@@ -84,7 +84,7 @@ const Audio = ({
       {/* <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" /> */}
       <div className="controls">
         <button className="player__button" onClick={() => setPlaying(!playing)}>
-          <div style={{ color: "white" }}> {currentTrack === index && isPlaying ? "PAUSE" : "START"}</div>
+          <div style={{ color: "white" }}> {playing ? "PAUSE" : "START"}</div>
         </button>
         <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
       </div>
