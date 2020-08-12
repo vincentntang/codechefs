@@ -7,29 +7,38 @@
 
 .cc-play {
   border-right: 1px solid black;
+  width: 120px;
   cursor: pointer;
   .cc-play_button {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   img {
     width: 30px;
   }
+  .duration-ratio {
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 .player {
-  // margin-left: -25px;
-  // margin-right: -25px;
-  // margin-top: -15px;
+  border-top: 1px solid #f1c15d;
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-top: -25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   // padding: 20px 0;
   background-color: #212527;
-  background-color: $gray-5;
+  background-color: $gray-7;
 
   // .song {
   //   user-select: none;
@@ -84,7 +93,7 @@
     }
   }
   .cc-volume {
-    width: 200px; // temp
+    width: 100px; // temp
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -94,7 +103,8 @@
     .cc-volume-bar-wrapper {
       display: flex;
       align-items: flex-end;
-      height: 50px;
+      height: 40px;
+      margin-top: 10px;
       width: 100%;
       .volume-bar {
         height: 100%;
@@ -172,40 +182,55 @@
   //   }
   // }
 
-  .bar {
-    user-select: none;
+  .bar-wrapper {
+    flex: 1;
     width: 100%;
-    height: 20px;
-    background-color: white;
     display: flex;
-    position: relative;
-
-    .bar__time {
-      color: white;
-      font-size: 16px;
-    }
-
-    .bar__progress {
-      // flex: 1;
-      // border-radius: 5px;
-      // margin: 0 20px;
-      position: absolute;
-      height: 20px;
+    flex-direction: column;
+    .bar-episode-name {
+      flex: 1;
       display: flex;
       align-items: center;
-      background: linear-gradient(30deg, orange 0%, #03fff3 100%);
-      cursor: pointer;
-
-      // .bar__progress__knob {
-      //   position: relative;
-      //   height: 16px;
-      //   width: 16px;
-      //   border: 1.5px solid white;
-      //   border-radius: 50%;
-      //   background-color: orange;
-      // }
+      height: 100%;
+      padding: 15px;
+      font-size: 18px;
+    }
+    .bar {
+      user-select: none;
+      width: 100%;
+      height: 20px;
+      background-color: white;
+      display: flex;
+      position: relative;
+  
+      .bar__time {
+        color: white;
+        font-size: 16px;
+      }
+  
+      .bar__progress {
+        // flex: 1;
+        // border-radius: 5px;
+        // margin: 0 20px;
+        position: absolute;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(30deg, orange 0%, #03fff3 100%);
+        cursor: pointer;
+  
+        // .bar__progress__knob {
+        //   position: relative;
+        //   height: 16px;
+        //   width: 16px;
+        //   border: 1.5px solid white;
+        //   border-radius: 50%;
+        //   background-color: orange;
+        // }
+      }
     }
   }
+  
 
   @media screen and (max-width: 800px) {
     flex-direction: column;

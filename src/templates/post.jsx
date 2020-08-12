@@ -24,7 +24,7 @@ export default class PostTemplate extends React.Component {
     return (
       <Layout>
         <section className="cc-container mt-15 post-container">
-          <div className="cc-card">
+          <div className="cc-post-card">
             <div className="cc-padding">
               <Helmet>
                 <title>{`${post.title} | ${config.siteTitle}`}</title>
@@ -40,7 +40,8 @@ export default class PostTemplate extends React.Component {
                 <Audio 
                   id={1} 
                   index={1} 
-                  mp3={'https://codechefs.s3.amazonaws.com/000_preview_episode.mp3'} 
+                  mp3={'https://codechefs.s3.amazonaws.com/000_preview_episode.mp3'}
+                  episodeName={post.title}
                   // currentTrack={currentTrack} 
                   // setCurrentTrack={setCurrentTrack}
                   // currentVolume={currentVolume}
@@ -49,7 +50,6 @@ export default class PostTemplate extends React.Component {
                   // setIsPlaying={setIsPlaying}
                   // setTrackPlayed={setTrackPlayed}
                 />
-                <h1>{post.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 {/* <div className="post-meta">
                   <PostTags tags={post.tags} />

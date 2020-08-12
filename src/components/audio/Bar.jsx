@@ -3,7 +3,7 @@ import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
 
 export default function Bar(props) {
-  const { duration, curTime, onTimeUpdate } = props;
+  const { episodeName,duration, curTime, onTimeUpdate } = props;
 
   const curPercentage = (curTime / duration) * 100;
 
@@ -58,23 +58,23 @@ export default function Bar(props) {
     //   </div>
     //   {/* <span className="bar__time">{formatDuration(duration)}</span> */}
     // </div>
-    <div className="bar" onMouseDown={e => handleTimeDrag(e)}>
-    {/* <span className="bar__time">{formatDuration(curTime)}</span> */}
-      <div
-        className="bar__progress"
-        style={{
-          // background: `linear-gradient(to right, orange ${curPercentage}%, white 0)`
-          // background: `linear-gradient(30deg, #d2ff52 50%, #03fff3 100%)`
-          width:`${curPercentage}%`
-        }}
-        // onMouseDown={e => handleTimeDrag(e)}
-      >
-        {/* <span
-          className="bar__progress__knob"
-          style={{ left: `${curPercentage - 2}%` }}
-        /> */}
+    <div className="bar-wrapper">
+      <div className="bar" onMouseDown={e => handleTimeDrag(e)}>
+      {/* <span className="bar__time">{formatDuration(curTime)}</span> */}
+        <div
+          className="bar__progress"
+          style={{
+            // background: `linear-gradient(to right, orange ${curPercentage}%, white 0)`
+            // background: `linear-gradient(30deg, #d2ff52 50%, #03fff3 100%)`
+            width:`${curPercentage}%`
+          }}
+          // onMouseDown={e => handleTimeDrag(e)}
+        >
+        </div>
       </div>
-      {/* <span className="bar__time">{formatDuration(duration)}</span> */}
+      <div className="bar-episode-name">
+        {episodeName}
+      </div>
     </div>
   );
 }

@@ -15,7 +15,9 @@ const Audio = ({
   setCurrentTrack, 
   isPlaying, 
   setIsPlaying, 
-  setTrackPlayed, mp3, index}) => {
+  setTrackPlayed, mp3, index,
+  episodeName
+}) => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
@@ -118,24 +120,26 @@ const Audio = ({
       </audio>
       {/* <Song songName="Instant Crush" songArtist="Daft Punk ft. Julian Casablancas" /> */}
       <div className="controls">
-        <div className="cc-play noselect" onClick={() => setPlaying(!playing)}>
+        <div className="cc-play p-3 noselect" onClick={() => setPlaying(!playing)}>
           <div className="cc-play_button" >
             <img src={playing ? pauseSvg: playSvg} alt="play button"/>
           </div>
-          {formatDuration(curTime)}/
-          {formatDuration(duration)}
+          <div className="duration-ratio">
+            <span>{formatDuration(curTime)}</span> / {""}
+            <span>{formatDuration(duration)}</span>
+          </div>
           {/* <button className="player__button" onClick={() => setPlaying(!playing)}>
             <div style={{ color: "white" }}> {playing ? "PAUSE" : "START"}</div>
           </button> */}
         </div>
 
-        <Bar curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
-        <div className="cc-speed noselect" onClick={()=>changeAudioSpeed()}>
+        <Bar episodeName={episodeName} curTime={curTime} duration={duration} onTimeUpdate={(time) => setClickedTime(time)}/>
+        <div className="cc-speed p-3 noselect" onClick={()=>changeAudioSpeed()}>
           <p className="my-0">Speed</p>
           <div className="cc-speed-display">{curSpeed}x</div>
         </div>
    
-        <div className="cc-volume noselect">
+        <div className="cc-volume p-3 noselect">
           <p className="my-0">Volume</p>
           {/* <div>{curVolume}</div> */}
           <div className="cc-volume-bar-wrapper">

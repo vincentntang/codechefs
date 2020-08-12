@@ -34,6 +34,16 @@
   }
 }
 
+// Seperate card class for post so podcast player class unaffected
+.cc-post-card {
+  border: 3px solid black;
+  border-radius: 10px;
+  // background-color: hsl(10,10,10);
+  background-color: $gray-10;
+  width: 100%;
+  position: relative;
+}
+
 /**
  * HEADER SPECIFIC
  */
