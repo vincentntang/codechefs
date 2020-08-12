@@ -22,6 +22,7 @@ const Audio = ({
   const [playing, setPlaying] = useState(false);
   const [clickedTime, setClickedTime] = useState();
   const [curSpeed, setCurSpeed] = useState(1);
+  const [curVolume, setCurVolume] = useState(1);
   
   
 
@@ -44,7 +45,7 @@ const Audio = ({
   // }
 
   
-  function changeAudioSpeed () {
+  const changeAudioSpeed = () => {
     const playBackRates = [0.75,1,1.25,1.5,1.75,2,2.25,2.5];
     const index = playBackRates.indexOf(curSpeed);
     if(index==-1){
@@ -54,7 +55,19 @@ const Audio = ({
     } else {
       setCurSpeed(playBackRates[index+1]);
     }
+  }
+
     
+  const changeVolumeLevel = () => {
+    const volumeLevels = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
+    const index = volumeLevels.indexOf(curVolume);
+    if(index==-1){
+      setCurVolume(0.5);
+    } else if (index === volumeLevels.length - 1){
+      setCurVolume(volumeLevels[0]);
+    } else {
+      setCurVolume(volumeLevels[index+1]);
+    }
   }
 
   useEffect(() => {
@@ -79,6 +92,7 @@ const Audio = ({
     } else {
       audio.pause();
     }
+    audio.volume=curVolume;
     audio.playbackRate=curSpeed;
     playing ? audio.play() : audio.pause();
 
@@ -120,8 +134,9 @@ const Audio = ({
           <div>Speed</div>
           <div>{curSpeed}</div>
         </div>
-        <div className="cc-volume">
-          <p>Volume</p>
+        <div className="cc-volume" onClick={()=>changeVolumeLevel()}>
+          <div>Volume</div>
+          <div>{curVolume}</div>
         </div>
       </div>
     </div>
