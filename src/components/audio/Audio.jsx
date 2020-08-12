@@ -23,7 +23,9 @@ const Audio = ({
   const [clickedTime, setClickedTime] = useState();
   const [curSpeed, setCurSpeed] = useState(1);
   const [curVolume, setCurVolume] = useState(1);
-  
+  const volumeLevels = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
+  const playBackRates = [0.75,1,1.25,1.5,1.75,2,2.25,2.5];
+
   
 
   // const setTrackPlayed = (index) => {
@@ -46,7 +48,6 @@ const Audio = ({
 
   
   const changeAudioSpeed = () => {
-    const playBackRates = [0.75,1,1.25,1.5,1.75,2,2.25,2.5];
     const index = playBackRates.indexOf(curSpeed);
     if(index==-1){
       setCurSpeed(1);
@@ -58,17 +59,16 @@ const Audio = ({
   }
 
     
-  const changeVolumeLevel = () => {
-    const volumeLevels = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
-    const index = volumeLevels.indexOf(curVolume);
-    if(index==-1){
-      setCurVolume(0.5);
-    } else if (index === volumeLevels.length - 1){
-      setCurVolume(volumeLevels[0]);
-    } else {
-      setCurVolume(volumeLevels[index+1]);
-    }
-  }
+  // const changeVolumeLevel = () => {
+  //   const index = volumeLevels.indexOf(curVolume);
+  //   // if(index==-1){
+  //   //   setCurVolume(0.5);
+  //   // } else if (index === volumeLevels.length - 1){
+  //   //   setCurVolume(volumeLevels[0]);
+  //   // } else {
+  //   //   setCurVolume(volumeLevels[index+1]);
+  //   // }
+  // }
 
   useEffect(() => {
     const audio = document.getElementById(index);
@@ -134,9 +134,18 @@ const Audio = ({
           <div>Speed</div>
           <div>{curSpeed}</div>
         </div>
-        <div className="cc-volume" onClick={()=>changeVolumeLevel()}>
+   
+        <div className="cc-volume">
           <div>Volume</div>
           <div>{curVolume}</div>
+          <div className="cc-volume-bar-wrapper">
+            {volumeLevels.map((volume,index) => {
+              return (
+                <div className={`volume-bar ${(index/10) < curVolume ? 'volume-bar-active':""}`} key={index} onClick={()=>setCurVolume(volume)}>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>

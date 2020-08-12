@@ -75,8 +75,29 @@
     cursor: pointer;
   }
   .cc-volume {
+    width: 200px; // temp
+    display: flex;
+    flex-direction: column;
     border-left: 1px solid black;
     cursor: pointer;
+    .cc-volume-bar-wrapper {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      .volume-bar {
+        height: 100%;
+        margin-left: 1px;
+        background-color: white;
+        width: calc(10% - 1px);
+        position: relative;
+        &:first-of-type {
+          margin-left: 0px;
+        }
+      }
+      .volume-bar.volume-bar-active {
+        background-color: orange;
+      }
+    }
   }
 
   // .player__button {
