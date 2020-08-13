@@ -7,6 +7,10 @@
 
 .cc-play {
   border-right: 1px solid black;
+  @include screen-max(576px){
+    border-right: none;
+    flex-basis: 33%;
+  }
   width: 120px;
   cursor: pointer;
   .cc-play_button {
@@ -74,6 +78,9 @@
   // }
 
   .controls {
+    @include screen-max(576px){
+      flex-wrap: wrap;
+    }
     flex-grow: 1;
     // margin: 0 20px;
     display: flex;
@@ -94,9 +101,15 @@
       display: flex;
       align-items: center;
     }
+    @include screen-max(576px){
+      flex-basis: 23%;
+    }
   }
   .cc-volume {
     width: 100px; // temp
+    @include screen-max(576px){
+      flex-basis: 41%;
+    }
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -188,6 +201,13 @@
   .bar-wrapper {
     flex: 1;
     width: 100%;
+    @include screen-max(576px){
+      order: -1;
+      flex-wrap:wrap;
+      flex: 1;
+      flex-basis: 100%;
+      border-bottom: 1px solid black;
+    }
     display: flex;
     flex-direction: column;
     .bar-episode-name {
@@ -235,28 +255,28 @@
   }
   
 
-  @media screen and (max-width: 800px) {
-    flex-direction: column;
+  // @media screen and (max-width: 800px) {
+  //   flex-direction: column;
 
-    .controls {
-      width: 100%;
-      // margin-top: 20px;
-    }
+  //   .controls {
+  //     width: 100%;
+  //     // margin-top: 20px;
+  //   }
 
-    .bar {
-      width: 90%;
-    }
-  }
+  //   .bar {
+  //     width: 90%;
+  //   }
+  // }
 
-  @media screen and (max-width: 500px) {
-    .song {
-      .song__title {
-        font-size: 2.5em;
-      }
+  // @media screen and (max-width: 500px) {
+  //   .song {
+  //     .song__title {
+  //       font-size: 2.5em;
+  //     }
 
-      .song__artist {
-        font-size: 0.8em;
-      }
-    }
-  }
+  //     .song__artist {
+  //       font-size: 0.8em;
+  //     }
+  //   }
+  // }
 }
