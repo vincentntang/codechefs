@@ -4,6 +4,7 @@ import Audio from "./audio/Audio";
 import codeChefsHat from "../assets/code_chefs_hat.svg";
 import germanImg from "../assets/germangamboa.jpeg";
 import vincentImg from "../assets/vincentntang.jpeg";
+import moment from "moment";
 
 const PostListing = props => {
   const getPostList = () => {
@@ -47,7 +48,6 @@ const PostListing = props => {
         </div> */}
       <div className="cc-podcast-wrapper">
         {postList.map((post, index) => {
-          const shortDate = new Date(post.date).toLocaleDateString('en-US');
           return (
             <>
             {index===0 && 
@@ -70,7 +70,7 @@ const PostListing = props => {
                     <div className="frontpage-episode pt-5">
                       <Link to={post.path} key={`podcast-${index}`} className="podcast-episode">
                         <div className="podcast-title">{post.title}</div>
-                        <p>{shortDate}</p>
+                        <p>{moment(post.date).format('ll')}</p>
                         <p className="mt-0 short-description">{post.shortDescription}</p>
                         {/* <Audio 
                           id={index} 
@@ -120,7 +120,7 @@ const PostListing = props => {
                       </div>
                       <div className="podcast-content-right">
                         <div className="podcast-title">{post.title}</div>
-                        <p>{shortDate}</p>
+                        <p>{moment(post.date).format('ll')}</p>
                         <p className="mt-0 short-description">{post.shortDescription}</p>
                       </div>
                        
