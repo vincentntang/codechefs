@@ -305,4 +305,4 @@ export default Logo;
       <use fill="#FFF" xlinkHref="#path-5"/>
     </g>
   </g>
-</svg>  */}
+</svg> */}

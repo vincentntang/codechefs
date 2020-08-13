@@ -395,3 +395,23 @@
     left: -23px;
   }
 }
+
+
+
+@keyframes flicker {
+  0%    { opacity: 1; }
+  3%    { opacity: 0.4; }
+  6%    { opacity: 1; }
+  7%    { opacity: 0.4; }
+  8%    { opacity: 1; }
+  9%    { opacity: 0.4; }
+  10%   { opacity: 1; }
+  89%   { opacity: 1; }
+  90%   { opacity: 0.4; }
+  100%  { opacity: 0.4; }
+}
+
+// #L  { animation: flicker 6s infinite step-end; }
+// #et { animation: flicker 5s infinite 3s step-end; }
+
+#path-12 { animation: flicker 6s infinite step-end; }

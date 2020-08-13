@@ -8,6 +8,7 @@ import UserLinks from "./UserLinks";
 import { ReactComponent as MyLogo} from "../assets/code_chefs_art3.svg";
 // import logo3svg from "../assets/code_chefs_art3.svg";
 import Logo from "./Logo";
+import LogoTest from "./LogoTest";
 import { Location } from '@reach/router';
 
 const Navbar = (props) => {
@@ -25,6 +26,9 @@ const Navbar = (props) => {
         {/* <img src={logo3svg} alt="logo"/> */}
         <Logo/>
       </div>
+      {/* <div className="cc-logo-hero">
+        <LogoTest/>
+      </div> */}
       <div className="social-links">
         
       </div>
