@@ -91,10 +91,16 @@ const PostListing = props => {
               </>
             }
           
-            {index===1 && <p className="earlier-episodes-title">Older Episodes</p>}
+            {index===1 && <div className="earlier-episodes-wrapper">
+              <img className="hat-img" src={codeChefsHat} alt="logo hat"/>
+              <p className="earlier-episodes-title">Older Episodes</p>
+            </div>}
             {index >0 &&
               <div key={index} className="podcast-wrapper cc-card mb-7">
                 <Link to={post.path} key={`podcast-${index}`} className="podcast-episode">
+                  {/* <div className="lol-hats">
+                    <img className="hat-img" src={codeChefsHat} alt="logo hat"/>
+                  </div> */}
                   <div className="cc-padding">
                     <svg>
                       <rect>
@@ -105,11 +111,11 @@ const PostListing = props => {
                       <div className="podcast-image-left">
                         <div className="portrait-hat">
                           <img className="portrait-img" src={vincentImg} alt="vincent"/>
-                          <img className="hat-img" src={codeChefsHat} alt="logo hat"/>
+                          {/* <img className="hat-img" src={codeChefsHat} alt="logo hat"/> */}
                         </div>
                         <div className="portrait-hat">
                           <img className="portrait-img"src={germanImg} alt="german"/>
-                          <img className="hat-img" src={codeChefsHat} alt="logo hat"/>
+                          {/* <img className="hat-img" src={codeChefsHat} alt="logo hat"/> */}
                         </div>
                       </div>
                       <div className="podcast-content-right">

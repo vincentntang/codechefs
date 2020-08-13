@@ -5,10 +5,10 @@
 .cc-container {
   margin: 0 auto;
   width: 100%; 
-  @include screen-min(576px){max-width: 500px;}
+  @include screen-min(576px){max-width: 550px;}
   @include screen-min(768px){max-width: 700px;}
   @include screen-min(992px){max-width: 800px;}
-  @include screen-min(1200px){max-width: 800px;}
+  @include screen-min(1200px){max-width: 900px;}
 }
 .cc-padding {
   padding: 25px;
@@ -330,12 +330,15 @@
 .podcast-inner-card {
   display: flex;
   .podcast-image-left {
+    @include screen-max(576px){
+      display: none;
+    }
     display: flex;
     align-items: center;
     margin-right: 20px;
     .portrait-hat {
       &:not(:first-of-type){
-        margin-left: -30px;
+        margin-left: -20px;
       }
       position: relative;
       .portrait-img {
@@ -345,7 +348,7 @@
       }
       .hat-img {
         width: 30px;
-        transform: rotate(-30deg);
+        transform: rotate(-40deg);
         position: absolute;
         top: -10px;
         // left: calc(50% - 15px);
@@ -367,5 +370,28 @@
       color: white;
       text-decoration: none;
     }
+  }
+}
+.lol-hats {
+  position: absolute;
+  top: -23px;
+  left: -27px;
+  top: 0px;
+  left: 0px;
+
+  .hat-img {
+    width: 50px;
+    transform: rotate(-35deg);
+  }
+}
+
+.earlier-episodes-wrapper {
+  position: relative;
+  .hat-img {
+    position: absolute;
+    width: 40px;
+    transform: rotate(-20deg);
+    top:-30px;
+    left: -23px;
   }
 }
