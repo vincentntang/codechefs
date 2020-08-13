@@ -12,7 +12,7 @@ const Logo = () => (
 <defs>
     <filter id="glow" width="100%" height="100%" x="0" y="0" filterUnits="userSpaceOnUse">
       <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
-      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="50"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
       <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
       <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter2"/>
       <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="7"/>
