@@ -5,7 +5,7 @@
 .cc-container {
   margin: 0 auto;
   width: 100%; 
-  @include screen-min(576px){max-width: 500px;}
+  @include screen-min(576px){max-width: 550px;}
   @include screen-min(768px){max-width: 700px;}
   @include screen-min(992px){max-width: 800px;}
   @include screen-min(1200px){max-width: 800px;}
@@ -34,6 +34,16 @@
   }
 }
 
+// Seperate card class for post so podcast player class unaffected
+.cc-post-card {
+  border: 3px solid black;
+  border-radius: 10px;
+  // background-color: hsl(10,10,10);
+  background-color: $gray-10;
+  width: 100%;
+  position: relative;
+}
+
 /**
  * HEADER SPECIFIC
  */
@@ -43,6 +53,8 @@
   padding-top: 20px;
   border-top-right-radius: 3px;
   border-top-left-radius:3px;
+  max-width: 500px;
+  margin: 0 auto;
   // background-color: black;
   img {
     // padding: 0px 20px;
@@ -54,7 +66,9 @@
   }
 }
 .cc-hero-description {
-  font-size: 20px;
+  font-size: 16px;
+  max-width: 640px;
+  margin: 0 auto;
 }
 .cc-navbar {
   display: flex;
@@ -63,7 +77,7 @@
   justify-content: center ;
   background-color: hsl(240,1,30);
   // background-color: teal;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   border-radius: 5px;
   padding-bottom: 5px;
 }
@@ -204,7 +218,7 @@
   transition: 1.2s;
   @include screen-min(577px){
     &:hover {
-      transform: scale(1.01);
+      transform: scale(1.0005);
       background-color: $gray-8;
     }  
   }
@@ -241,22 +255,8 @@
   //   }    
   // }
 
-  .podcast-episode {
-    display: flex;
-    flex-direction: column;
-    // border: 1px solid gray;
 
-  }
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  .podcast-title {
-    font-size: 24px;
-  }
-  .short-description {
-    font-size: 18px;
-  }
+
 }
 
 
@@ -310,3 +310,136 @@
 .post-container a {
   color: $teal-7;
 }
+
+.social-links-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: white;
+    }
+    .podcast-links {
+      &:hover {
+        transition: 0.3s;
+        background-color: darkcyan;
+      }
+      transition: 0.3s;
+      width: 100%;
+      padding: 10px;
+      max-width: 48px;
+      max-height: 48px;
+      margin: 3px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  }
+
+}
+
+.frontpage-episode {
+  
+}
+
+.podcast-title {
+  font-size: 24px;
+}
+.short-description {
+  font-size: 18px;
+}
+.earlier-episodes-title {
+  margin-left: -5px;
+}
+
+
+//reusable
+.podcast-inner-card {
+  display: flex;
+  .podcast-image-left {
+    @include screen-max(576px){
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    .portrait-hat {
+      &:not(:first-of-type){
+        margin-left: -20px;
+      }
+      position: relative;
+      .portrait-img {
+        border: 1px solid $gray-5;
+        width: 100px;
+        border-radius: 50%;
+      }
+      .hat-img {
+        width: 30px;
+        transform: rotate(-40deg);
+        position: absolute;
+        top: -10px;
+        // left: calc(50% - 15px);
+        left: 0px;
+      }
+    }
+  
+
+ 
+  }
+  .podcast-content-right {
+    .podcast-episode {
+      display: flex;
+      flex-direction: column;
+      // border: 1px solid gray;
+  
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+.lol-hats {
+  position: absolute;
+  top: -23px;
+  left: -27px;
+  top: 0px;
+  left: 0px;
+
+  .hat-img {
+    width: 50px;
+    transform: rotate(-35deg);
+  }
+}
+
+.earlier-episodes-wrapper {
+  position: relative;
+  .hat-img {
+    position: absolute;
+    width: 40px;
+    transform: rotate(-20deg);
+    top:-30px;
+    left: -23px;
+  }
+}
+
+
+
+@keyframes flicker {
+  0%    { opacity: 1; }
+  3%    { opacity: 0.4; }
+  6%    { opacity: 1; }
+  7%    { opacity: 0.4; }
+  8%    { opacity: 1; }
+  9%    { opacity: 0.4; }
+  10%   { opacity: 1; }
+  89%   { opacity: 1; }
+  90%   { opacity: 0.4; }
+  100%  { opacity: 0.4; }
+}
+
+// #L  { animation: flicker 6s infinite step-end; }
+// #et { animation: flicker 5s infinite 3s step-end; }

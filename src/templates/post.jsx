@@ -9,6 +9,7 @@ import SocialLinks from "../components/SocialLinks";
 import SEO from "../components/SEO";
 // import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
+import Audio from "../components/audio/Audio";
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -22,8 +23,8 @@ export default class PostTemplate extends React.Component {
 
     return (
       <Layout>
-        <section className="cc-container mt-15 post-container">
-          <div className="cc-card">
+        <section className="cc-container post-container">
+          <div className="cc-post-card">
             <div className="cc-padding">
               <Helmet>
                 <title>{`${post.title} | ${config.siteTitle}`}</title>
@@ -36,7 +37,19 @@ export default class PostTemplate extends React.Component {
               {/* </div> */}
               {/* End - Test Example */}
               <div>
-                <h1>{post.title}</h1>
+                <Audio 
+                  id={1} 
+                  index={1} 
+                  mp3={'https://codechefs.s3.amazonaws.com/000_preview_episode.mp3'}
+                  episodeName={post.title}
+                  // currentTrack={currentTrack} 
+                  // setCurrentTrack={setCurrentTrack}
+                  // currentVolume={currentVolume}
+                  // setCurrentVolume={setCurrentVolume}
+                  // isPlaying={isPlaying}
+                  // setIsPlaying={setIsPlaying}
+                  // setTrackPlayed={setTrackPlayed}
+                />
                 <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 {/* <div className="post-meta">
                   <PostTags tags={post.tags} />

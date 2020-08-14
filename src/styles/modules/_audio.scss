@@ -5,127 +5,278 @@
   text-align: center;
 }
 
-.player {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  background-color: #212527;
-
-  .song {
-    user-select: none;
-    margin: 0 20px;
-    .song__title {
-      text-align: left;
-      margin: 0;
-      color: white;
-      font-family: "Permanent Marker", cursive;
-      font-weight: normal;
-      font-size: 3.5em;
-
-      &:hover {
-        color: greenyellow;
-      }
-    }
-
-    .song__artist {
-      margin: 0;
-      color: white;
-      font-family: "Rock Salt", cursive;
-      font-weight: normal;
-      font-size: 1em;
-
-      &:hover {
-        color: greenyellow;
-        cursor: pointer;
-      }
-    }
+.cc-play {
+  border-right: 1px solid black;
+  @include screen-max(576px){
+    border-right: none;
+    flex-basis: 33%;
   }
-
-  .controls {
-    flex-grow: 1;
-    margin: 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .player__button {
-    width: fit-content;
-    margin-bottom: 15px;
-    background-color: transparent;
-    border: none;
-
-    &:focus {
-      outline: none;
-    }
-    &:hover {
-      cursor: pointer;
-      svg {
-        color: greenyellow;
-      }
-    }
-
-    svg {
-      font-size: 4em;
-      color: white;
-    }
-  }
-
-  .bar {
-    user-select: none;
+  width: 120px;
+  cursor: pointer;
+  .cc-play_button {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  img {
+    width: 30px;
+  }
+  .duration-ratio {
+    font-size: 14px;
+    text-align: center;
+  }
+}
 
-    .bar__time {
-      color: white;
-      font-size: 16px;
+.player {
+  border-top: 1px solid #f1c15d;
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-top: -25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // position: -webkit-sticky;
+  // position: sticky;
+  // top:0;
+  // padding: 20px 0;
+  background-color: #212527;
+  background-color: $gray-7;
+
+  // .song {
+  //   user-select: none;
+  //   margin: 0 20px;
+  //   .song__title {
+  //     text-align: left;
+  //     margin: 0;
+  //     color: white;
+  //     font-family: "Permanent Marker", cursive;
+  //     font-weight: normal;
+  //     font-size: 3.5em;
+
+  //     &:hover {
+  //       color: greenyellow;
+  //     }
+  //   }
+
+  //   .song__artist {
+  //     margin: 0;
+  //     color: white;
+  //     font-family: "Rock Salt", cursive;
+  //     font-weight: normal;
+  //     font-size: 1em;
+
+  //     &:hover {
+  //       color: greenyellow;
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
+
+  .controls {
+    @include screen-max(576px){
+      flex-wrap: wrap;
     }
+    flex-grow: 1;
+    // margin: 0 20px;
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+  }
 
-    .bar__progress {
-      flex: 1;
-      border-radius: 5px;
-      margin: 0 20px;
-      height: 10px;
+  .cc-speed {
+    border-left: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .cc-speed-display {
+      height: 50px;
       display: flex;
       align-items: center;
-      cursor: pointer;
-
-      .bar__progress__knob {
+    }
+    @include screen-max(576px){
+      flex-basis: 23%;
+    }
+  }
+  .cc-volume {
+    width: 100px; // temp
+    @include screen-max(576px){
+      flex-basis: 41%;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-left: 1px solid black;
+    cursor: pointer;
+    .cc-volume-bar-wrapper {
+      display: flex;
+      align-items: flex-end;
+      height: 40px;
+      margin-top: 10px;
+      width: 100%;
+      .volume-bar {
+        height: 100%;
+        margin-left: 1px;
+        background-color: white;
+        width: calc(10% - 1px);
         position: relative;
-        height: 16px;
-        width: 16px;
-        border: 1.5px solid white;
-        border-radius: 50%;
+        &:first-of-type {
+          margin-left: 0px;
+        }
+        &:hover {
+          height: 100%;
+          transition: 0.2s;
+          &~.volume-bar {
+            height: calc(100% - 5px);
+          }
+        }
+      }
+      .volume-bar.volume-bar-active {
         background-color: orange;
       }
     }
   }
 
-  @media screen and (max-width: 800px) {
+  // .player__button {
+  //   width: fit-content;
+  //   margin-bottom: 15px;
+  //   background-color: transparent;
+  //   border: none;
+
+  //   &:focus {
+  //     outline: none;
+  //   }
+  //   &:hover {
+  //     cursor: pointer;
+  //     svg {
+  //       color: greenyellow;
+  //     }
+  //   }
+
+  //   svg {
+  //     font-size: 4em;
+  //     color: white;
+  //   }
+  // }
+
+  // .bar {
+  //   user-select: none;
+  //   width: 100%;
+  //   display: flex;
+  //   align-items: center;
+
+  //   .bar__time {
+  //     color: white;
+  //     font-size: 16px;
+  //   }
+
+  //   .bar__progress {
+  //     flex: 1;
+  //     border-radius: 5px;
+  //     margin: 0 20px;
+  //     height: 10px;
+  //     display: flex;
+  //     align-items: center;
+  //     cursor: pointer;
+
+  //     .bar__progress__knob {
+  //       position: relative;
+  //       height: 16px;
+  //       width: 16px;
+  //       border: 1.5px solid white;
+  //       border-radius: 50%;
+  //       background-color: orange;
+  //     }
+  //   }
+  // }
+
+  .bar-wrapper {
+    flex: 1;
+    width: 100%;
+    @include screen-max(576px){
+      order: -1;
+      flex-wrap:wrap;
+      flex: 1;
+      flex-basis: 100%;
+      border-bottom: 1px solid black;
+    }
+    display: flex;
     flex-direction: column;
-
-    .controls {
-      width: 100%;
-      margin-top: 20px;
+    .bar-episode-name {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 15px;
+      font-size: 18px;
     }
-
     .bar {
-      width: 90%;
+      user-select: none;
+      width: 100%;
+      height: 20px;
+      background-color: white;
+      display: flex;
+      position: relative;
+  
+      .bar__time {
+        color: white;
+        font-size: 16px;
+      }
+  
+      .bar__progress {
+        // flex: 1;
+        // border-radius: 5px;
+        // margin: 0 20px;
+        position: absolute;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(30deg, orange 0%, #03fff3 100%);
+        cursor: pointer;
+  
+        // .bar__progress__knob {
+        //   position: relative;
+        //   height: 16px;
+        //   width: 16px;
+        //   border: 1.5px solid white;
+        //   border-radius: 50%;
+        //   background-color: orange;
+        // }
+      }
     }
   }
+  
 
-  @media screen and (max-width: 500px) {
-    .song {
-      .song__title {
-        font-size: 2.5em;
-      }
+  // @media screen and (max-width: 800px) {
+  //   flex-direction: column;
 
-      .song__artist {
-        font-size: 0.8em;
-      }
-    }
-  }
+  //   .controls {
+  //     width: 100%;
+  //     // margin-top: 20px;
+  //   }
+
+  //   .bar {
+  //     width: 90%;
+  //   }
+  // }
+
+  // @media screen and (max-width: 500px) {
+  //   .song {
+  //     .song__title {
+  //       font-size: 2.5em;
+  //     }
+
+  //     .song__artist {
+  //       font-size: 0.8em;
+  //     }
+  //   }
+  // }
 }

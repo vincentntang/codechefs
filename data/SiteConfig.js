@@ -15,9 +15,9 @@ const config = {
   dateFormat: "MM/DD/YYYY", // Date format for display.
   postsPerPage: 9999, // Amount of posts displayed per listing page.
   userName: "Code Chefs", // Username to display in the author segment.
-  userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment
+  userEmail: "vincentntang@gmail.com", // Email used for RSS feed's author segment
   userTwitter: "codechefsdev", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "North Pole, Earth", // User location to display in the author segment.
+  userLocation: "Florida, USA", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
@@ -39,7 +39,7 @@ const config = {
     //   iconClassName: "fa fa-envelope"
     // }
   ],
-  copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2020 Code Chefs", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
 };

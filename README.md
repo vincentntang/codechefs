@@ -44,6 +44,12 @@ Frontend components automatically have graphql results set into props
 - `$ npm install`
 - `$ npm run dev`
 
+Run
+
+- `$ npm run build`
+
+to generate the `rss.xml` file
+
 ## PODCAST WORKFLOW & TOOLING
 
 - Trello

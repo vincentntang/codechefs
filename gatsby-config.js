@@ -19,6 +19,7 @@ module.exports = {
     }
   },
   plugins: [
+    "gatsby-plugin-svgr",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-lodash",
@@ -135,6 +136,51 @@ module.exports = {
           }
         }
       `,
+      setup: options => ({
+        ...options,
+        custom_namespaces: {
+          itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+        },
+        custom_elements: [
+          { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
+          { 'itunes:explicit': 'clean'},
+          { 'itunes:subtitle': "Podcast for Hungry Web Developers"},
+          { 'itunes:summary': "Fullstack Developers Vincent Tang and German Gamboa deep dive into topics in web development! They discuss from their own set of experience, and what life is like in tech. Topics range from Javascript, React, Backend Development, Soft Skills, and more! "},
+          { 'itunes:owner': [
+            {'itunes:name': "Vincent Tang"},
+            {'itunes:email': "vincentntang@gmail.com"}
+          ]},
+          {'itunes:category': [
+            {_attr: {
+              text: 'News'
+            }},
+            {'itunes:category': {
+              _attr: {
+                text: 'Tech News'
+              }
+            }}
+          ]},
+          {'itunes:category': [
+            {_attr: {
+              text: 'Technology'
+            }},
+          ]},
+          {'itunes:category': {
+            _attr: {
+              text: 'Education'
+            }
+          }},
+          {'itunes:type': "episodic"},
+          {'itunes:image': [
+            {_attr: {
+              href: 'no-logo-yet.jpg'
+            }},
+          ]},
+          {
+            'itunes:keywords':"javascript, webdevelopment,html,css,js"
+          },
+        ],
+      }),
         feeds: [
           {
             serialize(ctx) {
@@ -148,7 +194,19 @@ module.exports = {
                 guid: rssMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
-                  { author: config.userEmail }
+                  // { author: config.userEmail },
+                  { "itunes:author":"Vincent Tang and German Gamboa - Fullstack Developers"},
+                  { "itunes:subtitle": edge.node.excerpt},
+                  { "itunes:duration": 1234},
+                  {"itunes:explicit": "no"},
+                  {'enclosure': [
+                    {_attr: {
+                      url: '12345',
+                      length: "123123123",
+                      type: "audio/mpeg",
+                    }},
+                  ]},
+                  // Do some bit rate calculations   
                 ]
               }));
             },
