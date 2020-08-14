@@ -19,6 +19,7 @@ module.exports = {
     }
   },
   plugins: [
+    "gatsby-plugin-svgr",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-lodash",

@@ -8,7 +8,7 @@
   @include screen-min(576px){max-width: 550px;}
   @include screen-min(768px){max-width: 700px;}
   @include screen-min(992px){max-width: 800px;}
-  @include screen-min(1200px){max-width: 900px;}
+  @include screen-min(1200px){max-width: 800px;}
 }
 .cc-padding {
   padding: 25px;
@@ -53,6 +53,8 @@
   padding-top: 20px;
   border-top-right-radius: 3px;
   border-top-left-radius:3px;
+  max-width: 500px;
+  margin: 0 auto;
   // background-color: black;
   img {
     // padding: 0px 20px;
@@ -64,7 +66,9 @@
   }
 }
 .cc-hero-description {
-  font-size: 20px;
+  font-size: 16px;
+  max-width: 640px;
+  margin: 0 auto;
 }
 .cc-navbar {
   display: flex;
@@ -307,8 +311,33 @@
   color: $teal-7;
 }
 
-.social-links {
-  
+.social-links-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  .social-links {
+    display: flex;
+    justify-content: center;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: white;
+    }
+    .podcast-links {
+      &:hover {
+        transition: 0.3s;
+        background-color: $teal-7;
+      }
+      transition: 0.3s;
+      width: 100%;
+      padding: 10px;
+      max-width: 48px;
+      max-height: 48px;
+      margin: 0 3px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  }
+
 }
 
 .frontpage-episode {
@@ -413,6 +442,3 @@
 
 // #L  { animation: flicker 6s infinite step-end; }
 // #et { animation: flicker 5s infinite 3s step-end; }
-
-#path-10 { 
-  animation: flicker 6s step-end; }
