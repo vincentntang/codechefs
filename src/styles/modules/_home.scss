@@ -316,6 +316,7 @@
   margin: 0 auto;
   .social-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     svg {
       width: 100%;
@@ -332,7 +333,7 @@
       padding: 10px;
       max-width: 48px;
       max-height: 48px;
-      margin: 0 3px;
+      margin: 3px;
       border-radius: 50%;
       border: 2px solid white;
     }
