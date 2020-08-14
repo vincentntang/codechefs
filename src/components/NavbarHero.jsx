@@ -56,13 +56,13 @@ const Navbar = (props) => {
           <img src={podcastSpotify} alt="podcast apple"/>
           <img src={podcastRss} alt="podcast apple"/>
           <img src={podcastTwitter} alt="podcast apple"/> */}
-          <a className="podcast-links" href="google.com">
+          <a className="podcast-links" href="https://google.com">
             <PodcastTwitter/>
           </a>
-          <a className="podcast-links" href="google.com">
+          <a className="podcast-links" href="https://google.com">
             <PodcastApple/>
           </a>
-          <a className="podcast-links" href="google.com">
+          <a className="podcast-links" href="https://google.com">
             <PodcastGoogle/>
           </a>
           <a className="podcast-links" href="https://google.com">
