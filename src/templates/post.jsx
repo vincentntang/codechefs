@@ -23,6 +23,7 @@ export default class PostTemplate extends React.Component {
 
 
     console.log(postNode.html, "POST HTML");
+    console.log(post,"POST");
 
     return (
       <Layout>
@@ -43,7 +44,7 @@ export default class PostTemplate extends React.Component {
                 <Audio 
                   id={1} 
                   index={1} 
-                  mp3={'https://codechefs.s3.amazonaws.com/000_preview_episode.mp3'}
+                  mp3={post.audioUrl}
                   episodeName={post.title}
                   episodeHtml={postNode.html}
                   // currentTrack={currentTrack} 
@@ -84,6 +85,7 @@ export const pageQuery = graphql`
         date
         category
         tags
+        audioUrl
       }
       fields {
         slug

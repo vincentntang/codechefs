@@ -232,6 +232,7 @@ module.exports = {
                       category
                       tags
                       shortDescription
+                      audioUrl
                     }
                   }
                 }
