@@ -18,6 +18,7 @@ const Audio = ({
   setTrackPlayed, mp3, index,
   episodeName,
   episodeHtml,
+  children
 }) => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();
@@ -112,8 +113,8 @@ const Audio = ({
   });
 
   console.log(mp3,"MP3");
-
   return (
+    <>
     <div className="player">
       <audio id={index}>
         <source src={mp3} />
@@ -154,6 +155,8 @@ const Audio = ({
         </div>
       </div>
     </div>
+    {children}
+    </>
   );
 }
 

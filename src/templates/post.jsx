@@ -24,6 +24,7 @@ export default class PostTemplate extends React.Component {
 
     console.log(postNode.html, "POST HTML");
     console.log(post,"POST");
+    console.log(this.props,"PROPSS")
 
     return (
       <Layout>
@@ -54,13 +55,16 @@ export default class PostTemplate extends React.Component {
                   // isPlaying={isPlaying}
                   // setIsPlaying={setIsPlaying}
                   // setTrackPlayed={setTrackPlayed}
-                />
+                >
+                  <h3>{post.title}</h3>
+                  <p>{post.shortDescription}</p>
+                </Audio>
                 <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-                {/* <div className="post-meta">
+                <div className="post-meta">
                   <PostTags tags={post.tags} />
                   <SocialLinks postPath={slug} postNode={postNode} />
                 </div>
-                <UserInfo config={config} /> */}
+                {/* <UserInfo config={config} /> */}
                 {/* <Disqus postNode={postNode} /> */}
               </div>
             </div>
@@ -86,6 +90,7 @@ export const pageQuery = graphql`
         category
         tags
         audioUrl
+        shortDescription
       }
       fields {
         slug
