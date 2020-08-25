@@ -16,7 +16,8 @@ const Audio = ({
   isPlaying, 
   setIsPlaying, 
   setTrackPlayed, mp3, index,
-  episodeName
+  episodeName,
+  episodeHtml,
 }) => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();

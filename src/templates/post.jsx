@@ -21,6 +21,9 @@ export default class PostTemplate extends React.Component {
       post.id = slug;
     }
 
+
+    console.log(postNode.html, "POST HTML");
+
     return (
       <Layout>
         <section className="cc-container post-container">
@@ -42,6 +45,7 @@ export default class PostTemplate extends React.Component {
                   index={1} 
                   mp3={'https://codechefs.s3.amazonaws.com/000_preview_episode.mp3'}
                   episodeName={post.title}
+                  episodeHtml={postNode.html}
                   // currentTrack={currentTrack} 
                   // setCurrentTrack={setCurrentTrack}
                   // currentVolume={currentVolume}

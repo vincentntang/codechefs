@@ -50,7 +50,7 @@ const PostListing = props => {
         {postList.map((post, index) => {
           return (
             <>
-            {index===0 && 
+            {/* {index===0 && 
               <>
                 <div className="cc-post-card mb-15">
                   <div className="cc-padding">
@@ -59,43 +59,24 @@ const PostListing = props => {
                       index={1} 
                       mp3={'https://codechefs.s3.amazonaws.com/000_preview_episode.mp3'}
                       episodeName={post.title}
-                      // currentTrack={currentTrack} 
-                      // setCurrentTrack={setCurrentTrack}
-                      // currentVolume={currentVolume}
-                      // setCurrentVolume={setCurrentVolume}
-                      // isPlaying={isPlaying}
-                      // setIsPlaying={setIsPlaying}
-                      // setTrackPlayed={setTrackPlayed}
                     />
                     <div className="frontpage-episode pt-5">
                       <Link to={post.path} key={`podcast-${index}`} className="podcast-episode">
                         <div className="podcast-title">{post.title}</div>
                         <p>{moment(post.date).format('ll')}</p>
                         <p className="mt-0 short-description">{post.shortDescription}</p>
-                        {/* <Audio 
-                          id={index} 
-                          index={index} 
-                          mp3={item.audioFile} 
-                          currentTrack={currentTrack} 
-                          // setCurrentTrack={setCurrentTrack}
-                          // currentVolume={currentVolume}
-                          // setCurrentVolume={setCurrentVolume}
-                          isPlaying={isPlaying}
-                          setIsPlaying={setIsPlaying}
-                          setTrackPlayed={setTrackPlayed}
-                        /> */}
                       </Link>
                     </div>
                   </div>
                 </div>
               </>
-            }
-          
+            } */}
+{/*           
             {index===1 && <div className="earlier-episodes-wrapper">
               <img className="hat-img" src={codeChefsHat} alt="logo hat"/>
               <p className="earlier-episodes-title">Older Episodes</p>
-            </div>}
-            {index >0 &&
+            </div>} */}
+            {/* {index >0 && */}
               <div key={index} className="podcast-wrapper cc-card mb-7">
                 <Link to={post.path} key={`podcast-${index}`} className="podcast-episode">
                   {/* <div className="lol-hats">
@@ -140,7 +121,7 @@ const PostListing = props => {
                   </div>
                 </Link>
               </div>
-              }
+              {/* } */}
             </>
           )
         })}
