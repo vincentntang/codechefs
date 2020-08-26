@@ -10,7 +10,7 @@ import SEO from "../components/SEO";
 // import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
 import Audio from "../components/audio/Audio";
-
+import moment from "moment";
 export default class PostTemplate extends React.Component {
   render() {
     const { data, pageContext } = this.props;
@@ -21,8 +21,10 @@ export default class PostTemplate extends React.Component {
       post.id = slug;
     }
 
-
     console.log(postNode.html, "POST HTML");
+    console.log(postNode.frontmatter.timestamps);
+
+    console.log(moment.duration(`00:${"00:30"}`).asSeconds());
 
     return (
       <Layout>
@@ -36,17 +38,19 @@ export default class PostTemplate extends React.Component {
               {/* Start - Test Example */}
               {/* <div>
                 <p>Hello world</p> */}
-                {/* <img src={post.cover} alt="Arnold S"/> */}
+              {/* <img src={post.cover} alt="Arnold S"/> */}
               {/* </div> */}
               {/* End - Test Example */}
               <div>
-                <Audio 
-                  id={1} 
-                  index={1} 
-                  mp3={'https://codechefs.s3.amazonaws.com/000_preview_episode.mp3'}
+                <Audio
+                  id={1}
+                  index={1}
+                  mp3={
+                    "https://codechefs.s3.amazonaws.com/000_preview_episode.mp3"
+                  }
                   episodeName={post.title}
                   episodeHtml={postNode.html}
-                  // currentTrack={currentTrack} 
+                  // currentTrack={currentTrack}
                   // setCurrentTrack={setCurrentTrack}
                   // currentVolume={currentVolume}
                   // setCurrentVolume={setCurrentVolume}
@@ -54,7 +58,10 @@ export default class PostTemplate extends React.Component {
                   // setIsPlaying={setIsPlaying}
                   // setTrackPlayed={setTrackPlayed}
                 />
-                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                <div
+                  class="content"
+                  dangerouslySetInnerHTML={{ __html: postNode.html }}
+                />
                 {/* <div className="post-meta">
                   <PostTags tags={post.tags} />
                   <SocialLinks postPath={slug} postNode={postNode} />

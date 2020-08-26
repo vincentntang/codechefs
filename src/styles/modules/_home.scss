@@ -4,11 +4,19 @@
 // 320px, 576px, 768px, 992px, 1200px, 1440px
 .cc-container {
   margin: 0 auto;
-  width: 100%; 
-  @include screen-min(576px){max-width: 550px;}
-  @include screen-min(768px){max-width: 700px;}
-  @include screen-min(992px){max-width: 800px;}
-  @include screen-min(1200px){max-width: 800px;}
+  width: 100%;
+  @include screen-min(576px) {
+    max-width: 550px;
+  }
+  @include screen-min(768px) {
+    max-width: 700px;
+  }
+  @include screen-min(992px) {
+    max-width: 800px;
+  }
+  @include screen-min(1200px) {
+    max-width: 800px;
+  }
 }
 .cc-padding {
   padding: 25px;
@@ -21,7 +29,7 @@
   background-color: $gray-10;
   width: 100%;
   position: relative;
-  @include screen-max(576px){
+  @include screen-max(576px) {
     &:before {
       width: 100%;
       content: "";
@@ -52,13 +60,13 @@
   padding-left: 20px;
   padding-top: 20px;
   border-top-right-radius: 3px;
-  border-top-left-radius:3px;
+  border-top-left-radius: 3px;
   max-width: 500px;
   margin: 0 auto;
   // background-color: black;
   img {
     // padding: 0px 20px;
-    background-color: hsla(0,0,0,0.5);
+    background-color: hsla(0, 0, 0, 0.5);
     width: 100%;
     display: block;
     margin: 0 auto;
@@ -74,8 +82,8 @@
   display: flex;
   // background-color: black;
   width: 100%;
-  justify-content: center ;
-  background-color: hsl(240,1,30);
+  justify-content: center;
+  background-color: hsl(240, 1, 30);
   // background-color: teal;
   margin-bottom: 50px;
   border-radius: 5px;
@@ -96,7 +104,7 @@
 .cc-navitem {
   font-size: 24px;
   position: relative;
-  a{
+  a {
     display: inline-block;
     padding: 10px;
     height: 100%;
@@ -134,14 +142,12 @@
     left: 10px;
     background-color: white;
     z-index: 5;
-
   }
-  a:hover:before{
+  a:hover:before {
     visibility: visible;
-    transform: scaleX(1);  
+    transform: scaleX(1);
   }
 }
-
 
 /**
  * THE PEOPLE AND INTRO
@@ -171,7 +177,7 @@
   min-height: 100px;
   flex-direction: column;
   align-items: center;
-  @include screen-max(768px){
+  @include screen-max(768px) {
     width: 100%;
   }
   img {
@@ -185,7 +191,6 @@
     max-width: 200px;
   }
   .desc-wrapper {
-
   }
   .footer {
     height: 50px;
@@ -193,11 +198,10 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
-    background-color: rgb(56,56,56);
+    background-color: rgb(56, 56, 56);
     display: flex;
   }
   .header {
-
   }
 }
 
@@ -216,11 +220,11 @@
   //   border: 2px solid white;
   // }
   transition: 1.2s;
-  @include screen-min(577px){
+  @include screen-min(577px) {
     &:hover {
       transform: scale(1.0005);
       background-color: $gray-8;
-    }  
+    }
   }
 
   svg {
@@ -237,10 +241,10 @@
     stroke: $gray-4;
     width: 100%;
     height: 100%;
-    stroke-width:0;
+    stroke-width: 0;
     transition: 1s;
     stroke-dasharray: 400%;
-    stroke-dashoffset:900;
+    stroke-dashoffset: 900;
   }
 
   &:hover svg rect {
@@ -252,14 +256,19 @@
   //   hr {
   //     width: 100%;
   //     background-color: white;
-  //   }    
+  //   }
   // }
-
-
-
 }
 
-
+.content {
+  Button {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0.25em 0;
+    color: inherit;
+  }
+}
 
 /* Paging Container */
 
@@ -275,7 +284,7 @@
 
 .layout-container {
   min-height: 800px;
-  @include screen-max(576px){
+  @include screen-max(576px) {
     padding: 15px;
   }
 }
@@ -293,7 +302,6 @@
 .post-container {
   min-height: calc(100vh - 350px);
 }
-
 
 .newsletter-link {
   color: $teal-7;
@@ -338,11 +346,9 @@
       border: 2px solid white;
     }
   }
-
 }
 
 .frontpage-episode {
-  
 }
 
 .podcast-title {
@@ -355,19 +361,18 @@
   margin-left: -5px;
 }
 
-
 //reusable
 .podcast-inner-card {
   display: flex;
   .podcast-image-left {
-    @include screen-max(576px){
+    @include screen-max(576px) {
       display: none;
     }
     display: flex;
     align-items: center;
     margin-right: 20px;
     .portrait-hat {
-      &:not(:first-of-type){
+      &:not(:first-of-type) {
         margin-left: -20px;
       }
       position: relative;
@@ -385,16 +390,12 @@
         left: 0px;
       }
     }
-  
-
- 
   }
   .podcast-content-right {
     .podcast-episode {
       display: flex;
       flex-direction: column;
       // border: 1px solid gray;
-  
     }
     a {
       color: white;
@@ -421,24 +422,42 @@
     position: absolute;
     width: 40px;
     transform: rotate(-20deg);
-    top:-30px;
+    top: -30px;
     left: -23px;
   }
 }
 
-
-
 @keyframes flicker {
-  0%    { opacity: 1; }
-  3%    { opacity: 0.4; }
-  6%    { opacity: 1; }
-  7%    { opacity: 0.4; }
-  8%    { opacity: 1; }
-  9%    { opacity: 0.4; }
-  10%   { opacity: 1; }
-  89%   { opacity: 1; }
-  90%   { opacity: 0.4; }
-  100%  { opacity: 0.4; }
+  0% {
+    opacity: 1;
+  }
+  3% {
+    opacity: 0.4;
+  }
+  6% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0.4;
+  }
+  8% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0.4;
+  }
+  10% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.4;
+  }
 }
 
 // #L  { animation: flicker 6s infinite step-end; }
