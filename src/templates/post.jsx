@@ -56,10 +56,10 @@ export default class PostTemplate extends React.Component {
                   // setIsPlaying={setIsPlaying}
                   // setTrackPlayed={setTrackPlayed}
                 >
-                  <h3>{post.title}</h3>
-                  <p>{post.shortDescription}</p>
+                  {/* <h3>{post.title}</h3>
+                  <p>{post.shortDescription}</p> */}
                 </Audio>
-                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                <div className="danger-html" dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 <div className="post-meta">
                   <PostTags tags={post.tags} />
                   <SocialLinks postPath={slug} postNode={postNode} />
