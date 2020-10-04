@@ -75,6 +75,12 @@ const Audio = ({
   // }
 
   useEffect(() => {
+    // temporary solution from germ
+    window.jumpToTimestamp = (t) => {
+      const time = moment.duration(`00:${t}`).asSeconds();
+      audio.currentTime = time;
+      setPlaying(true);
+    };
     const audio = document.getElementById(index);
 
     // state setters wrappers
@@ -112,12 +118,19 @@ const Audio = ({
     }
   });
 
-  const jumpToTimestamp = (timestamp) => {
+  // todo-not used
+  const jumpToTimestampAudio = (timestamp) => {
     console.log(" I RAN !!!")
     // const time = moment.duration(`00:${t}`).asSeconds();
     // audio.currentTime = time;
     console.log("Yo")
   }
+
+  // todo-not used
+  const jumpToTimestampTopLevel = (element) => {
+    console.log(element,"TESTING");
+  }
+
 
   console.log(mp3,"MP3");
   console.log(episodeHtml,"Episode HTML");
@@ -127,7 +140,8 @@ const Audio = ({
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
   // its $& not $1 for whatever reason on capture group
   // let newHtml="yo"
-  let newHtml = episodeHtml.replace(regex, '<span class="timestamp" onClick={jumpToTimestamp(\`$&`)}>$&</span>')
+  // let newHtml = episodeHtml.replace(regex, '<span class="timestamp" onClick={jumpToTimestampAudio(\`$&`)}>$&</span>')
+  let newHtml = episodeHtml.replace(regex, '<span class="timestamp" onClick=window.jumpToTimestamp(\`$&`)>$&</span>')
   // console.log(episodeHtml, "EPISODE HTML AGAIN!")
   console.log(newHtml, "Episode HTML END")
 
@@ -173,7 +187,20 @@ const Audio = ({
         </div>
       </div>
     </div>
-    <div className="danger-html" dangerouslySetInnerHTML={{ __html: newHtml }} />
+    {/* <div onClick={(event) => {
+        console.log("YOOOO I EXECUTE!~");
+        event.stopPropagation();
+        jumpToTimestampTopLevel(arg)}
+      } 
+      className="danger-html" dangerouslySetInnerHTML={{ __html: newHtml }} /> */}
+      <div onClick={(event) => {
+        console.log("YOOOO I EXECUTE!~");
+        event.stopPropagation();
+        jumpToTimestampTopLevel(event)}
+      } 
+      className="danger-html">
+        <div dangerouslySetInnerHTML={{ __html: newHtml }} />
+      </div>
     {/* {children} */}
     </>
   );
