@@ -1,6 +1,6 @@
 ---
 title: "Preview Episode"
-slug: "000-preview-episode"
+slug: "preview-episode"
 # cover: "img/arnold.jpeg"
 cover: "8.jpg"
 date: "2020-08-01"

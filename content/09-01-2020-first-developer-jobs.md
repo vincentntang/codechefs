@@ -1,6 +1,6 @@
 ---
 title: "First Developer Jobs"
-slug: "01-intro-to-qa"
+slug: "first-developer-jobs"
 # cover: "img/arnold.jpeg"
 cover: "8.jpg"
 date: "2020-09-02"
