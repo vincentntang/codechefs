@@ -313,13 +313,26 @@
   }
 
   ul {
+    // list-style-type: none;
+    padding-left: 20px;
+    p {
+      margin: 0px;
+    }
+    // padding-left: 0px;
     li {
-      padding: 3px;
+      &:before {
+        // content: "•";
+        font-size: 1.5em;
+        line-height: 1;
+      }
+      // // padding: 3px;
+      padding-left: 3px;
     }
   }
   .danger-html {
     margin-bottom: 80px;
     color: #b3b3b3;
+
   }
 }
 
