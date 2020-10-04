@@ -23,6 +23,8 @@ export default class PostTemplate extends React.Component {
 
 
     console.log(postNode.html, "POST HTML");
+    console.log(post,"POST");
+    console.log(this.props,"PROPSS")
 
     return (
       <Layout>
@@ -43,7 +45,7 @@ export default class PostTemplate extends React.Component {
                 <Audio 
                   id={1} 
                   index={1} 
-                  mp3={'https://codechefs.s3.amazonaws.com/000_preview_episode.mp3'}
+                  mp3={post.audioUrl}
                   episodeName={post.title}
                   episodeHtml={postNode.html}
                   // currentTrack={currentTrack} 
@@ -53,13 +55,16 @@ export default class PostTemplate extends React.Component {
                   // isPlaying={isPlaying}
                   // setIsPlaying={setIsPlaying}
                   // setTrackPlayed={setTrackPlayed}
-                />
-                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-                {/* <div className="post-meta">
+                >
+                  {/* <h3>{post.title}</h3>
+                  <p>{post.shortDescription}</p> */}
+                </Audio>
+                <div className="danger-html" dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                <div className="post-meta">
                   <PostTags tags={post.tags} />
                   <SocialLinks postPath={slug} postNode={postNode} />
                 </div>
-                <UserInfo config={config} /> */}
+                {/* <UserInfo config={config} /> */}
                 {/* <Disqus postNode={postNode} /> */}
               </div>
             </div>
@@ -84,6 +89,8 @@ export const pageQuery = graphql`
         date
         category
         tags
+        audioUrl
+        shortDescription
       }
       fields {
         slug

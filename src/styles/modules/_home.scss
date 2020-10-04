@@ -307,8 +307,20 @@
   margin-bottom: 50px;
 }
 
-.post-container a {
-  color: $teal-7;
+.post-container {
+  a {
+    color: $teal-7;
+  }
+
+  ul {
+    li {
+      padding: 3px;
+    }
+  }
+  .danger-html {
+    margin-bottom: 80px;
+    color: #b3b3b3;
+  }
 }
 
 .social-links-wrapper {
@@ -399,6 +411,9 @@
     a {
       color: white;
       text-decoration: none;
+    }
+    .short-description {
+      color: #b3b3b3;
     }
   }
 }
