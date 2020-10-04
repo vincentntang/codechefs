@@ -112,7 +112,25 @@ const Audio = ({
     }
   });
 
+  const jumpToTimestamp = (timestamp) => {
+    console.log(" I RAN !!!")
+    // const time = moment.duration(`00:${t}`).asSeconds();
+    // audio.currentTime = time;
+    console.log("Yo")
+  }
+
   console.log(mp3,"MP3");
+  console.log(episodeHtml,"Episode HTML");
+  // preprocess episodeHTML
+  const regex = /(\d[:])?\d\d[:]\d\d/g;
+  // const regex = /\d\d[:]\d\d/g;
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+  // its $& not $1 for whatever reason on capture group
+  // let newHtml="yo"
+  let newHtml = episodeHtml.replace(regex, '<span class="timestamp" onClick={jumpToTimestamp(\`$&`)}>$&</span>')
+  // console.log(episodeHtml, "EPISODE HTML AGAIN!")
+  console.log(newHtml, "Episode HTML END")
+
   return (
     <>
     <div className="player">
@@ -155,7 +173,8 @@ const Audio = ({
         </div>
       </div>
     </div>
-    {children}
+    <div className="danger-html" dangerouslySetInnerHTML={{ __html: newHtml }} />
+    {/* {children} */}
     </>
   );
 }
