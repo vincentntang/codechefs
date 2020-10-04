@@ -322,8 +322,8 @@
     li {
       &:before {
         // content: "•";
-        font-size: 1.5em;
-        line-height: 1;
+        // font-size: 1.5em;
+        // line-height: 1;
       }
       // // padding: 3px;
       padding-left: 3px;
@@ -475,7 +475,10 @@
 .timestamp {
   color: lightblue;
   cursor: pointer;
+  padding-top: 2px;
   padding-right: 2px;
   padding-top: 2px;
   padding-bottom: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
 }
