@@ -482,3 +482,33 @@
   margin-bottom: 2px;
   display: inline-block;
 }
+
+// tags + share icons
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  // padding-bottom: 10px;
+  flex-wrap: wrap;
+
+  .post-tag-container {
+    margin-bottom: 10px;
+    button {
+      padding: 5px;
+    }
+    display: flex;
+    flex-direction: column;
+    .tag-desc {
+      margin-bottom: 5px;
+    }
+  
+  }
+  
+  .share-links {
+    svg {
+      margin-right: 4px;
+    }
+  
+  }
+}
+
