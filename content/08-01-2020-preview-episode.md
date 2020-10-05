@@ -9,8 +9,7 @@ category: "tech"
 shortDescription: "A brief introduction to our ourselves and the show!"
 tags:
     - programming
-    - stuff
-    - other
+
 ---
 
 ### Our first episode!

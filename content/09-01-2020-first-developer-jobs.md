@@ -9,8 +9,7 @@ category: "tech"
 shortDescription: "What's it like working in your first developer job? German and Vincent discuss their restaurant history background before webdevelopment and how they successfully transitioned into tech!"
 tags:
     - programming
-    - stuff
-    - other
+    - career
 ---
 
 ### And how to get your first job
