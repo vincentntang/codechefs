@@ -27,7 +27,7 @@ const SocialLinks = (props) => {
   ); 
 
   return (
-    <div className="social-links">
+    <div className="share-links">
       <RedditShareButton url={url} title={post.title}>
         <RedditIcon round size={iconSize} />
         <RedditShareCount url={url}>
@@ -50,9 +50,9 @@ const SocialLinks = (props) => {
       >
         <LinkedinIcon round size={iconSize} />
       </LinkedinShareButton>
-      <TelegramShareButton url={url}>
+      {/* <TelegramShareButton url={url}>
         <TelegramIcon round size={iconSize} />
-      </TelegramShareButton>
+      </TelegramShareButton> */}
     </div>
   );
 }

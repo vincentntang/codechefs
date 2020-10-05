@@ -1,6 +1,6 @@
 ---
 title: "First Developer Jobs"
-slug: "01-intro-to-qa"
+slug: "first-developer-jobs"
 # cover: "img/arnold.jpeg"
 cover: "8.jpg"
 date: "2020-09-02"
@@ -9,8 +9,7 @@ category: "tech"
 shortDescription: "What's it like working in your first developer job? German and Vincent discuss their restaurant history background before webdevelopment and how they successfully transitioned into tech!"
 tags:
     - programming
-    - stuff
-    - other
+    - career
 ---
 
 ### And how to get your first job
@@ -24,6 +23,10 @@ After that, we cover what working in the software industry feels like! What thin
 <hr>
 
 ### Shownotes
+
+<!-- - 00:30 - Intro
+    - 00:40 - Testing
+        - 00:50 - Testing -->
 
 - 00:30 - Intro
 - 01:57 - Vincent as a kitchen designer

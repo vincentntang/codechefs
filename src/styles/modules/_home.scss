@@ -313,13 +313,26 @@
   }
 
   ul {
+    // list-style-type: none;
+    padding-left: 20px;
+    p {
+      margin: 0px;
+    }
+    // padding-left: 0px;
     li {
-      padding: 3px;
+      &:before {
+        // content: "•";
+        // font-size: 1.5em;
+        // line-height: 1;
+      }
+      // // padding: 3px;
+      padding-left: 3px;
     }
   }
   .danger-html {
     margin-bottom: 80px;
     color: #b3b3b3;
+
   }
 }
 
@@ -457,4 +470,45 @@
 }
 
 // #L  { animation: flicker 6s infinite step-end; }
-// #et { animation: flicker 5s infinite 3s step-end; }
+// #et { animation: flicker 5s infinite 3s step-end; }\
+
+.timestamp {
+  color: lightblue;
+  cursor: pointer;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+// tags + share icons
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  // padding-bottom: 10px;
+  flex-wrap: wrap;
+
+  .post-tag-container {
+    margin-bottom: 10px;
+    button {
+      padding: 5px;
+    }
+    display: flex;
+    flex-direction: column;
+    .tag-desc {
+      margin-bottom: 5px;
+    }
+  
+  }
+  
+  .share-links {
+    svg {
+      margin-right: 4px;
+    }
+  
+  }
+}
+
