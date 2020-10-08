@@ -7,8 +7,8 @@ import config from "../../data/SiteConfig";
 // import dinerLogo from "../assets/diner_logo.svg";
 // import logo from "../assets/code_chefs_transparent.svg";
 // import sampleMp3 from "../assets/file_example.mp3";
-import vincentntang from "../assets/vincentntang.jpeg";
-import germangamboa from "../assets/germangamboa.jpeg";
+import vincentImg from "../../static/logos/vincentntang.jpeg";
+import germanImg from "../../static/logos/germangamboa.jpeg";
 // import Menu from "../layout/Menu";
 // import Footer from "../components/Footer";
 
@@ -28,7 +28,7 @@ const AboutPage = () => {
               <div className="header">
               </div> 
               <div className="img-wrapper">
-                <img src={vincentntang} alt="vincent tang"/>
+                <img src={vincentImg} alt="vincent tang"/>
               </div>
               <div className="desc-wrapper">
                 <div className="description">👨‍🍳 Vincent Tang is a fullstack developer from Orlando, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
@@ -36,7 +36,7 @@ const AboutPage = () => {
             </div>
             <div className="cc-padding cc-portrait">
               <div className="img-wrapper">
-                <img src={germangamboa} alt="german gamboa"/>
+                <img src={germanImg} alt="german gamboa"/>
               </div>
               <div className="desc-wrapper">
                 <div className="description">👨‍🍳 German Gamboa is a fullstack developer from Orlando, FL. Formerly a general manager for a restaurant chain. Likes to learn new things</div>
