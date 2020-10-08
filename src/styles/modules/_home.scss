@@ -148,6 +148,7 @@
  * THE PEOPLE AND INTRO
  */
 .cc-intro {
+  font-size: 18px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   padding: 40px; // override default 25px on cc-padding
@@ -175,6 +176,7 @@
   border-bottom-right-radius: 20px;
 }
 .cc-portrait {
+  font-size: 18px;
   display: flex;
   width: 50%;
   min-height: 100px;
@@ -553,3 +555,11 @@
   }
 }
 
+.cc-support {
+  font-size:18px;
+  a {
+    color: $teal-5 !important;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
