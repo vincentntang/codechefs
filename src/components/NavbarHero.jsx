@@ -1,23 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import UserLinks from "./UserLinks";
-// import logo from "../assets/code_chefs_transparent.svg";
-// import logo2 from "../assets/Artboard2.png";
-// import logo2svg from "../assets/Artboard2.svg";
-// import logo2svga from "../assets/Artboard2a.svg";
-import { ReactComponent as MyLogo} from "../assets/code_chefs_art3.svg";
-// import logo3svg from "../assets/code_chefs_art3.svg";
+// import UserLinks from "./UserLinks";
 import Logo from "./Logo";
+import MainLogo from "../../static/logos/code_chefs_main_logo.png";
 import LogoTest from "./LogoTest";
 import { Location } from '@reach/router';
-// import podcastApple from "../assets/podcastApple.svg";
-// import podcastGoogle from "../assets/podcastGoogle.svg";
-// import podcastGooglePlayMusic from "../assets/podcastGooglePlayMusic.svg";
-// import podcastOvercast from "../assets/podcastOvercast.svg";
-// import podcastPocketcasts from "../assets/podcastPocketcasts.svg";
-// import podcastSpotify from "../assets/podcastSpotify.svg";
-// import podcastRss from "../assets/podcastRss.svg";
-// import podcastTwitter from "../assets/podcastTwitter.svg";
 import {ReactComponent as PodcastApple} from "../assets/podcastApple.svg";
 import {ReactComponent as PodcastGoogle} from "../assets/podcastGoogle.svg";
 import {ReactComponent as PodcastGooglePlayMusic} from "../assets/podcastGooglePlayMusic.svg";
@@ -41,11 +28,17 @@ const Navbar = (props) => {
       <div className="cc-logo-hero">
         {/* <img src={logo} alt="logo"/> */}
         {/* <img src={logo3svg} alt="logo"/> */}
-        <Logo/>
+        {/* <Logo/> */}
+        <Link to={'/'}>
+          <img className="main-logo" alt="Code Chefs Logo" src={MainLogo}/>
+        </Link>
       </div>
       {/* <div className="cc-logo-hero">
         <LogoTest/>
       </div> */}
+      <div className="cc-hero-description text-center">
+        <p className="my-0">Podcast for Hungry Web Developers</p>
+      </div>
       <div className="social-links-wrapper">
         <div className="social-links">
           {/* <img src={podcastApple} alt="podcast apple"/>
@@ -56,35 +49,33 @@ const Navbar = (props) => {
           <img src={podcastSpotify} alt="podcast apple"/>
           <img src={podcastRss} alt="podcast apple"/>
           <img src={podcastTwitter} alt="podcast apple"/> */}
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastTwitter/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastApple/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastGoogle/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastGooglePlayMusic/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastSpotify/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastPocketcasts/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastOvercast/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://codechefs.dev/rss.xml">
             <PodcastRss/>
           </a>
         </div>
       </div>
-      <div className="cc-hero-description text-center">
-        <p>Podcast for Hungry Web Developers</p>
-      </div>
+
       <nav className="cc-navbar">
         <div className="cc-navitem">
           <Link to="/" activeClassName="active-link">
@@ -100,11 +91,6 @@ const Navbar = (props) => {
       </nav>
    
     </section>
-    {/* <div className="cc-navbar-background">
-      <div className="cc-container"> */}
-
-      {/* </div>
-    </div> */}
     </>
   );
 }

@@ -55,6 +55,7 @@
   border-top-left-radius:3px;
   max-width: 500px;
   margin: 0 auto;
+  // margin-bottom: 10px;
   // background-color: black;
   img {
     // padding: 0px 20px;
@@ -147,8 +148,14 @@
  * THE PEOPLE AND INTRO
  */
 .cc-intro {
+  font-size: 18px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  padding: 40px; // override default 25px on cc-padding
+}
+
+.cc-support {
+  padding: 40px;
 }
 
 .cc-portraits {
@@ -158,6 +165,9 @@
   border-bottom-right-radius: 20px;
   border-top: 1px dotted white;
   padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
 }
 .cc-portrait:first-of-type {
   border-bottom-left-radius: 20px;
@@ -166,6 +176,7 @@
   border-bottom-right-radius: 20px;
 }
 .cc-portrait {
+  font-size: 18px;
   display: flex;
   width: 50%;
   min-height: 100px;
@@ -174,18 +185,34 @@
   @include screen-max(768px){
     width: 100%;
   }
-  img {
+  .img-portait{
     width: 100%;
     // max-width: 100%;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
   }
   .img-wrapper {
     max-width: 200px;
   }
   .desc-wrapper {
-
+    .personal-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 14px;
+      a {
+        margin-right: 3px;
+        margin-left: 3px;
+      }
+      img {
+        margin-left: 3px;
+        margin-right: 3px;
+        max-width: 36px;
+        height: auto;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
   }
   .footer {
     height: 50px;
@@ -280,13 +307,27 @@
   }
 }
 
+// .footer {
+//   // border-top: 3px solid white;
+//   margin-top: 80px;
+//   background-color: #1a1a1a;
+//   width: 100%;
+//   padding-bottom: 60px;
+//   padding-top: 40px;
+// }
+
 .footer {
-  border-top: 3px solid white;
-  margin-top: 80px;
-  background-color: #1a1a1a;
-  width: 100%;
-  padding-bottom: 60px;
-  padding-top: 40px;
+  // border-top: 3px solid white;
+  text-align: center;
+  background-color: hsla(0,0,0,0.5);
+  padding: 15px;
+  p {
+    margin: 0px;
+  }
+  a {
+    text-decoration: underline;
+    padding: 5px;
+  }
 }
 
 // Force a min height on all posts if not enough content
@@ -343,6 +384,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
     svg {
       width: 100%;
       height: 100%;
@@ -470,7 +513,7 @@
 }
 
 // #L  { animation: flicker 6s infinite step-end; }
-// #et { animation: flicker 5s infinite 3s step-end; }\
+// #et { animation: flicker 5s infinite 3s step-end; }
 
 .timestamp {
   color: lightblue;
@@ -512,3 +555,11 @@
   }
 }
 
+.cc-support {
+  font-size:18px;
+  a {
+    color: $teal-5 !important;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}

@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 import Audio from "./audio/Audio";
-import codeChefsHat from "../assets/code_chefs_hat.svg";
-import germanImg from "../assets/germangamboa.jpeg";
-import vincentImg from "../assets/vincentntang.jpeg";
+import germanImg from "../../static/logos/germangamboa.jpeg";
+import vincentImg from "../../static/logos/vincentntang.jpeg";
 import moment from "moment";
 
 const PostListing = props => {

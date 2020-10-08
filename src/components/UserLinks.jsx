@@ -1,23 +1,23 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-const UserLinks = (props) => {
-  const getLinkElements = () => {
-    const { userLinks } = props.config;
-    const { labeled } = props;
-    return userLinks.map(link => (
-      <a href={link.url}>
-        <button type="button" key={link.label}>
-          {labeled ? link.label : ""}
-        </button>
-      </a>
-    ));
-  }
+// const UserLinks = (props) => {
+//   const getLinkElements = () => {
+//     const { userLinks } = props.config;
+//     const { labeled } = props;
+//     return userLinks.map(link => (
+//       <a href={link.url}>
+//         <button type="button" key={link.label}>
+//           {labeled ? link.label : ""}
+//         </button>
+//       </a>
+//     ));
+//   }
 
-  const { userLinks } = props.config;
-  if (!userLinks) {
-    return null;
-  }
-  return <div className="user-links">{getLinkElements()}</div>;
-}
+//   const { userLinks } = props.config;
+//   if (!userLinks) {
+//     return null;
+//   }
+//   return <div className="user-links">{getLinkElements()}</div>;
+// }
 
-export default UserLinks;
+// export default UserLinks;

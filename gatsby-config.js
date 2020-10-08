@@ -142,6 +142,7 @@ module.exports = {
           itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
         },
         custom_elements: [
+          { 'language': 'en'},
           { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
           { 'itunes:explicit': 'clean'},
           { 'itunes:subtitle': "Podcast for Hungry Web Developers"},
@@ -173,8 +174,13 @@ module.exports = {
           {'itunes:type': "episodic"},
           {'itunes:image': [
             {_attr: {
-              href: 'no-logo-yet.jpg'
+              href: 'https://codechefs.dev/logos/code_chefs_podcast_art.png'
             }},
+          ]},
+          {'image': [
+            {'url':'https://codechefs.dev/logos/code_chefs_podcast_art.png'},
+            {'title':'Code Chefs'},
+            {'link': 'https://codechefs.dev'},
           ]},
           {
             'itunes:keywords':"javascript, webdevelopment,html,css,js"
