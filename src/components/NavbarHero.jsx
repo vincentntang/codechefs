@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import UserLinks from "./UserLinks";
+// import UserLinks from "./UserLinks";
 import Logo from "./Logo";
 import MainLogo from "../../static/logos/code_chefs_main_logo.png";
 import LogoTest from "./LogoTest";
