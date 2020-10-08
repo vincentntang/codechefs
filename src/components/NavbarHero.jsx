@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
 import UserLinks from "./UserLinks";
-import { ReactComponent as MyLogo} from "../assets/code_chefs_art3.svg";
 import Logo from "./Logo";
 import MainLogo from "../../static/logos/code_chefs_main_logo.png";
 import LogoTest from "./LogoTest";
@@ -68,7 +67,7 @@ const Navbar = (props) => {
           <a className="podcast-links" href="https://google.com">
             <PodcastOvercast/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://codechefs.dev/rss.xml">
             <PodcastRss/>
           </a>
         </div>
