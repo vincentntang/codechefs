@@ -36,6 +36,9 @@ const Navbar = (props) => {
       {/* <div className="cc-logo-hero">
         <LogoTest/>
       </div> */}
+      <div className="cc-hero-description text-center">
+        <p className="my-0">Podcast for Hungry Web Developers</p>
+      </div>
       <div className="social-links-wrapper">
         <div className="social-links">
           {/* <img src={podcastApple} alt="podcast apple"/>
@@ -72,9 +75,7 @@ const Navbar = (props) => {
           </a>
         </div>
       </div>
-      <div className="cc-hero-description text-center">
-        <p>Podcast for Hungry Web Developers</p>
-      </div>
+
       <nav className="cc-navbar">
         <div className="cc-navitem">
           <Link to="/" activeClassName="active-link">

@@ -5,6 +5,7 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
+// import Footer from "../components/Footer";
 
 class Listing extends React.Component {
   renderPaging() {

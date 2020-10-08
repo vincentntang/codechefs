@@ -32,7 +32,7 @@ const AboutPage = () => {
                 <img src={germanImg} alt="german gamboa"/>
               </div>
               <div className="desc-wrapper">
-                <div className="description">👨‍🍳 German Gamboa is a fullstack developer from Orlando, FL. Formerly a general manager for a restaurant chain. Likes to learn new things</div>
+                <div className="description">👨‍🍳 German Gamboa is a fullstack developer from Orlando, FL. Formerly a general restaurant manager. Likes to learn new things</div>
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import config from "../../data/SiteConfig";
 import "../styles/main.scss";
 import NavbarHero from "../components/NavbarHero"
 import favicon from "../../static/logos/favicon.png"
+import Footer from "../components/Footer";
 
 const MainLayout = (props) => {
   const { children } = props;
@@ -68,6 +69,7 @@ const MainLayout = (props) => {
             </Row>
           </Col>
         </Row> */}
+      <Footer config={config} />
     </div>
   );
 }
