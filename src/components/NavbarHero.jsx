@@ -49,22 +49,22 @@ const Navbar = (props) => {
           <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastTwitter/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastApple/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastGoogle/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastGooglePlayMusic/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastSpotify/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastPocketcasts/>
           </a>
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastOvercast/>
           </a>
           <a className="podcast-links" href="https://codechefs.dev/rss.xml">
