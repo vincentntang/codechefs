@@ -58,8 +58,8 @@ export default class PostTemplate extends React.Component {
                 >
                   {/* <h3>{post.title}</h3>
                   <p>{post.shortDescription}</p> */}
+                  {/* <div className="danger-html" dangerouslySetInnerHTML={{ __html: postNode.html }} /> */}
                 </Audio>
-                <div className="danger-html" dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 <div className="post-meta">
                   <PostTags tags={post.tags} />
                   <SocialLinks postPath={slug} postNode={postNode} />
