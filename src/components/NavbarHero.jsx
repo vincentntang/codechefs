@@ -1,24 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
 import UserLinks from "./UserLinks";
-// import logo from "../assets/code_chefs_transparent.svg";
-// import logo2 from "../assets/Artboard2.png";
-// import logo2svg from "../assets/Artboard2.svg";
-// import logo2svga from "../assets/Artboard2a.svg";
 import { ReactComponent as MyLogo} from "../assets/code_chefs_art3.svg";
-// import logo3svg from "../assets/code_chefs_art3.svg";
 import Logo from "./Logo";
 import MainLogo from "../../static/logos/code_chefs_main_logo.png";
 import LogoTest from "./LogoTest";
 import { Location } from '@reach/router';
-// import podcastApple from "../assets/podcastApple.svg";
-// import podcastGoogle from "../assets/podcastGoogle.svg";
-// import podcastGooglePlayMusic from "../assets/podcastGooglePlayMusic.svg";
-// import podcastOvercast from "../assets/podcastOvercast.svg";
-// import podcastPocketcasts from "../assets/podcastPocketcasts.svg";
-// import podcastSpotify from "../assets/podcastSpotify.svg";
-// import podcastRss from "../assets/podcastRss.svg";
-// import podcastTwitter from "../assets/podcastTwitter.svg";
 import {ReactComponent as PodcastApple} from "../assets/podcastApple.svg";
 import {ReactComponent as PodcastGoogle} from "../assets/podcastGoogle.svg";
 import {ReactComponent as PodcastGooglePlayMusic} from "../assets/podcastGooglePlayMusic.svg";
@@ -104,11 +91,6 @@ const Navbar = (props) => {
       </nav>
    
     </section>
-    {/* <div className="cc-navbar-background">
-      <div className="cc-container"> */}
-
-      {/* </div>
-    </div> */}
     </>
   );
 }

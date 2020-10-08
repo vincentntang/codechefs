@@ -5,11 +5,6 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
-import dinerLogo from "../assets/diner_logo.svg";
-import logo from "../assets/code_chefs_transparent.svg";
-import sampleMp3 from "../assets/file_example.mp3";
-// import Menu from "../layout/Menu";
-// import Footer from "../components/Footer";
 
 class Listing extends React.Component {
   renderPaging() {
