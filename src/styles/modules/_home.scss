@@ -150,6 +150,11 @@
 .cc-intro {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  padding: 40px; // override default 25px on cc-padding
+}
+
+.cc-support {
+  padding: 40px;
 }
 
 .cc-portraits {
