@@ -142,6 +142,7 @@ module.exports = {
           itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
         },
         custom_elements: [
+          { 'language': 'en'},
           { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
           { 'itunes:explicit': 'clean'},
           { 'itunes:subtitle': "Podcast for Hungry Web Developers"},
@@ -175,6 +176,11 @@ module.exports = {
             {_attr: {
               href: 'no-logo-yet.jpg'
             }},
+          ]},
+          {'image': [
+            {'url':'123'},
+            {'title':'Code Chefs'},
+            {'link': 'https://codechefs.dev'},
           ]},
           {
             'itunes:keywords':"javascript, webdevelopment,html,css,js"
