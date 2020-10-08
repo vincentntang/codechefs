@@ -3,3 +3,5 @@ public/
 .cache
 drafts/
 reduxcache*
+*.ds
+.ds
