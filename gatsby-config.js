@@ -174,11 +174,11 @@ module.exports = {
           {'itunes:type': "episodic"},
           {'itunes:image': [
             {_attr: {
-              href: 'no-logo-yet.jpg'
+              href: 'https://codechefs.dev/logos/code_chefs_podcast_art.png'
             }},
           ]},
           {'image': [
-            {'url':'123'},
+            {'url':'https://codechefs.dev/logos/code_chefs_podcast_art.png'},
             {'title':'Code Chefs'},
             {'link': 'https://codechefs.dev'},
           ]},

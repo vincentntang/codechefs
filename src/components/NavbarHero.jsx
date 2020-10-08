@@ -8,7 +8,7 @@ import UserLinks from "./UserLinks";
 import { ReactComponent as MyLogo} from "../assets/code_chefs_art3.svg";
 // import logo3svg from "../assets/code_chefs_art3.svg";
 import Logo from "./Logo";
-import MainLogo from "../../static/logo/code_chefs_main_logo.png";
+import MainLogo from "../../static/logos/code_chefs_main_logo.png";
 import LogoTest from "./LogoTest";
 import { Location } from '@reach/router';
 // import podcastApple from "../assets/podcastApple.svg";
@@ -60,7 +60,7 @@ const Navbar = (props) => {
           <img src={podcastSpotify} alt="podcast apple"/>
           <img src={podcastRss} alt="podcast apple"/>
           <img src={podcastTwitter} alt="podcast apple"/> */}
-          <a className="podcast-links" href="https://google.com">
+          <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastTwitter/>
           </a>
           <a className="podcast-links" href="https://google.com">
