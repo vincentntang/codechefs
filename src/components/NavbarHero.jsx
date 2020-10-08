@@ -8,7 +8,7 @@ import UserLinks from "./UserLinks";
 import { ReactComponent as MyLogo} from "../assets/code_chefs_art3.svg";
 // import logo3svg from "../assets/code_chefs_art3.svg";
 import Logo from "./Logo";
-import MainLogo from "../assets/code_chefs_main_logo.png";
+import MainLogo from "../../static/logo/code_chefs_main_logo.png";
 import LogoTest from "./LogoTest";
 import { Location } from '@reach/router';
 // import podcastApple from "../assets/podcastApple.svg";
