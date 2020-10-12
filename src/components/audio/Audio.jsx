@@ -62,7 +62,7 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
       audio.removeEventListener("loadeddata", setAudioData);
       audio.removeEventListener("timeupdate", setAudioTime);
     };
-  }, [curVolume, curSpeed, clickedTime]);
+  });
 
   const regex = /(\d[:])?\d\d[:]\d\d/g;
   // const regex = /\d\d[:]\d\d/g;
