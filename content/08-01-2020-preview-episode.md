@@ -20,7 +20,7 @@ In this episode, we talk about what Code Chefs is, why we started it, and what y
 
 ### Shownotes
 
-- 00:52 - Intro
+- 00:30 - Intro End
 - 01:16 - German introduction
 - 01:51 - Vincent introduction
 - 02:44 - How we met at tech meetups and hackathons in Orlando, FL
@@ -29,4 +29,4 @@ In this episode, we talk about what Code Chefs is, why we started it, and what y
 - 10:57 - Dessert time!
 - 11:25 - Vincent & Scuba Diving
 - 12:40 - German & Fatherhood
-- 14:56 - Outro
+- 14:56 - Outro Start
