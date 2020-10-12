@@ -3,13 +3,9 @@ import Bar from "./Bar";
 import moment from "moment";
 import playSvg from "../../assets/play.svg";
 import pauseSvg from "../../assets/pause.svg";
+import { Controls } from "./Controls";
 
-const Audio = ({
-  mp3,
-  index,
-  episodeName,
-  episodeHtml,
-}) => {
+const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
@@ -17,7 +13,6 @@ const Audio = ({
   const [clickedTime, setClickedTime] = useState();
   const [curSpeed, setCurSpeed] = useState(1);
   const [curVolume, setCurVolume] = useState(1);
-  const volumeLevels = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
   const playBackRates = [0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5];
 
   const changeAudioSpeed = () => {
@@ -30,7 +25,6 @@ const Audio = ({
       setCurSpeed(playBackRates[index + 1]);
     }
   };
-
 
   useEffect(() => {
     // temporary solution from germ
@@ -68,7 +62,7 @@ const Audio = ({
       audio.removeEventListener("loadeddata", setAudioData);
       audio.removeEventListener("timeupdate", setAudioTime);
     };
-  });
+  }, [curVolume, curSpeed, clickedTime]);
 
   const regex = /(\d[:])?\d\d[:]\d\d/g;
   // const regex = /\d\d[:]\d\d/g;
@@ -76,13 +70,16 @@ const Audio = ({
   // its $& not $1 for whatever reason on capture group
   // let newHtml="yo"
   // let newHtml = episodeHtml.replace(regex, '<span class="timestamp" onClick={jumpToTimestampAudio(\`$&`)}>$&</span>')
-  let newHtml = useMemo(() => episodeHtml.replace(
-    regex,
-    '<span class="timestamp" onClick=window.jumpToTimestamp(`$&`)>$&</span>'
-  ), [episodeHtml])
+  let newHtml = useMemo(
+    () =>
+      episodeHtml.replace(
+        regex,
+        '<span class="timestamp" onClick=window.jumpToTimestamp(`$&`)>$&</span>'
+      ),
+    [episodeHtml]
+  );
 
-
-  console.log('I renrenderd')
+  console.log("I renrenderd");
 
   return (
     <>
@@ -91,7 +88,7 @@ const Audio = ({
           <source src={mp3} />
           Your browser does not support the <code>audio</code> element.
         </audio>
-  
+
         <div className="controls">
           <div
             className="cc-play p-3 noselect"
@@ -104,7 +101,6 @@ const Audio = ({
               <span>{formatDuration(curTime)}</span> / {""}
               <span>{formatDuration(duration)}</span>
             </div>
-    
           </div>
           <Bar
             episodeName={episodeName}
@@ -112,31 +108,12 @@ const Audio = ({
             duration={duration}
             onTimeUpdate={(time) => setClickedTime(time)}
           />
-          <div
-            className="cc-speed p-3 noselect"
-            onClick={() => changeAudioSpeed()}
-          >
-            <p className="my-0">Speed</p>
-            <div className="cc-speed-display">{curSpeed}x</div>
-          </div>
-
-          <div className="cc-volume p-3 noselect">
-            <p className="my-0">Volume</p>
-            {/* <div>{curVolume}</div> */}
-            <div className="cc-volume-bar-wrapper">
-              {volumeLevels.map((volume, index) => {
-                return (
-                  <div
-                    className={`volume-bar ${
-                      index / 10 < curVolume ? "volume-bar-active" : ""
-                    }`}
-                    key={index}
-                    onClick={() => setCurVolume(volume)}
-                  ></div>
-                );
-              })}
-            </div>
-          </div>
+          <Controls
+            changeAudioSpeed={changeAudioSpeed}
+            curSpeed={curSpeed}
+            setCurVolume={setCurVolume}
+            curVolume={curVolume}
+          />
         </div>
       </div>
       <div
