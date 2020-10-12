@@ -15,7 +15,7 @@ const AboutPage = () => {
         <Helmet title={`About | ${config.siteTitle}`} />
         <div className="cc-header cc-card">
           <div className="cc-padding cc-intro">
-            <h3 className="color-offgray">What is it Code Chefs?</h3>
+            <h3 className="color-offgray">What is Code Chefs?</h3>
             <p className="my-0">It's a podcast for web developers who wants to level up! We do talks for all skill levels on:</p>
             <ul>
               <li>Javascript (React, Vue, Angular)</li>
