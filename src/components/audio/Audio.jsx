@@ -4,6 +4,7 @@ import moment from "moment";
 import playSvg from "../../assets/play.svg";
 import pauseSvg from "../../assets/pause.svg";
 import { Controls } from "./Controls";
+import {PlayButton} from "./PlayButton";
 
 const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
@@ -26,13 +27,20 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
     }
   };
 
+  // ComponentDidMount
+  // temporary solution from germ
   useEffect(() => {
-    // temporary solution from germ
+    const audio = document.getElementById(index);
     window.jumpToTimestamp = (t) => {
       const time = moment.duration(`00:${t}`).asSeconds();
       audio.currentTime = time;
       setPlaying(true);
     };
+  },[])
+
+
+  // ComponentDidUpdate
+  useEffect(() => {
     const audio = document.getElementById(index);
 
     // state setters wrappers
@@ -45,7 +53,6 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
 
     // DOM listeners: update React state on DOM events
     audio.addEventListener("loadeddata", setAudioData);
-
     audio.addEventListener("timeupdate", setAudioTime);
 
     audio.volume = curVolume;
@@ -63,7 +70,7 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
       audio.removeEventListener("timeupdate", setAudioTime);
     };
   });
-
+  
   const regex = /(\d[:])?\d\d[:]\d\d/g;
   // const regex = /\d\d[:]\d\d/g;
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
@@ -90,18 +97,12 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
         </audio>
 
         <div className="controls">
-          <div
-            className="cc-play p-3 noselect"
-            onClick={() => setPlaying(!playing)}
-          >
-            <div className="cc-play_button">
-              <img src={playing ? pauseSvg : playSvg} alt="play button" />
-            </div>
-            <div className="duration-ratio">
-              <span>{formatDuration(curTime)}</span> / {""}
-              <span>{formatDuration(duration)}</span>
-            </div>
-          </div>
+          <PlayButton
+            setPlaying={setPlaying}
+            playing={playing}
+            curTime={curTime}
+            duration={duration}
+          />
           <Bar
             episodeName={episodeName}
             curTime={curTime}
@@ -125,7 +126,3 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
 };
 
 export default Audio;
-
-function formatDuration(duration) {
-  return moment.duration(duration, "seconds").format("mm:ss", { trim: false });
-}
