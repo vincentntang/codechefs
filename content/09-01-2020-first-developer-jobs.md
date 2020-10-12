@@ -28,7 +28,7 @@ After that, we cover what working in the software industry feels like! What thin
     - 00:40 - Testing
         - 00:50 - Testing -->
 
-- 00:30 - Intro
+- 00:30 - Intro End
 - 01:57 - Vincent as a kitchen designer
 - 03:20 - Vincent's first open source scripts
 - 04:22 - German working as a kitchen manager before coding
@@ -39,4 +39,4 @@ After that, we cover what working in the software industry feels like! What thin
 - 22:30 - Working at a web agency
 - 25:00 - Advice to our past selves
 - 30:00 - Dessert time! Skateboarding and fatherhood
-
+- 33:56 - Outro Start
