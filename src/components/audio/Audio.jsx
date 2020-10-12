@@ -75,7 +75,6 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
   // const regex = /\d\d[:]\d\d/g;
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
   // its $& not $1 for whatever reason on capture group
-  // let newHtml="yo"
   // let newHtml = episodeHtml.replace(regex, '<span class="timestamp" onClick={jumpToTimestampAudio(\`$&`)}>$&</span>')
   let newHtml = useMemo(
     () =>
@@ -86,7 +85,7 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
     [episodeHtml]
   );
 
-  console.log("I renrenderd");
+  // console.log("I renrenderd");
 
   return (
     <>

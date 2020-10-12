@@ -2,6 +2,7 @@ import React from "react";
 import playSvg from "../../assets/play.svg";
 import pauseSvg from "../../assets/pause.svg";
 import moment from "moment";
+import momentDurationFormatSetup from "moment-duration-format"; //plugin used on momentJS to give it `format` methods
 
 export const PlayButton = ({
   setPlaying,

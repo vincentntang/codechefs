@@ -1,17 +1,9 @@
 import React from "react";
-import moment from "moment";
-import momentDurationFormatSetup from "moment-duration-format";
 
 export default function Bar(props) {
   const { episodeName,duration, curTime, onTimeUpdate } = props;
 
   const curPercentage = (curTime / duration) * 100;
-
-  function formatDuration(duration) {
-    return moment
-      .duration(duration, "seconds")
-      .format("mm:ss", { trim: false });
-  }
 
   function calcClickedTime(e) {
     const clickPositionInPage = e.pageX;
@@ -24,7 +16,7 @@ export default function Bar(props) {
   }
 
   function handleTimeDrag(e) {
-    console.log(e,"Eee");
+    // console.log(e,"handle drag");
     onTimeUpdate(calcClickedTime(e));
 
     const updateTimeOnMove = eMove => {
