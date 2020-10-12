@@ -414,6 +414,7 @@
 }
 
 .podcast-title {
+  font-weight: bold;
   font-size: 24px;
 }
 .short-description {
@@ -458,6 +459,7 @@
  
   }
   .podcast-content-right {
+    color: $gray-35;
     .podcast-episode {
       display: flex;
       flex-direction: column;

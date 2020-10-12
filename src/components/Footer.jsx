@@ -12,7 +12,7 @@ const Footer = (props) => {
 
   return (
     <footer className="footer">
-      <p>Made with 💛 in Gatsby. <a href="https://github.com/vincentntang/codechefs">Source Code</a></p>
+      <p>Made with <span className="mr-1">💛 </span>in Gatsby. <a href="https://github.com/vincentntang/codechefs">Source Code</a></p>
     </footer>
   )
   // return (

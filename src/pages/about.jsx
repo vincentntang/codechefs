@@ -15,7 +15,8 @@ const AboutPage = () => {
         <Helmet title={`About | ${config.siteTitle}`} />
         <div className="cc-header cc-card">
           <div className="cc-padding cc-intro">
-            <p className="my-0"><span>🎤 </span>Code chefs is a podcast for the web developer who wants to level up! We do talks for all skill levels on:</p>
+            <h3 className="color-offgray">What is it Code Chefs?</h3>
+            <p className="my-0">It's a podcast for web developers who wants to level up! We do talks for all skill levels on:</p>
             <ul>
               <li>Javascript (React, Vue, Angular)</li>
               <li>Backend + DevOps</li>
@@ -42,7 +43,7 @@ const AboutPage = () => {
                     <img src={socialGlobe} alt="social globe"/>
                   </a>
                 </div>
-                <div className="description">👨‍🍳 Vincent Tang is a fullstack developer residing in Tampa, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
+                <div className="description">Vincent Tang is a fullstack developer residing in Tampa, FL. Formerly a kitchen designer. Loves the outdoors and trying new things</div>
                
               </div>
             </div>
@@ -62,7 +63,7 @@ const AboutPage = () => {
                     <img src={socialGlobe} alt="social globe"/>
                   </a>
                 </div>
-                <div className="description">👨‍🍳 German Gamboa is a fullstack developer from Orlando, FL. Formerly a general restaurant manager. Expert waffler at meetup talks</div>
+                <div className="description">German Gamboa is a fullstack developer from Orlando, FL. Formerly a general restaurant manager. Expert waffler at meetup talks</div>
               </div>
             </div>
           </div>
