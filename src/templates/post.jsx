@@ -21,11 +21,6 @@ export default class PostTemplate extends React.Component {
       post.id = slug;
     }
 
-
-    console.log(postNode.html, "POST HTML");
-    console.log(post,"POST");
-    console.log(this.props,"PROPSS")
-
     return (
       <Layout>
         <section className="cc-container post-container">

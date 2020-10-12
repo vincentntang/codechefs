@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Bar from "./Bar";
 import moment from "moment";
-import playSvg from "../../assets/play.svg";
-import pauseSvg from "../../assets/pause.svg";
 import { Controls } from "./Controls";
 import {PlayButton} from "./PlayButton";
 
