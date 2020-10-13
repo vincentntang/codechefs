@@ -40,7 +40,7 @@ export default class PostTemplate extends React.Component {
                 <Audio 
                   id={1} 
                   index={1} 
-                  mp3={post.audioUrl}
+                  mp3={config.s3bucket + post.audioPath}
                   episodeName={post.title}
                   episodeHtml={postNode.html}
                   // currentTrack={currentTrack} 
@@ -84,7 +84,7 @@ export const pageQuery = graphql`
         date
         category
         tags
-        audioUrl
+        audioPath
         shortDescription
       }
       fields {

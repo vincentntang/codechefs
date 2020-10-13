@@ -1,4 +1,5 @@
 const config = {
+  s3bucket: 'https://codechefs.s3.amazonaws.com/',
   siteTitle: "Code Chefs Developer Podcast", // Site title.
   siteTitleShort: "Code Chefs", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Code Chefs Web Developer Podcast", // Alternative site title for SEO.
@@ -7,10 +8,10 @@ const config = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Podcast Site For Hungry Web Developers", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssTitle: "Code Chefs RSS feed", // Title of the RSS feed
-  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
-  googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
-  disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
+  siteRssTitle: "Code Chefs - Podcast for Hungry Web Developers", // Title of the RSS feed
+  // siteFBAppID: "1825356251115265", // FB Application ID for using app insights
+  // googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
+  // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "MM/DD/YYYY", // Date format for display.
   postsPerPage: 9999, // Amount of posts displayed per listing page.
@@ -18,9 +19,8 @@ const config = {
   userEmail: "vincentntang@gmail.com", // Email used for RSS feed's author segment
   userTwitter: "codechefsdev", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Florida, USA", // User location to display in the author segment.
-  userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
-  userDescription:
-    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+  userAvatar: "https://www.codechefs.dev/logos/vincentntang.jpeg", // User avatar to display in the author segment.
+  userDescription: "Code Chefs is a podcast for web developers who want to level up! We do all topics ranging from frontend to backend development",
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {

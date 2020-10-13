@@ -3,8 +3,10 @@ title: "Preview Episode"
 slug: "preview-episode"
 # cover: "img/arnold.jpeg"
 cover: "8.jpg"
-date: "2020-08-01"
-audioUrl: "https://codechefs.s3.amazonaws.com/000_preview_episode.mp3"
+date: 2020-08-01
+audioPath: 000_preview_episode.mp3
+fileSize: 17.6
+showLength: 15:24
 category: "tech"
 shortDescription: "A brief introduction to ourselves and the show!"
 tags:

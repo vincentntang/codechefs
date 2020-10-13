@@ -146,7 +146,7 @@ module.exports = {
           { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
           { 'itunes:explicit': 'clean'},
           { 'itunes:subtitle': "Podcast for Hungry Web Developers"},
-          { 'itunes:summary': "Fullstack Developers Vincent Tang and German Gamboa deep dive into topics in web development! They discuss from their own set of experience, and what life is like in tech. Topics range from Javascript, React, Backend Development, Soft Skills, and more! "},
+          { 'itunes:summary': "Fullstack Developers Vincent Tang and German Gamboa deep dive into topics in web development! They discuss from their own set of experiences, and what life is like in tech. Topics range from Javascript, React, Backend Development, Soft Skills, and more! "},
           { 'itunes:owner': [
             {'itunes:name': "Vincent Tang"},
             {'itunes:email': "vincentntang@gmail.com"}
@@ -183,6 +183,9 @@ module.exports = {
             {'link': 'https://codechefs.dev'},
           ]},
           {
+            'link': 'https://codechefs.dev'
+          },
+          {
             'itunes:keywords':"javascript, webdevelopment,html,css,js"
           },
         ],
@@ -203,12 +206,12 @@ module.exports = {
                   // { author: config.userEmail },
                   { "itunes:author":"Vincent Tang and German Gamboa - Fullstack Developers"},
                   { "itunes:subtitle": edge.node.excerpt},
-                  { "itunes:duration": 1234},
+                  { "itunes:duration": edge.node.frontmatter.showLength},
                   {"itunes:explicit": "no"},
                   {'enclosure': [
                     {_attr: {
-                      url: '12345',
-                      length: "123123123",
+                      url: config.s3bucket + edge.node.frontmatter.audioPath,
+                      length: Number(edge.node.frontmatter.fileSize) * 1000 * 1000, // megabytes to bytes
                       type: "audio/mpeg",
                     }},
                   ]},
@@ -238,7 +241,9 @@ module.exports = {
                       category
                       tags
                       shortDescription
-                      audioUrl
+                      audioPath
+                      showLength
+                      fileSize
                     }
                   }
                 }
