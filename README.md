@@ -4,12 +4,11 @@
 
 Source code to the [Code Chefs Podcast](https://codechefs.dev) site! Feel free to peruse around the source code, although it may be slightly messy
 
-This theme is based on [Gatsby-Hooks-Starter-Theme](https://github.com/vincentntang/gatsby-hooks-starter-theme), another theme I made
-
+This theme is based on [Gatsby-Hooks-Starter-Theme](https://github.com/vincentntang/gatsby-hooks-starter-theme)
 Some of the coolest parts of this repo are the following:
 
 1. A custom React Audio Library that controls playback speed, volume levels, and timestamps that can autoplay
-2. Fully responsive sass library support based on this [scss library](https://github.com/vincentntang/freshpoint) I made
+2. Fully responsive sass library support based on this [scss library](https://github.com/vincentntang/freshpoint)
 
 ## Installation Notes
 

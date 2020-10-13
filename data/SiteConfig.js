@@ -1,4 +1,5 @@
 const config = {
+  s3bucket: 'https://codechefs.s3.amazonaws.com/',
   siteTitle: "Code Chefs Developer Podcast", // Site title.
   siteTitleShort: "Code Chefs", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Code Chefs Web Developer Podcast", // Alternative site title for SEO.
@@ -7,7 +8,7 @@ const config = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Podcast Site For Hungry Web Developers", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssTitle: "Code Chefs RSS feed", // Title of the RSS feed
+  siteRssTitle: "Code Chefs - Podcast for Hungry Web Developers", // Title of the RSS feed
   // siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   // googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.

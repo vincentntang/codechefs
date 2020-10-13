@@ -183,6 +183,9 @@ module.exports = {
             {'link': 'https://codechefs.dev'},
           ]},
           {
+            'link': 'https://codechefs.dev'
+          },
+          {
             'itunes:keywords':"javascript, webdevelopment,html,css,js"
           },
         ],
@@ -203,12 +206,12 @@ module.exports = {
                   // { author: config.userEmail },
                   { "itunes:author":"Vincent Tang and German Gamboa - Fullstack Developers"},
                   { "itunes:subtitle": edge.node.excerpt},
-                  { "itunes:duration": 1234},
+                  { "itunes:duration": edge.node.frontmatter.showLength},
                   {"itunes:explicit": "no"},
                   {'enclosure': [
                     {_attr: {
-                      url: '12345',
-                      length: "123123123",
+                      url: config.s3bucket + edge.node.frontmatter.audioPath,
+                      length: Number(edge.node.frontmatter.fileSize) * 1000 * 1000, // megabytes to bytes
                       type: "audio/mpeg",
                     }},
                   ]},
@@ -238,7 +241,9 @@ module.exports = {
                       category
                       tags
                       shortDescription
-                      audioUrl
+                      audioPath
+                      showLength
+                      fileSize
                     }
                   }
                 }
