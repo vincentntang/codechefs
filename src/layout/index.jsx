@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import "../styles/main.scss";
 import NavbarHero from "../components/NavbarHero"
-import favicon from "../../static/logos/favicon.png"
+import favicon from "../../static/logos/favicon48.png"
 import Footer from "../components/Footer";
 
 const MainLayout = (props) => {
