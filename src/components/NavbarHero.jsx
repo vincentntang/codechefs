@@ -37,7 +37,7 @@ const Navbar = (props) => {
         <LogoTest/>
       </div> */}
       <div className="cc-hero-description text-center">
-        <p className="my-0 color-offgray">Podcast for Hungry Web Developers</p>
+        <p className="my-0 color-offgray">Hungry Web Developer Podcast</p>
       </div>
       <div className="social-links-wrapper">
         <div className="social-links">
