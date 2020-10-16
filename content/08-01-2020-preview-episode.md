@@ -16,7 +16,7 @@ tags:
 
 ### Our first episode!
 
-In this episode, we talk about what Code Chefs is, why we started it, and what you should expect in future episodes!
+We talk about what Code Chefs is, why we started it, and what you should expect in future episodes!
 
 <hr>
 

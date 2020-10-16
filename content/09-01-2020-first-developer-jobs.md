@@ -14,9 +14,9 @@ tags:
     - career
 ---
 
-### And how to get your first job
+### And how to get your first job!
 
-Getting that first job can be hard! Especially if you never programmed before. How do you get started? What does it take for an employer to take a chance on you?
+Especially if you never programmed before. How do you get started? What does it take for an employer to take a chance on you?
 
 In this episode, we cover our work histories before starting our careers in software! How we transitioned from working in the restaurant industry to the online courses we took. Followed up with applying to jobs, dealing with rejections, and finally accepting an offer!
 

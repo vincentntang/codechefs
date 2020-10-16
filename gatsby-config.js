@@ -137,10 +137,11 @@ module.exports = {
         }
       `,
       setup: options => ({
-        ...options,
+        ...options, // https://www.npmjs.com/package/rss#feedoptions to override any specs
         custom_namespaces: {
           itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
         },
+        site_url: 'https://codechefs.dev',
         custom_elements: [
           { 'language': 'en'},
           { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
@@ -182,9 +183,9 @@ module.exports = {
             {'title':'Code Chefs'},
             {'link': 'https://codechefs.dev'},
           ]},
-          {
-            'link': 'https://codechefs.dev'
-          },
+          // {
+          //   'link': 'https://codechefs.dev'
+          // },
           {
             'itunes:keywords':"javascript, webdevelopment,html,css,js"
           },
