@@ -14,7 +14,7 @@ module.exports = {
       image_url: `${urljoin(
         config.siteUrl,
         config.pathPrefix
-      )}/logos/logo-512.png`,
+      )}/logos/code_chefs_square512.png`,
       copyright: config.copyright
     }
   },
@@ -88,12 +88,12 @@ module.exports = {
         display: "minimal-ui",
         icons: [
           {
-            src: "/logos/logo-192.png",
+            src: "/logos/code_chefs_square192.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/logos/logo-512.png",
+            src: "/logos/code_chefs_square512.png",
             sizes: "512x512",
             type: "image/png"
           }
@@ -137,10 +137,11 @@ module.exports = {
         }
       `,
       setup: options => ({
-        ...options,
+        ...options, // https://www.npmjs.com/package/rss#feedoptions to override any specs
         custom_namespaces: {
           itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
         },
+        site_url: 'https://codechefs.dev',
         custom_elements: [
           { 'language': 'en'},
           { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
@@ -182,9 +183,9 @@ module.exports = {
             {'title':'Code Chefs'},
             {'link': 'https://codechefs.dev'},
           ]},
-          {
-            'link': 'https://codechefs.dev'
-          },
+          // {
+          //   'link': 'https://codechefs.dev'
+          // },
           {
             'itunes:keywords':"javascript, webdevelopment,html,css,js"
           },
