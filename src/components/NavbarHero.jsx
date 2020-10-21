@@ -49,28 +49,28 @@ const Navbar = (props) => {
           <img src={podcastSpotify} alt="podcast apple"/>
           <img src={podcastRss} alt="podcast apple"/>
           <img src={podcastTwitter} alt="podcast apple"/> */}
-          <a className="podcast-links" href="https://twitter.com/codechefsdev">
+          <a className="podcast-links" target="_blank" href="https://twitter.com/codechefsdev">
             <PodcastTwitter/>
           </a>
-          <a className="podcast-links" href="https://twitter.com/codechefsdev">
+          <a className="podcast-links" target="_blank" href="https://podcasts.apple.com/us/podcast/code-chefs-hungry-web-developer-podcast/id1536223859">
             <PodcastApple/>
           </a>
-          <a className="podcast-links" href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuY29kZWNoZWZzLmRldi9yc3MueG1s?sa=X&ved=0CBQQ27cFahcKEwjg4Obtj7_sAhUAAAAAHQAAAAAQAQ">
+          <a className="podcast-links" target="_blank" href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuY29kZWNoZWZzLmRldi9yc3MueG1s?sa=X&ved=0CBQQ27cFahcKEwjg4Obtj7_sAhUAAAAAHQAAAAAQAQ">
             <PodcastGoogle/>
           </a>
-          <a className="podcast-links" href="https://twitter.com/codechefsdev">
+          {/* <a className="podcast-links" href="https://twitter.com/codechefsdev">
             <PodcastGooglePlayMusic/>
-          </a>
-          <a className="podcast-links" href="https://open.spotify.com/show/6DxHVg6CAOzwHnLgQClrs7">
+          </a> */}
+          <a className="podcast-links" target="_blank" href="https://open.spotify.com/show/6DxHVg6CAOzwHnLgQClrs7">
             <PodcastSpotify/>
           </a>
-          <a className="podcast-links" href="https://pca.st/wtu4690d">
+          <a className="podcast-links" target="_blank" href="https://pca.st/wtu4690d">
             <PodcastPocketcasts/>
           </a>
-          <a className="podcast-links" href="https://overcast.fm/p2403384-t859cb">
+          <a className="podcast-links" target="_blank" href="https://overcast.fm/p2403384-t859cb">
             <PodcastOvercast/>
           </a>
-          <a className="podcast-links" href="https://codechefs.dev/rss.xml">
+          <a className="podcast-links" target="_blank" href="https://codechefs.dev/rss.xml">
             <PodcastRss/>
           </a>
         </div>

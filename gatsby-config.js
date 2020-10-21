@@ -144,10 +144,10 @@ module.exports = {
         site_url: 'https://codechefs.dev',
         custom_elements: [
           { 'language': 'en'},
-          { 'itunes:author': 'Vincent Tang &amp German Gamboa - Fullstack Developers' },
+          { 'itunes:author': 'Vincent Tang & German Gamboa' },
           { 'itunes:explicit': 'clean'},
           { 'itunes:subtitle': "Hungry Web Developer Podcast"},
-          { 'itunes:summary': "Fullstack Developers Vincent Tang and German Gamboa deep dive into topics in web development! They discuss from their own set of experiences, and what life is like in tech. Topics range from Javascript, React, Backend Development, Soft Skills, and more! "},
+          { 'itunes:summary': "Looking to expand your skills as a Web Developer? Vincent Tang and German Gamboa break down topics in Javascript, NodeJS, CSS, DevOps, AWS, soft skills and more!"},
           { 'itunes:owner': [
             {'itunes:name': "Vincent Tang"},
             {'itunes:email': "vincentntang@gmail.com"}
