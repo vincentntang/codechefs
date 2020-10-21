@@ -147,7 +147,7 @@ module.exports = {
           { 'itunes:author': 'Vincent Tang & German Gamboa' },
           { 'itunes:explicit': 'clean'},
           { 'itunes:subtitle': "Hungry Web Developer Podcast"},
-          { 'itunes:summary': "Looking to expand your skills as a Web Developer? Vincent Tang and German Gamboa break down topics in Javascript, NodeJS, CSS, DevOps, AWS, soft skills and more!"},
+          { 'itunes:summary': "Looking to expand your skills as a Web Developer? Vincent Tang and German Gamboa break down topics in Javascript, NodeJS, CSS, DevOps, AWS, and career development!"},
           { 'itunes:owner': [
             {'itunes:name': "Vincent Tang"},
             {'itunes:email': "vincentntang@gmail.com"}
@@ -187,7 +187,7 @@ module.exports = {
           //   'link': 'https://codechefs.dev'
           // },
           {
-            'itunes:keywords':"javascript, webdevelopment,html,css,js"
+            'itunes:keywords':"javascript, webdevelopment,html,css,js, codechefs"
           },
         ],
       }),
@@ -205,7 +205,7 @@ module.exports = {
                 custom_elements: [
                   { "content:encoded": edge.node.html },
                   // { author: config.userEmail },
-                  { "itunes:author":"Vincent Tang and German Gamboa - Fullstack Developers"},
+                  { "itunes:author":"Vincent Tang & German Gamboa"},
                   { "itunes:subtitle": edge.node.excerpt},
                   { "itunes:duration": edge.node.frontmatter.showLength},
                   {"itunes:explicit": "no"},
