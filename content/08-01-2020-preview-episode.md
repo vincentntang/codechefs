@@ -1,13 +1,13 @@
 ---
 title: "Preview Episode"
 slug: "preview-episode"
-# cover: "img/arnold.jpeg"
-cover: "8.jpg"
-date: 2020-08-01
+cover: "code_chefs_podcast_art.png"
+date: 2020-05-09
 audioPath: 000_preview_episode.mp3
 fileSize: 17.6
 showLength: 15:24
 category: "tech"
+# shortDescription is only for codechefs.dev homepage
 shortDescription: "A brief introduction to ourselves and the show!"
 tags:
     - programming
@@ -16,7 +16,7 @@ tags:
 
 ### Our first episode!
 
-We talk about what Code Chefs is, why we started it, and what you should expect in future episodes!
+We talk about what Code Chefs is, why we started it, and what you should expect in future episodes! Stay tuned in for more!
 
 <hr>
 

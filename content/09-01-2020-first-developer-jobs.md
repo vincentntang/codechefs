@@ -1,13 +1,13 @@
 ---
 title: "First Developer Jobs"
 slug: "first-developer-jobs"
-# cover: "img/arnold.jpeg"
-cover: "8.jpg"
-date: 2020-09-02
+cover: "code_chefs_podcast_art.png"
+date: 2020-05-16
 audioPath: 001_first_developer_jobs.mp3
 fileSize: 39.4
 showLength: 34:26
 category: "tech"
+# shortDescription is only for codechefs.dev homepage
 shortDescription: "What's it like working in your first developer job? German and Vincent discuss their restaurant history background before webdevelopment and how they successfully transitioned into tech!"
 tags:
     - programming
