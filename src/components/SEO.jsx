@@ -17,13 +17,15 @@ const SEO = (props) => {
     description = postMeta.description
       ? postMeta.description
       : postNode.excerpt;
-    image = postMeta.cover;
+    // image = postMeta.cover;
     postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
   } else {
     title = config.siteTitle;
     description = config.siteDescription;
-    image = config.siteLogo;
+    // image = config.siteLogo;
   }
+
+  image = config.siteLogo;
 
   const getImagePath = imageURI => {
     if (

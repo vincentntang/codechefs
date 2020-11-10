@@ -3,7 +3,7 @@ const config = {
   siteTitle: "Code Chefs Developer Podcast", // Site title.
   siteTitleShort: "Code Chefs", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Code Chefs Web Developer Podcast", // Alternative site title for SEO.
-  siteLogo: "/logos/code_chefs_logo.png", // Logo used for SEO and manifest.
+  siteLogo: "/logos/code_chefs_podcast_art.png", // Logo used for SEO and manifest.
   siteUrl: "https://codechefs.dev", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Hungry Web Developer Podcast", // Website description used for RSS feeds/meta description tag.
