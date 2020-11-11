@@ -11,6 +11,7 @@ const config = {
   siteRssTitle: "Code Chefs - Hungry Web Developer Podcast", // Title of the RSS feed
   // siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   // googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
+  googleAnalyticsID: "G-08P9C1V7PY",
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "MM/DD/YYYY", // Date format for display.
