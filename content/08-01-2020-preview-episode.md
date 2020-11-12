@@ -4,6 +4,7 @@ slug: "preview-episode"
 cover: "code_chefs_podcast_art.png"
 date: 2020-05-09
 audioPath: 000_preview_episode.mp3
+episodeNumber: 000
 fileSize: 17.6
 showLength: 15:24
 category: "tech"

@@ -70,6 +70,7 @@ export const pageQuery = graphql`
         tags
         audioPath
         shortDescription
+        episodeNumber
       }
       fields {
         slug

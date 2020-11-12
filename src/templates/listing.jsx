@@ -82,6 +82,7 @@ export const listingQuery = graphql`
             cover
             date
             shortDescription
+            episodeNumber
           }
         }
       }

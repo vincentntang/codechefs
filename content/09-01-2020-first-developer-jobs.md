@@ -4,6 +4,7 @@ slug: "first-developer-jobs"
 cover: "code_chefs_podcast_art.png"
 date: 2020-05-16
 audioPath: 001_first_developer_jobs.mp3
+episodeNumber: 001
 fileSize: 39.4
 showLength: 34:26
 category: "tech"
