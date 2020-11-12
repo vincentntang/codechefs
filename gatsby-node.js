@@ -69,6 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
               category
               date
               shortDescription
+              episodeNumber
               audioPath
             }
           }
@@ -157,6 +158,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         audioPath: edge.node.frontmatter.audioPath,
         shortDescription: edge.node.frontmatter.shortDescription,
+        episodeNumber: edge.node.frontmatter.episodeNumber,
         slug: edge.node.fields.slug,
         nexttitle: nextEdge.node.frontmatter.title,
         nextslug: nextEdge.node.fields.slug,

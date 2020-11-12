@@ -17,6 +17,7 @@ const PostListing = props => {
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead,
         shortDescription: postEdge.node.frontmatter.shortDescription,
+        episodeNumber: postEdge.node.frontmatter.episodeNumber,
         description: postEdge.node.fields.description,
       });
     });
@@ -28,9 +29,20 @@ const PostListing = props => {
     <section className="cc-container post-listing-container">
       <div className="cc-podcast-wrapper">
         {postList.map((post, index) => {
+          let formattedEpisodeNumber;
+          if (post.episodeNumber < 10){
+            formattedEpisodeNumber = "00" + post.episodeNumber;
+          } else if (post.episodeNumber < 100) {
+            formattedEpisodeNumber = "0" + post.episodeNumber;
+          } else {
+            formattedEpisodeNumber = post.episodeNumber;
+          }
           return (
             <div key={`podcast-${index}`} className="podcast-wrapper cc-card mb-7">
               <Link to={post.path}  className="podcast-episode">
+                <div className="podcast-number">
+                  {formattedEpisodeNumber}
+                </div>
                 <div className="cc-padding">
                   <svg>
                     <rect>

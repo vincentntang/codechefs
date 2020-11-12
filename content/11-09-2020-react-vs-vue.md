@@ -4,6 +4,7 @@ slug: "react-vs-vue"
 cover: "code_chefs_podcast_art.png"
 date: 2020-05-23
 audioPath: 002_react_vs_vue.mp3
+episodeNumber: 002
 fileSize: 67.8
 showLength: 49:23
 category: "tech"

@@ -242,6 +242,7 @@ module.exports = {
                       category
                       tags
                       shortDescription
+                      episodeNumber
                       audioPath
                       showLength
                       fileSize

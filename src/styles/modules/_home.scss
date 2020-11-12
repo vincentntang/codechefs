@@ -249,6 +249,12 @@
       background-color: $gray-8;
     }  
   }
+  .podcast-number {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: $gray-7;
+  }
 
   svg {
     position: absolute;
