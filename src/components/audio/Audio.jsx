@@ -16,7 +16,7 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
 
   const changeAudioSpeed = () => {
     const index = playBackRates.indexOf(curSpeed);
-    if (index == -1) {
+    if (index === -1) {
       setCurSpeed(1);
     } else if (index === playBackRates.length - 1) {
       setCurSpeed(playBackRates[0]);

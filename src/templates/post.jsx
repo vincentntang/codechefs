@@ -30,12 +30,6 @@ export default class PostTemplate extends React.Component {
                 <title>{`${post.title} | ${config.siteTitle}`}</title>
               </Helmet>
               <SEO postPath={slug} postNode={postNode} postSEO />
-              {/* Start - Test Example */}
-              {/* <div>
-                <p>Hello world</p> */}
-                {/* <img src={post.cover} alt="Arnold S"/> */}
-              {/* </div> */}
-              {/* End - Test Example */}
               <div>
                 <Audio 
                   id={1} 
@@ -43,17 +37,7 @@ export default class PostTemplate extends React.Component {
                   mp3={config.s3bucket + post.audioPath}
                   episodeName={post.title}
                   episodeHtml={postNode.html}
-                  // currentTrack={currentTrack} 
-                  // setCurrentTrack={setCurrentTrack}
-                  // currentVolume={currentVolume}
-                  // setCurrentVolume={setCurrentVolume}
-                  // isPlaying={isPlaying}
-                  // setIsPlaying={setIsPlaying}
-                  // setTrackPlayed={setTrackPlayed}
                 >
-                  {/* <h3>{post.title}</h3>
-                  <p>{post.shortDescription}</p> */}
-                  {/* <div className="danger-html" dangerouslySetInnerHTML={{ __html: postNode.html }} /> */}
                 </Audio>
                 <div className="post-meta">
                   <PostTags tags={post.tags} />

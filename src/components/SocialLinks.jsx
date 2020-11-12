@@ -1,15 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
-  TelegramShareButton,
   RedditShareButton,
   FacebookShareCount,
   RedditShareCount,
   FacebookIcon,
   TwitterIcon,
-  TelegramIcon,
   LinkedinIcon,
   RedditIcon
 } from "react-share";
@@ -50,9 +48,6 @@ const SocialLinks = (props) => {
       >
         <LinkedinIcon round size={iconSize} />
       </LinkedinShareButton>
-      {/* <TelegramShareButton url={url}>
-        <TelegramIcon round size={iconSize} />
-      </TelegramShareButton> */}
     </div>
   );
 }
