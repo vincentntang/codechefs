@@ -2,7 +2,7 @@
 title: "Level up with Hackathons"
 slug: "hackathons"
 cover: "code_chefs_podcast_art.png"
-date: 2020-05-23
+date: 2020-06-14
 audioPath: 003_hackathons.mp3
 episodeNumber: 003
 fileSize: 53.1
