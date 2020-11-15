@@ -1,0 +1,48 @@
+@for $i from 0 through 50 {
+  .m-#{$i} {
+    margin: $i * $spacer !important;
+  }
+  .ml-#{$i} {
+    margin-left: $i * $spacer !important;
+  }
+  .mr-#{$i} {
+    margin-right: $i * $spacer !important;
+  }
+  .mt-#{$i} {
+    margin-top: $i * $spacer !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: $i * $spacer !important;
+  }
+  .mx-#{$i} {
+    margin-left: $i * $spacer !important;
+    margin-right: $i * $spacer !important;
+  }
+  .my-#{$i} {
+    margin-top: $i * $spacer !important;
+    margin-bottom: $i * $spacer !important;
+  }
+  .p-#{$i} {
+    padding: $i * $spacer !important;
+  }
+  .pl-#{$i} {
+    padding-left: $i * $spacer !important;
+  }
+  .pr-#{$i} {
+    padding-right: $i * $spacer !important;
+  }
+  .pt-#{$i} {
+    padding-top: $i * $spacer !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: $i * $spacer !important;
+  }
+  .px-#{$i} {
+    padding-left: $i * $spacer !important;
+    padding-right: $i * $spacer !important;
+  }
+  .py-#{$i} {
+    padding-top: $i * $spacer !important;
+    padding-bottom: $i * $spacer !important;
+  }
+}

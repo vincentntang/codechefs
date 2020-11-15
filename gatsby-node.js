@@ -52,7 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
   const listingPage = path.resolve("./src/templates/listing.jsx");
-  const landingPage = path.resolve("./src/templates/landing.jsx");
+  // const landingPage = path.resolve("./src/templates/landing.jsx"); // controlled by site.config.js
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
@@ -68,6 +68,9 @@ exports.createPages = async ({ graphql, actions }) => {
               tags
               category
               date
+              shortDescription
+              episodeNumber
+              audioPath
             }
           }
         }
@@ -124,7 +127,8 @@ exports.createPages = async ({ graphql, actions }) => {
     // Load the landing page instead
     createPage({
       path: `/`,
-      component: landingPage
+      // component: landingPage // controled by siteconfig.js
+      component: listingPage
     });
   }
 
@@ -152,6 +156,9 @@ exports.createPages = async ({ graphql, actions }) => {
       path: edge.node.fields.slug,
       component: postPage,
       context: {
+        audioPath: edge.node.frontmatter.audioPath,
+        shortDescription: edge.node.frontmatter.shortDescription,
+        episodeNumber: edge.node.frontmatter.episodeNumber,
         slug: edge.node.fields.slug,
         nexttitle: nextEdge.node.frontmatter.title,
         nextslug: nextEdge.node.fields.slug,

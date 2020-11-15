@@ -14,12 +14,14 @@ module.exports = {
       image_url: `${urljoin(
         config.siteUrl,
         config.pathPrefix
-      )}/logos/logo-512.png`,
+      )}/logos/code_chefs_square512.png`,
       copyright: config.copyright
     }
   },
   plugins: [
+    "gatsby-plugin-svgr",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     "gatsby-plugin-lodash",
     {
       resolve: "gatsby-source-filesystem",
@@ -80,18 +82,18 @@ module.exports = {
         name: config.siteTitle,
         short_name: config.siteTitleShort,
         description: config.siteDescription,
-        start_url: config.pathPrefix,
+        start_url: config.pathPrefix ? config.pathPrefix : `/`,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: "minimal-ui",
         icons: [
           {
-            src: "/logos/logo-192.png",
+            src: "/logos/code_chefs_square192.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/logos/logo-512.png",
+            src: "/logos/code_chefs_square512.png",
             sizes: "512x512",
             type: "image/png"
           }
@@ -134,6 +136,61 @@ module.exports = {
           }
         }
       `,
+      setup: options => ({
+        ...options, // https://www.npmjs.com/package/rss#feedoptions to override any specs
+        custom_namespaces: {
+          itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+        },
+        site_url: 'https://codechefs.dev',
+        custom_elements: [
+          { 'language': 'en'},
+          { 'itunes:author': 'Vincent Tang & German Gamboa' },
+          { 'itunes:explicit': 'clean'},
+          { 'itunes:subtitle': "Hungry Web Developer Podcast"},
+          { 'itunes:summary': "Looking to expand your skills as a Web Developer? Vincent Tang and German Gamboa break down topics in Javascript, NodeJS, CSS, DevOps, AWS, and career development!"},
+          { 'itunes:owner': [
+            {'itunes:name': "Vincent Tang"},
+            {'itunes:email': "vincentntang@gmail.com"}
+          ]},
+          {'itunes:category': [
+            {_attr: {
+              text: 'News'
+            }},
+            {'itunes:category': {
+              _attr: {
+                text: 'Tech News'
+              }
+            }}
+          ]},
+          {'itunes:category': [
+            {_attr: {
+              text: 'Technology'
+            }},
+          ]},
+          {'itunes:category': {
+            _attr: {
+              text: 'Education'
+            }
+          }},
+          {'itunes:type': "episodic"},
+          {'itunes:image': [
+            {_attr: {
+              href: 'https://codechefs.dev/logos/code_chefs_podcast_art.png'
+            }},
+          ]},
+          {'image': [
+            {'url':'https://codechefs.dev/logos/code_chefs_podcast_art.png'},
+            {'title':'Code Chefs'},
+            {'link': 'https://codechefs.dev'},
+          ]},
+          // {
+          //   'link': 'https://codechefs.dev'
+          // },
+          {
+            'itunes:keywords':"javascript, webdevelopment,html,css,js, codechefs"
+          },
+        ],
+      }),
         feeds: [
           {
             serialize(ctx) {
@@ -147,7 +204,19 @@ module.exports = {
                 guid: rssMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
-                  { author: config.userEmail }
+                  // { author: config.userEmail },
+                  { "itunes:author":"Vincent Tang & German Gamboa"},
+                  { "itunes:subtitle": edge.node.excerpt},
+                  { "itunes:duration": edge.node.frontmatter.showLength},
+                  {"itunes:explicit": "no"},
+                  {'enclosure': [
+                    {_attr: {
+                      url: config.s3bucket + edge.node.frontmatter.audioPath,
+                      length: Number(edge.node.frontmatter.fileSize) * 1000 * 1000, // megabytes to bytes
+                      type: "audio/mpeg",
+                    }},
+                  ]},
+                  // Do some bit rate calculations   
                 ]
               }));
             },
@@ -172,6 +241,11 @@ module.exports = {
                       date
                       category
                       tags
+                      shortDescription
+                      episodeNumber
+                      audioPath
+                      showLength
+                      fileSize
                     }
                   }
                 }

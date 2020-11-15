@@ -2,10 +2,10 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
+import PostListing from "../components/PostListing";
+import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
-import "./listing.css";
+// import Footer from "../components/Footer";
 
 class Listing extends React.Component {
   renderPaging() {
@@ -18,7 +18,8 @@ class Listing extends React.Component {
     return (
       <div className="paging-container">
         {!isFirstPage && <Link to={prevPage}>Previous</Link>}
-        {[...Array(pageCount)].map((_val, index) => {
+        {/* Controls pagination */}
+        {/* {[...Array(pageCount)].map((_val, index) => {
           const pageNum = index + 1;
           return (
             <Link
@@ -29,13 +30,14 @@ class Listing extends React.Component {
             </Link>
           );
         })}
-        {!isLastPage && <Link to={nextPage}>Next</Link>}
+        {!isLastPage && <Link to={nextPage}>Next</Link>} */}
       </div>
     );
   }
 
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
+    console.log(postEdges,"POST EDGES FROM ZE TOP!");
 
     return (
       <Layout>
@@ -43,9 +45,13 @@ class Listing extends React.Component {
           <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />
+            {/* <Menu/> */}
             <PostListing postEdges={postEdges} />
+            <section className="cc-container">
+              {this.renderPaging()}
+            </section>
+            {/* <Footer config={config} /> */}
           </div>
-          {this.renderPaging()}
         </div>
       </Layout>
     );
@@ -75,6 +81,8 @@ export const listingQuery = graphql`
             tags
             cover
             date
+            shortDescription
+            episodeNumber
           }
         }
       }

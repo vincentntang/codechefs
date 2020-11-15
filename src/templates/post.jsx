@@ -2,15 +2,14 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import Footer from "../components/Footer/Footer";
+// import UserInfo from "../components/UserInfo";
+// import Disqus from "../components/Disqus";
+import PostTags from "../components/PostTags";
+import SocialLinks from "../components/SocialLinks";
+import SEO from "../components/SEO";
+// import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
-import "./post.css";
+import Audio from "../components/audio/Audio";
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -24,29 +23,33 @@ export default class PostTemplate extends React.Component {
 
     return (
       <Layout>
-        <div>
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
-          <SEO postPath={slug} postNode={postNode} postSEO />
-          {/* Start - Test Example */}
-          {/* <div>
-            <p>Hello world</p> */}
-            {/* <img src={post.cover} alt="Arnold S"/> */}
-          {/* </div> */}
-          {/* End - Test Example */}
-          <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
+        <section className="cc-container post-container">
+          <div className="cc-post-card">
+            <div className="cc-padding">
+              <Helmet>
+                <title>{`${post.title} | ${config.siteTitle}`}</title>
+              </Helmet>
+              <SEO postPath={slug} postNode={postNode} postSEO />
+              <div>
+                <Audio 
+                  id={1} 
+                  index={1} 
+                  mp3={config.s3bucket + post.audioPath}
+                  episodeName={post.title}
+                  episodeHtml={postNode.html}
+                >
+                </Audio>
+                <div className="post-meta">
+                  <PostTags tags={post.tags} />
+                  <SocialLinks postPath={slug} postNode={postNode} />
+                </div>
+                {/* <UserInfo config={config} /> */}
+                {/* <Disqus postNode={postNode} /> */}
+              </div>
             </div>
-            <UserInfo config={config} />
-            <Disqus postNode={postNode} />
-            <Footer config={config} />
           </div>
-        </div>
+        </section>
+        {/* <Footer config={config} /> */}
       </Layout>
     );
   }
@@ -65,6 +68,9 @@ export const pageQuery = graphql`
         date
         category
         tags
+        audioPath
+        shortDescription
+        episodeNumber
       }
       fields {
         slug
