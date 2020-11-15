@@ -1,5 +1,5 @@
 ---
-title: "Leveling up with Hackathons"
+title: "Level up with Hackathons"
 slug: "hackathons"
 cover: "code_chefs_podcast_art.png"
 date: 2020-05-23
@@ -20,6 +20,9 @@ tags:
 And what can you learn from one? In this episode, we talk about our own experiences with hackathons!
 
 We talk about how to go from an initial concept, to building a fully fleshed MVP in just a few days. And shortcuts we might take along the way, and how to pitch / present the idea to get teammates and win prizes! We also talk about how to pick the right tooling, and how to divide up roles to get things done!
+
+We go into two hackathons that we've both competed in, one is a telecommunications hackathon, another is a gaming jam hackathon!
+We discuss the different types of hackathons, and what you should expect out of your first one!
 
 <hr>
 
