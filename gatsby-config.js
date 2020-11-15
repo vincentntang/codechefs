@@ -59,10 +59,18 @@ module.exports = {
         ]
       }
     },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: config.googleAnalyticsID
+    //   }
+    // },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-gtag",
       options: {
-        trackingId: config.googleAnalyticsID
+        trackingId: config.googleAnalyticsID,
+        head: false,
+        anonymize: true,
       }
     },
     {
