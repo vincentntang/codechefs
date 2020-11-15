@@ -1,5 +1,5 @@
 ---
-title: "Level up with Hackathons"
+title: "Level Up with Hackathons"
 slug: "hackathons"
 cover: "code_chefs_podcast_art.png"
 date: 2020-06-14
