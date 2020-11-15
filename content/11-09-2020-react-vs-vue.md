@@ -49,3 +49,7 @@ Finally, we discuss how Vue works, and how it is similar to, or different from R
 - 43:29 - Comparing the mobile integration of React & Vue
 - 45:53 - Dessert Time!
 - 48:30 - Wrap-up & Outros
+
+### Links
+
+- [Learning Vue As A React Developer](https://dev.to/vincentntang/learning-vue-as-a-react-developer-385l)
