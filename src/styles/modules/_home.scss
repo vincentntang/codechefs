@@ -357,7 +357,7 @@
 .post-container {
   a {
     // color: $teal-7;
-    color: #add8e6;
+    color: $blue-3;
   }
 
   ul {
@@ -567,8 +567,9 @@
 .cc-support {
   font-size:18px;
   a {
-    color: $teal-5 !important;
-    font-size: 22px;
+    // color: $teal-5 !important;
+    color: $blue-3;
+    // font-size: 22px;
     font-weight: bold;
   }
 }
