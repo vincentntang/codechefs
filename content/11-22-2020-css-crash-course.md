@@ -55,7 +55,7 @@ Lastly, we cover more CSS variables, transformation properties, and pseudoselect
 - 40:40 - Pseudoselectors :before and :after
 - 42:40 - Transformation Property CSS
 - 44:00 - Sass and compilation process into CSS
-- 46:00 - Resources - https://www.youtube.com/channel/UCyIe-61Y8C4_o-zZCtO4ETQ
+- 46:00 - Resources
 - 47:30 - Stuff we haven't talked about! SVGs, animations, HTML Canvas, Scss
 - 50:40 - CSS Zen Garden - styling the same site with different CSS!
 - 52:25 - DESSERT TIME! - Fitness and CalNewport's book on DeepWork!
