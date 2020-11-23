@@ -28,18 +28,18 @@ const SocialLinks = (props) => {
     <div className="share-links">
       <RedditShareButton url={url} title={post.title}>
         <RedditIcon round size={iconSize} />
-        <RedditShareCount url={url}>
+        {/* <RedditShareCount url={url}>
           {count => renderShareCount(count)}
-        </RedditShareCount>
+        </RedditShareCount> */}
       </RedditShareButton>
       <TwitterShareButton url={url} title={post.title}>
         <TwitterIcon round size={iconSize} />
       </TwitterShareButton>
       <FacebookShareButton url={url} quote={postNode.excerpt}>
         <FacebookIcon round size={iconSize} />
-        <FacebookShareCount url={url}>
+        {/* <FacebookShareCount url={url}>
           {count => renderShareCount(count)}
-        </FacebookShareCount>
+        </FacebookShareCount> */}
       </FacebookShareButton>
       <LinkedinShareButton
         url={url}
