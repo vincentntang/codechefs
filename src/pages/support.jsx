@@ -13,7 +13,7 @@ const AboutPage = () => {
           <div className="cc-padding cc-support">
             <h3 className="color-offgray mt-0">Thanks for tuning in!</h3>
             <p>Follow us on <a className="newsletter-link text-21" href="https://twitter.com/codechefsdev">twitter </a>and our <a className="newsletter-link text-21" href="https://tinyletter.com/vincentntang">newsletter</a> for updates on new episodes!</p>
-            <p>We're looking to air an episode a week!</p>
+            <p>We're looking to air an episode every week!</p>
             {/* <p>Also don't forget to follow us on your favorite podcast platform!</p>
             <ul>
               <li><a target="_blank" rel="noreferrer" href="https://podcasts.apple.com/us/podcast/code-chefs-hungry-web-developer-podcast/id1536223859">Apple Podcasts</a></li>
