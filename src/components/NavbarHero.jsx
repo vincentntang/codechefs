@@ -57,7 +57,7 @@ const Navbar = (props) => {
         <div className="cc-navitem">
           <Link to="/about" activeClassName="active-link">About</Link>
         </div>
-        <div className="cc-navitem">
+        <div className="cc-navitem support-icon">
           <Link to="/support" activeClassName="active-link">Support</Link>
         </div>
       </nav>
