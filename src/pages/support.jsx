@@ -28,9 +28,9 @@ const AboutPage = () => {
             <br/>
             <br/>
             <br/>
-            <br/>
-            <br/>
-            <br/>
+            {/* <br/>
+            <br/> */}
+            {/* <br/> */}
             <div className="follow-us-wrapper">
               <hr/>
               <h2>Follow us!</h2>
