@@ -14,8 +14,10 @@ const PostTags = (props) => {
               key={tag}
               style={{ textDecoration: "none" }}
               to={`/tags/${_.kebabCase(tag)}`}
+              className="tag-item"
             >
-              <button type="button">{tag}</button>
+              {/* <button type="button">{tag}</button> */}
+              <span>{tag}</span>
             </Link>
           ))}
       </div>

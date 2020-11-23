@@ -10,6 +10,7 @@ import SEO from "../components/SEO";
 // import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
 import Audio from "../components/audio/Audio";
+import PodcastLinks from "../components/PodcastLinks";
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -41,7 +42,12 @@ export default class PostTemplate extends React.Component {
                 </Audio>
                 <div className="post-meta">
                   <PostTags tags={post.tags} />
-                  <SocialLinks postPath={slug} postNode={postNode} />
+                  {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
+                </div>
+                <div className="follow-us-wrapper">
+                  <hr/>
+                  <h2>Follow us!</h2>
+                  <PodcastLinks/>
                 </div>
                 {/* <UserInfo config={config} /> */}
                 {/* <Disqus postNode={postNode} /> */}

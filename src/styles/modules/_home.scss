@@ -544,16 +544,26 @@
   flex-wrap: wrap;
 
   .post-tag-container {
-    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 0px;
     button {
       padding: 5px;
     }
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     .tag-desc {
+      display: inline;
       margin-bottom: 5px;
     }
-  
+    .tag-list {
+      display: inline;
+      margin-left: 10px;
+    }
+    .tag-item:not(:last-of-type):after {
+      content:',';
+      color: white;
+      margin-right: 5px;
+    }
   }
   
   .share-links {
@@ -571,5 +581,121 @@
     color: $blue-3;
     // font-size: 22px;
     font-weight: bold;
+  }
+}
+
+.follow-us-wrapper {
+
+}
+.follow-us {
+  display: flex;
+  flex-wrap:wrap;
+}
+.btn-social {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  // background-color: $teal-5;
+  // color: $teal-5 !important;
+  // border: 1px solid white;
+  border-radius: 3px;
+  padding: 6px;
+  color: black !important;
+  img {
+    width: 24px;
+    margin-right: 5px;
+    border-radius: 6px;
+  }
+  svg {
+    fill: white;
+    fill: $teal-5;
+    width: 24px;
+    margin-right: 5px;
+  }
+}
+.btn-rss {
+  background: rgb(255,186,69);
+background: linear-gradient(7deg, rgba(255,186,69,1) 0%, rgba(255,160,0,1) 65%);
+}
+.btn-pocketcasts {
+  background: rgb(212,155,155);
+background: linear-gradient(7deg, rgba(212,155,155,1) 0%, rgba(212,106,106,1) 65%);
+
+  background: rgb(255,135,135);
+background: linear-gradient(7deg, rgba(255,135,135,1) 0%, rgba(255,108,108,1) 65%);
+background: rgb(255,135,135);
+background: linear-gradient(7deg, rgba(255,135,135,1) 0%, rgba(255,89,89,1) 65%);
+background: rgb(212,106,106);
+background: linear-gradient(7deg, rgba(212,106,106,1) 0%, rgba(205,26,26,1) 65%);  
+  img {
+  }
+}
+.btn-itunes {
+  background: rgb(129,74,251);
+  background: linear-gradient(7deg, rgba(129,74,251,1) 0%, rgba(90,21,244,1) 65%);
+  background: rgb(188,74,251);
+background: linear-gradient(7deg, rgba(188,74,251,1) 0%, rgba(90,21,244,1) 65%);
+background: rgb(212,133,255);
+background: linear-gradient(7deg, rgba(212,133,255,1) 0%, rgba(188,74,251,1) 65%);
+  
+}
+.btn-overcasts {
+  background: rgb(255,186,69);
+  background: linear-gradient(7deg, rgba(255,186,69,1) 0%, rgba(255,160,0,1) 65%);  
+  background: rgb(207,156,72);
+background: linear-gradient(7deg, rgba(207,156,72,1) 0%, rgba(209,131,0,1) 65%);
+background: rgb(255,184,64);
+background: linear-gradient(7deg, rgba(255,184,64,1) 0%, rgba(255,164,9,1) 65%);
+background: rgb(255,176,62);
+background: linear-gradient(7deg, rgba(255,176,62,1) 0%, rgba(255,151,0,1) 65%);
+background: rgb(255,160,62);
+background: linear-gradient(7deg, rgba(255,160,62,1) 0%, rgba(255,151,0,1) 65%);
+}
+.btn-googlepodcasts {
+  background: rgb(247,250,167);
+background: linear-gradient(7deg, rgba(247,250,167,1) 0%, rgba(247,255,0,1) 65%);
+background: rgb(185,186,71);
+background: linear-gradient(7deg, rgba(185,186,71,1) 0%, rgba(179,181,39,1) 65%);
+  img {
+    background-color: white;
+    padding: 2px;
+    border-radius: 50%;
+  }
+}
+.btn-twitter {
+  // background-color: $teal-7;
+  background: #2193b0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: black !important;
+  svg {
+    fill: white !important;
+  }
+}
+.btn-spotify {
+  background: rgb(40,119,19);
+  background: linear-gradient(7deg, rgba(40,119,19,1) 0%, rgba(64,205,26,1) 65%);
+  svg {
+    fill: white !important;
+  }
+}
+.btn-newsletter {
+  background: rgb(135,120,87);
+  background: linear-gradient(7deg, rgba(135,120,87,1) 0%, rgba(110,74,0,1) 65%);
+  background: rgb(159,151,134);
+background: linear-gradient(7deg, rgba(159,151,134,1) 0%, rgba(158,134,85,1) 65%);
+  svg {
+    border-radius: 3px;
+    background-color: white;
+    fill: black !important;
+    // background-color: white;
+    // fill: black;
+    // fill: white !important;
+    // p {
+    //   stroke: white !important;
+    // }
   }
 }
