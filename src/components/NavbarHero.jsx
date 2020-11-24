@@ -30,25 +30,25 @@ const Navbar = (props) => {
         </div>
         <div className="social-links-wrapper">
           <div className="social-links">
-            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://twitter.com/codechefsdev">
+            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://twitter.com/codechefsdev" title="Twitter">
               <PodcastTwitter/>
             </a>
-            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://podcasts.apple.com/us/podcast/code-chefs-hungry-web-developer-podcast/id1536223859">
+            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://podcasts.apple.com/us/podcast/code-chefs-hungry-web-developer-podcast/id1536223859" title="iTunes">
               <PodcastApple/>
             </a>
-            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuY29kZWNoZWZzLmRldi9yc3MueG1s?sa=X&ved=0CBQQ27cFahcKEwjg4Obtj7_sAhUAAAAAHQAAAAAQAQ">
+            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuY29kZWNoZWZzLmRldi9yc3MueG1s?sa=X&ved=0CBQQ27cFahcKEwjg4Obtj7_sAhUAAAAAHQAAAAAQAQ" title="Google Podcast">
               <PodcastGoogle/>
             </a>
-            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://open.spotify.com/show/6DxHVg6CAOzwHnLgQClrs7">
+            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://open.spotify.com/show/6DxHVg6CAOzwHnLgQClrs7" title="Spotify">
               <PodcastSpotify/>
             </a>
-            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://pca.st/wtu4690d">
+            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://pca.st/wtu4690d" title="Pocketcasts">
               <PodcastPocketcasts/>
             </a>
-            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://overcast.fm/p2403384-t859cb">
+            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://overcast.fm/p2403384-t859cb" title="Overcast">
               <PodcastOvercast/>
             </a>
-            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://codechefs.dev/rss.xml">
+            <a className="podcast-links" target="_blank" rel="noreferrer" href="https://codechefs.dev/rss.xml" title="RSS">
               <PodcastRss/>
             </a>
           </div>
