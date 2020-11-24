@@ -37,7 +37,6 @@ class Listing extends React.Component {
 
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
-    console.log(postEdges,"POST EDGES FROM ZE TOP!");
 
     return (
       <Layout>

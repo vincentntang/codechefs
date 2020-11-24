@@ -11,6 +11,7 @@ import {ReactComponent as PodcastTwitter} from "../assets/podcastTwitter.svg";
 
 
 const Navbar = (props) => {
+  const pathname = window.location.pathname;
   return (
     <>
     <section className="cc-container">
@@ -50,7 +51,10 @@ const Navbar = (props) => {
 
       <nav className="cc-navbar">
         <div className="cc-navitem">
-          <Link to="/" activeClassName="active-link">
+          <Link to="/" 
+            activeClassName="active-link"
+            partiallyActive={pathname !== "/about/" && pathname !== "/about" && pathname && "/support/" && pathname !=="/support/" ? true: false}
+          >
             Episodes
           </Link>
         </div>
