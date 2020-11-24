@@ -11,12 +11,12 @@ import {ReactComponent as PodcastTwitter} from "../assets/podcastTwitter.svg";
 
 
 const Navbar = (props) => {
-  const [pathname, setPathname] = useState('/about/');
-  useEffect(() => {
-    if(window){
-      setPathname(window.location.pathname);
-    }
-  }, [])
+  // const [pathname, setPathname] = useState('/about/');
+  // useEffect(() => {
+  //   if(window){
+  //     setPathname(window.location.pathname);
+  //   }
+  // }, [])
     return (
       <>
       <section className="cc-container">
@@ -58,7 +58,7 @@ const Navbar = (props) => {
           <div className="cc-navitem">
             <Link to="/" 
               activeClassName="active-link"
-              partiallyActive={pathname !== "/about/" && pathname !== "/about" && pathname && "/support/" && pathname !=="/support/" ? true: false}
+              // partiallyActive={pathname !== "/about/" && pathname !== "/about" && pathname && "/support/" && pathname !=="/support/" ? true: false}
             >
               Episodes
             </Link>
