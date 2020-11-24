@@ -102,6 +102,9 @@
     content: '💛';
     top: 6px;
     right: -9px;
+    @include screen-max(600px){
+      right: -10px;
+    }
     transform: rotate(15deg);
     z-index: 90;
     animation-name: grow-heart;  /* Refers to the name of your @keyframes element below */
