@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 // import UserInfo from "../components/UserInfo";
 // import Disqus from "../components/Disqus";
@@ -18,6 +18,7 @@ export default class PostTemplate extends React.Component {
     const { slug } = pageContext;
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter;
+    console.log(this.props,"THIS PROPS")
     if (!post.id) {
       post.id = slug;
     }
@@ -43,7 +44,9 @@ export default class PostTemplate extends React.Component {
                 <div className="post-meta">
                   <PostTags tags={post.tags} />
                   {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
+                  <p>Episodes: <Link to={`${pageContext.nextslug}`}>{'<-previous'}</Link>, <Link to="/">{'all'}</Link>, <Link to={`${pageContext.prevslug}`}>{'next->'}</Link></p>
                 </div>
+                <p className="my-0">Download: <a href={config.s3bucket + post.audioPath}>{post.audioPath.substring(4)}</a></p>
                 <div className="follow-us-wrapper">
                   <hr/>
                   <h2>Follow us!</h2>
