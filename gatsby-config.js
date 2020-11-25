@@ -120,7 +120,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-feed",
+      resolve: "gatsby-plugin-feed2",
       options: {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
@@ -146,6 +146,7 @@ module.exports = {
       `,
       setup: options => ({
         ...options, // https://www.npmjs.com/package/rss#feedoptions to override any specs
+        disable_cdata: true,
         custom_namespaces: {
           itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
         },
