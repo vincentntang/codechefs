@@ -149,6 +149,8 @@ module.exports = {
         custom_namespaces: {
           itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
         },
+        title: "Code Chefs - Hungry Web Developer Podcast", // should fix stitcherFM
+        description: "Looking to expand your skills as a Web Developer? Vincent Tang and German Gamboa break down topics in Javascript, NodeJS, CSS, DevOps, AWS, and career development!",
         site_url: 'https://codechefs.dev',
         custom_elements: [
           { 'language': 'en'},
