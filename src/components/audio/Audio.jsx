@@ -4,7 +4,7 @@ import moment from "moment";
 import { Controls } from "./Controls";
 import {PlayButton} from "./PlayButton";
 
-const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
+const Audio = ({ mp3, index, episodeName }) => {
   // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
@@ -55,7 +55,11 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
 
     audio.volume = curVolume;
     audio.playbackRate = curSpeed;
-    playing ? audio.play() : audio.pause();
+
+
+      playing ? audio.play().catch(err => console.log(err)) : audio.pause();
+      
+   
 
     if (clickedTime && clickedTime !== curTime) {
       audio.currentTime = clickedTime;
@@ -69,19 +73,6 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
     };
   });
   
-  const regex = /(\d[:])?\d\d[:]\d\d/g;
-  // const regex = /\d\d[:]\d\d/g;
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-  // its $& not $1 for whatever reason on capture group
-  // let newHtml = episodeHtml.replace(regex, '<span class="timestamp" onClick={jumpToTimestampAudio(\`$&`)}>$&</span>')
-  let newHtml = useMemo(
-    () =>
-      episodeHtml.replace(
-        regex,
-        '<span class="timestamp" onClick=window.jumpToTimestamp(`$&`)>$&</span>'
-      ),
-    [episodeHtml]
-  );
 
   // console.log("I renrenderd");
 
@@ -89,7 +80,7 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
     <>
       <div className="player">
         <audio id={index} preload="true">
-          <source src={mp3} />
+          <source src={mp3}  type={"audio/mp3"}/>
           Your browser does not support the <code>audio</code> element.
         </audio>
 
@@ -114,10 +105,7 @@ const Audio = ({ mp3, index, episodeName, episodeHtml }) => {
           />
         </div>
       </div>
-      <div
-        className="danger-html"
-        dangerouslySetInnerHTML={{ __html: newHtml }}
-      />
+  
     </>
   );
 };
