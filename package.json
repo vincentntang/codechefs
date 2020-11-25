@@ -71,6 +71,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "postinstall": "cd plugins/gatsby-plugin-feed2 && npm install",
     "develop": "gatsby develop",
     "dev": "npm run develop",
     "serve": "gatsby serve",
