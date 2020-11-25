@@ -1,12 +1,24 @@
 import React from "react";
 
 export const Controls = ({
-  changeAudioSpeed,
+  setCurSpeed,
   curSpeed,
   setCurVolume,
   curVolume,
 }) => {
   const volumeLevels = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
+  const playBackRates = [0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5];
+
+  const changeAudioSpeed = () => {
+    const index = playBackRates.indexOf(curSpeed);
+    if (index === -1) {
+      setCurSpeed(1);
+    } else if (index === playBackRates.length - 1) {
+      setCurSpeed(playBackRates[0]);
+    } else {
+      setCurSpeed(playBackRates[index + 1]);
+    }
+  };
 
   return (
     <>

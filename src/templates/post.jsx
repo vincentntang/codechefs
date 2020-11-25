@@ -49,11 +49,8 @@ export default (props) => {
             <SEO postPath={slug} postNode={postNode} postSEO />
             <div>
               <Audio
-                id={1}
-                index={1}
                 mp3={config.s3bucket + post.audioPath}
                 episodeName={post.title}
-
               >
               </Audio>
 

@@ -1,111 +1,100 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Bar from "./Bar";
 import moment from "moment";
 import { Controls } from "./Controls";
-import {PlayButton} from "./PlayButton";
+import { PlayButton } from "./PlayButton";
 
 const Audio = ({ mp3, index, episodeName }) => {
-  // const { curTime, duration, playing, setPlaying, setClickedTime } = useAudioPlayer();
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
   const [playing, setPlaying] = useState(false);
-  const [clickedTime, setClickedTime] = useState();
   const [curSpeed, setCurSpeed] = useState(1);
   const [curVolume, setCurVolume] = useState(1);
-  const playBackRates = [0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5];
+  const playerRef = useRef(null);
 
-  const changeAudioSpeed = () => {
-    const index = playBackRates.indexOf(curSpeed);
-    if (index === -1) {
-      setCurSpeed(1);
-    } else if (index === playBackRates.length - 1) {
-      setCurSpeed(playBackRates[0]);
-    } else {
-      setCurSpeed(playBackRates[index + 1]);
-    }
+
+  const setAudioData = () => {
+    setDuration(playerRef.current.duration);
+    setCurTime(playerRef.current.currentTime);
   };
 
-  // ComponentDidMount
-  // temporary solution from germ
+  const setAudioTime = () => setCurTime(playerRef.current.currentTime);
+
   useEffect(() => {
-    const audio = document.getElementById(index);
+
+    // setPlayerRef(audio)
     window.jumpToTimestamp = (t) => {
       const time = moment.duration(`00:${t}`).asSeconds();
-      audio.currentTime = time;
+      playerRef.current.currentTime = time;
+      playerRef.current.play()
       setPlaying(true);
     };
-  },[])
-
-
-  // ComponentDidUpdate
-  useEffect(() => {
-    const audio = document.getElementById(index);
-
-    // state setters wrappers
-    const setAudioData = () => {
-      setDuration(audio.duration);
-      setCurTime(audio.currentTime);
-    };
-
-    const setAudioTime = () => setCurTime(audio.currentTime);
 
     // DOM listeners: update React state on DOM events
-    audio.addEventListener("loadeddata", setAudioData);
-    audio.addEventListener("timeupdate", setAudioTime);
+    playerRef.current.addEventListener("loadeddata", setAudioData);
+    playerRef.current.addEventListener("timeupdate", setAudioTime);
 
-    audio.volume = curVolume;
-    audio.playbackRate = curSpeed;
-
-
-      playing ? audio.play().catch(err => console.log(err)) : audio.pause();
-      
-   
-
-    if (clickedTime && clickedTime !== curTime) {
-      audio.currentTime = clickedTime;
-      setClickedTime(null);
-    }
 
     // effect cleanup
     return () => {
-      audio.removeEventListener("loadeddata", setAudioData);
-      audio.removeEventListener("timeupdate", setAudioTime);
+      playerRef.current.removeEventListener("loadeddata", setAudioData);
+      playerRef.current.removeEventListener("timeupdate", setAudioTime);
     };
-  });
-  
 
-  // console.log("I renrenderd");
+  }, [])
+
+
+  useEffect(() => {
+    playerRef.current.volume = curVolume;
+    playerRef.current.playbackRate = curSpeed;
+
+  }, [curSpeed, curVolume])
+
+
+
+
+  const toggleAudio = async () => {
+    try {
+      playing ? await playerRef.current.pause() : await playerRef.current.play()
+      setPlaying(s => !s)
+    } catch (error) {
+      console.error(error)
+    }
+  }
 
   return (
     <>
       <div className="player">
-        <audio id={index} preload="true">
-          <source src={mp3}  type={"audio/mp3"}/>
+        <audio id={index} preload="true" ref={playerRef}>
+          <source src={mp3} type={"audio/mp3"} />
           Your browser does not support the <code>audio</code> element.
         </audio>
 
         <div className="controls">
           <PlayButton
-            setPlaying={setPlaying}
             playing={playing}
             curTime={curTime}
             duration={duration}
+            toggleAudio={toggleAudio}
+
           />
           <Bar
             episodeName={episodeName}
             curTime={curTime}
             duration={duration}
-            onTimeUpdate={(time) => setClickedTime(time)}
+            onTimeUpdate={(time) => {
+              playerRef.current.currentTime = time
+            }}
           />
           <Controls
-            changeAudioSpeed={changeAudioSpeed}
+            setCurSpeed={setCurSpeed}
             curSpeed={curSpeed}
             setCurVolume={setCurVolume}
             curVolume={curVolume}
           />
         </div>
       </div>
-  
+
     </>
   );
 };
