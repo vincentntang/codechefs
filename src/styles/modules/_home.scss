@@ -387,6 +387,9 @@
     color: $blue-3;
   }
 
+  .danger-html > ul:first-of-type > li:not(:first-of-type){
+    padding-top: 30px;
+  }
   ul {
     // list-style-type: none;
     padding-left: 20px;
@@ -400,7 +403,7 @@
         // font-size: 1.5em;
         // line-height: 1;
       }
-      // // padding: 3px;
+      padding: 3px;
       padding-left: 3px;
     }
   }
@@ -554,11 +557,12 @@
 .timestamp {
   color: lightblue;
   cursor: pointer;
-  padding-top: 2px;
-  padding-right: 2px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-bottom: 2px;
+  // padding-top: 2px;
+  // padding-right: 2px;
+  // padding-top: 2px;
+  // padding-bottom: 2px;
+  padding: 1px;
+  // margin-bottom: 2px;
   display: inline-block;
 }
 
