@@ -4,7 +4,7 @@ slug: "intro-to-backend"
 cover: "code_chefs_podcast_art.png"
 date: 2020-07-13
 audioPath: 006_intro_to_backend.mp3
-episodeNumber: 005
+episodeNumber: 006
 fileSize: 150
 showLength: 1:05:46
 category: "tech"
