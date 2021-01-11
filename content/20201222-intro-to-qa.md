@@ -4,7 +4,7 @@ slug: "intro-to-qa"
 cover: "code_chefs_podcast_art.png"
 date: 2020-08-14
 audioPath: 007_intro_to_qa_with_john.mp3
-episodeNumber: 007
+episodeNumber: 7
 fileSize: 141
 showLength: 1:01:55
 category: "tech"

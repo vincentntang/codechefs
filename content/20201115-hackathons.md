@@ -4,7 +4,7 @@ slug: "hackathons"
 cover: "code_chefs_podcast_art.png"
 date: 2020-06-14
 audioPath: 003_hackathons.mp3
-episodeNumber: 003
+episodeNumber: 3
 fileSize: 53.1
 showLength: 38:39
 category: "tech"

@@ -4,7 +4,7 @@ slug: "css-crash-course"
 cover: "code_chefs_podcast_art.png"
 date: 2020-06-29
 audioPath: 004_css_crash_course.mp3
-episodeNumber: 004
+episodeNumber: 4
 fileSize: 131.7
 showLength: 57:31
 category: "tech"
