@@ -18,7 +18,7 @@ tags:
 
 ### How does Javascript handle concurrency?
 
-When you execute asynchronous code in Javascript, it goes through an Event Loop. It describes what order a list of callbacks will be made, using a Stack and a Heap. This is important when understanding the order in which javascript code executes so you don't run into race conditions. In this episode, we deep dive into how it all works!
+When you execute asynchronous code in Javascript, it goes through something called an Event Loop. It describes in what order your code will run by using a call stack and a callback queue. This is important to understand so you don't run into race conditions in your codebase. In this episode, we deep dive into how it all works!
 
 <hr>
 
