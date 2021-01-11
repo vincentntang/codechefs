@@ -2,7 +2,7 @@
 title: "The Javascript Event Loop"
 slug: "the-event-loop"
 cover: "code_chefs_podcast_art.png"
-date: 2020-08-14
+date: 2020-08-22
 audioPath: 008_the_event_loop.mp3
 episodeNumber: 8
 fileSize: 64.5
