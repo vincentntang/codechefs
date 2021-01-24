@@ -11,7 +11,8 @@
   @include screen-min(1200px){max-width: 800px;}
 }
 .cc-padding {
-  padding: 25px;
+  // padding: 25px;
+  padding: 35px;
   font-size: 16px;
 }
 .cc-card {
@@ -387,9 +388,9 @@
     color: $blue-3;
   }
 
-  .danger-html > ul:first-of-type > li:not(:first-of-type){
-    padding-top: 30px;
-  }
+  // .danger-html > ul:first-of-type > li:not(:first-of-type){
+  //   padding-top: 30px;
+  // }
   ul {
     // list-style-type: none;
     padding-left: 20px;
