@@ -17,7 +17,7 @@ const SEO = (props) => {
     description = postMeta.description
       ? postMeta.description
       : postNode.excerpt;
-    image = postMeta.cover;
+    image =  `/thumbnails${postMeta.cover}`;
     postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
   } else {
     title = config.siteTitle;
@@ -50,9 +50,6 @@ const SEO = (props) => {
 
   image = getImagePath(image);
   // Hardcode fix for cover image in assets
-  if(postSEO){
-    image = `/thumbnails${image}`
-  }
 
   const datePublished = getPublicationDate();
 
