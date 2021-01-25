@@ -4,7 +4,7 @@ slug: "coding-bootcamps"
 cover: "009_coding_bootcamps.png"
 date: 2020-12-19
 audioPath: 009_coding_bootcamps.mp3
-episodeNumber: 10
+episodeNumber: 9
 fileSize: 136
 showLength: 59:45
 category: "tech"
