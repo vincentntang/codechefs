@@ -25,7 +25,7 @@ const SEO = (props) => {
     image = config.siteLogo;
   }
 
-  image = config.siteLogo;
+  // image = config.siteLogo;
 
   const getImagePath = imageURI => {
     if (
