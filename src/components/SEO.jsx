@@ -17,7 +17,7 @@ const SEO = (props) => {
     description = postMeta.description
       ? postMeta.description
       : postNode.excerpt;
-    image =  `/thumbnails${postMeta.cover}`;
+    image =  `/thumbnails/${postMeta.cover}`;
     postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
   } else {
     title = config.siteTitle;
