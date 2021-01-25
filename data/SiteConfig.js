@@ -22,23 +22,23 @@ const config = {
   userAvatar: "https://www.codechefs.dev/logos/vincentntang.jpeg", // User avatar to display in the author segment.
   userDescription: "Code Chefs is a podcast for web developers who want to level up! We do all topics ranging from frontend to backend development",
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
-  userLinks: [
-    {
-      label: "GitHub",
-      url: "https://github.com/vincentntang/codechefs",
-      iconClassName: "fa fa-github"
-    },
-    {
-      label: "Twitter",
-      url: "https://twitter.com/codechefsdev",
-      iconClassName: "fa fa-twitter"
-    },
-    // {
-    //   label: "Email",
-    //   url: "mailto:codechefsdev@gmail.com",
-    //   iconClassName: "fa fa-envelope"
-    // }
-  ],
+  // userLinks: [
+  //   {
+  //     label: "GitHub",
+  //     url: "https://github.com/vincentntang/codechefs",
+  //     iconClassName: "fa fa-github"
+  //   },
+  //   {
+  //     label: "Twitter",
+  //     url: "https://twitter.com/codechefsdev",
+  //     iconClassName: "fa fa-twitter"
+  //   },
+  //   // {
+  //   //   label: "Email",
+  //   //   url: "mailto:codechefsdev@gmail.com",
+  //   //   iconClassName: "fa fa-envelope"
+  //   // }
+  // ],
   copyright: "Copyright © 2020 Code Chefs", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
