@@ -49,6 +49,7 @@ const SEO = (props) => {
   };
 
   image = getImagePath(image);
+  // Hardcode fix for cover image in assets
   if(postSEO){
     image = `/thumbnails${image}`
   }
