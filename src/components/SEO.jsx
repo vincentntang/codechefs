@@ -49,6 +49,9 @@ const SEO = (props) => {
   };
 
   image = getImagePath(image);
+  if(postSEO){
+    image = `/thumbnails${image}`
+  }
 
   const datePublished = getPublicationDate();
 

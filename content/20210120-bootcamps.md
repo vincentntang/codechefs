@@ -1,7 +1,7 @@
 ---
 title: "Coding Bootcamps - are they worth it?"
 slug: "coding-bootcamps"
-cover: "./img/009_coding_bootcamps.png"
+cover: "009_coding_bootcamps.png"
 date: 2020-12-19
 audioPath: 009_coding_bootcamps.mp3
 episodeNumber: 9
