@@ -42,9 +42,9 @@ export default function Bar(props) {
         >
         </div>
       </div>
-      <div className="bar-episode-name">
+      <h1 className="bar-episode-name">
         {episodeName}
-      </div>
+      </h1>
     </div>
   );
 }
