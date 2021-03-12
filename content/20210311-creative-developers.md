@@ -9,7 +9,7 @@ fileSize: 133.1
 showLength: 58:09
 category: "tech"
 # shortDescription is only for codechefs.dev homepage
-shortDescription: "Creative developers are a specialized set of frontend developers. They focus more on the 'wow' factor. They need to know how to work with animations, video game engines, SVGs, amongst other tools"
+shortDescription: "Creative developers are a specialized set of frontend developers who focus more on the 'wow' factor. They work with animations, video game engines, SVGs, amongst other tools to bring cool projects to life"
 tags:
     - programming
     - web-forms
@@ -17,7 +17,7 @@ tags:
 
 ## What is creative development?
 
-Creative developers are a specialized set of frontend developers. They focus more on the "wow" factor. They need to know how to work with animations, video game engines, SVGs, amongst other tools. In this episode we break down how these skills are relevant to creative projects, and what defines a creative project
+Creative developers are a specialized set of frontend developers who focus more on the "wow" factor. They work with animations, video game engines, SVGs, amongst other tools to bring cool projects to life
 
 <hr>
 
