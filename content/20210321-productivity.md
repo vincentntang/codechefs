@@ -9,7 +9,7 @@ fileSize: 149.1
 showLength: 65:09
 category: "tech"
 # shortDescription is only for codechefs.dev homepage
-shortDescription: "Productivity is the defined ratio of output volume to volume of inputs. There's processes such as the Getting-Things-Done method for determining how to get work done. Time management and finding periods of focus work helps in getting your work done in one go. You can build upon better productivity habits by making good habits easier, and hard habits harder"
+shortDescription: "Productivity is the defined ratio of output volume to volume of inputs. Tool like the Getting-Things-Done method define how to streamline work. Other important productivity factors is time management and building good habits."
 tags:
     - programming
     - productivity
