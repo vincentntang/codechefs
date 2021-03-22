@@ -14,6 +14,7 @@ const MainLayout = (props) => {
         <meta name="description" content={config.siteDescription} />
         <html lang="en" />
         <link rel="shortcut icon" type="image/png" href={favicon} />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"></link>
       </Helmet>
       <NavbarHero props={props}/>
       {children}

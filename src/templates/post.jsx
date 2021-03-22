@@ -32,7 +32,7 @@ export default (props) => {
     () =>
       postNode.html.replace(
         regex,
-        '<span class="timestamp" onClick=window.jumpToTimestamp(`$&`)>$&</span>'
+        '<span data-nosnippet class="timestamp" onClick=window.jumpToTimestamp(`$&`)>$&</span>'
       ),
     [postNode.html]
   );
