@@ -51,12 +51,13 @@ const Audio = ({ mp3, index, episodeName }) => {
   }, [curSpeed, curVolume])
 
 
-
+  useEffect(() => {
+    playerRef.current.paused ? setPlaying(false) : setPlaying(true);
+  })
 
   const toggleAudio = async () => {
     try {
-      playing ? await playerRef.current.pause() : await playerRef.current.play()
-      setPlaying(s => !s)
+      playing ? await playerRef.current.pause() : await playerRef.current.play();
     } catch (error) {
       console.error(error)
     }
