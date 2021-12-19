@@ -28,7 +28,7 @@ In the early days of the web, it was the wild west with companies adding feature
 
 You probably have heard the word ECMAScript.
 ECMAScript is the specification against which JavaScript engines are implemented.
-By itself, ECMAScript defines a minimal API that each implementation needs to follow. Typically these are your basic programming language features such as loops, variable scope etc.
+By itself, ECMAScript defines a minimal API that each implementation needs to follow. Typically these are your basic programming language features such as loops, variable scope, etc.
 The rest of what is typically thought of as JavaScript are actually browser APIs which you can learn more about in [this blog post](https://dev.to/codechefs/am-i-ready-to-learn-a-framework-1cll)
 
 ## How does adding new features to Javascript Work?
