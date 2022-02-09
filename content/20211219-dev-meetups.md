@@ -1,59 +1,92 @@
 ---
-title: "Dev Meetups"
-slug: "dev_meetups"
+title: "Building a software developer community"
+slug: "building_a_software_developer-community"
 cover: "016_dev_meetups.png"
-date: 2021-12-19
+date: 2021-10-28
 audioPath: 016_dev_meetups.mp3
 episodeNumber: 15
 fileSize: 124
 showLength: 58:34
-category: "tech"
+category: "meetups"
 # shortDescription is only for codechefs.dev homepage
-shortDescription: "JavaScript has taken over the world over the past decade. Come learn about its history and the latest features."
+shortDescription: "In this episode we dive into what running a developer meetup is like with two veterans of running meetups, Jacques Fu & Brian Rinaldi!"
 tags:
-  - programming
-  - javascript
+  - meetups
 ---
 
-In this episode we dive into the history of Javascript aka ECMAScript and its latest features since ES6.
+In this episode we dive into what running a developer meetup is like with two experts in building developer communities, Jacques Fu & Brian Rinaldi!
 
 <hr/>
 
-## A brief history of Javascript
+## The history of Orlando Devs
 
-JavaScript was created in 10 days by Brendan Eich in 1995.
-In the early days of the web, it was the wild west with companies adding features as they saw fit. Coming together rarely to agree on how the language should function. Eventually, this led to a long period of stagnation in the language that wasn't fixed until 2015 with the release of the ES6.
+### 2:00
 
-## So what is Javascript and what isn't
+Jacques & Brian talk about the origin of Orlando Devs as a meetup and its growth into the non profit that it is today.
 
-You probably have heard the word ECMAScript.
-ECMAScript is the specification against which JavaScript engines are implemented.
-By itself, ECMAScript defines a minimal API that each implementation needs to follow. Typically these are your basic programming language features such as loops, variable scope, etc.
-The rest of what is typically thought of as JavaScript are actually browser APIs which you can learn more about in [this blog post](https://dev.to/codechefs/am-i-ready-to-learn-a-framework-1cll)
+### 6:50
 
-## How does adding new features to Javascript Work?
+Vincent reminisces about the our (almost) daily meetup routine in the before times and how that led into German and him breaking into the industry via networking.
 
-There is a committee in charge of guiding the development of ECMAScript called the TC39. That committee follows the following process when considering new JavaScript features.
+### 10:00
 
-**Fun note:** This process came about since the release of ES6 was massive! So rather than big monolithic releases, we now add small incremental features.
+Brian covers the experience of running online meetups and how it contrasts with in person meetups.
 
-### The process
+## The origin behind Tampa Devs
 
-1. Straw man: A way of an approved member proposing a feature. In summary, you can think of this step as sharing a shower thought and seeing if anyone is interested.
-2. Proposal: A formal proposal. Needs to be championed by a member of TC39.
-3. Draft: The first working version of the feature. It should be pretty much complete. Usually, you can start trying features out via babel at this point.
-4. Candidate: The proposal is mainly finished and receiving feedback. Needs to have at least two implementations.
-5. Finished: The proposal is ready to be included in the standard. At this point, at least two implementations must exist, and tests must also exist.
+### 14:50
+
+Vincent covers the inspiration and origin behind Tampa Devs.
+
+## What challenges have you run across as an organizer?
+
+### 21:50
+
+From Jacques perspective:
+
+- Turning the meetup into a non-profit.
+- Getting everyone onboard with things.
+- Finding the time.
+- Dealing with disputes within the community.
+
+From Brian's perspective:
+
+- Dealing with the slack group.
+- Finding venues.
+- Finding speakers.
+- Funding the food and sometimes venue.
+
+From Vincent's perspective:
+
+- Finding sponsors.
+
+## What lessons have you learned?
+
+### 43:00
+
+From Brian's perspective:
+
+- Running conferences is very very difficult.
+
+From Jacques perspective:
+
+- You have to do it for inner fulfillment.
+- Do it at a scale that you can handle.
+
+### Dessert Time
+
+Vincent got his ear pierced! German is back in the gym. Brian is excited about playing a new video game. Jacques has been enjoying his remarkable tablet.
 
 ## Social Media
 
 - [German's Twitter](https://twitter.com/germangamgon)
 - [Vincent's Twitter](https://twitter.com/vincentntang)
 - [Vincent's Instagram](https://instagram.com/vincentntang)
+- [Jacques' Twitter](https://twitter.com/JacquesKFu)
+- [Brian's Twitter](https://twitter.com/remotesynth)
 - Tweet us your thoughts on [@codechefsdev](https://twitter.com/codechefsdev)
 
 ## Links
 
-- [TC39 Process](https://2ality.com/2015/11/tc39-process.html)
-- [2020 JavaScript Features](https://www.freecodecamp.org/news/javascript-new-features-es2020/)
-- [TC39 Proposals](https://github.com/tc39/proposals)
+- [Orlando Devs](Orlandodevs.com)
+- [Tampa Devs](Tampadevs.com)
