@@ -14,7 +14,7 @@ tags:
   - meetups
 ---
 
-In this episode we dive into what running a developer meetup is like with two experts in building developer communities, Jacques Fu & Brian Rinaldi!
+In this episode, we dive into what running a developer meetup is like with two experts in building developer communities, Jacques Fu & Brian Rinaldi!
 
 <hr/>
 
@@ -22,15 +22,15 @@ In this episode we dive into what running a developer meetup is like with two ex
 
 ### 2:00
 
-Jacques & Brian talk about the origin of Orlando Devs as a meetup and its growth into the non profit that it is today.
+Jacques & Brian talk about the origin of Orlando Devs as a meetup and its growth into the non-profit that it is today.
 
 ### 6:50
 
-Vincent reminisces about the our (almost) daily meetup routine in the before times and how that led into German and him breaking into the industry via networking.
+Vincent reminisces about our (almost) daily meetup routine in the past and how that led to German and him breaking into the industry via networking.
 
 ### 10:00
 
-Brian covers the experience of running online meetups and how it contrasts with in person meetups.
+Brian covers the experience of running online meetups and how it contrasts with in-person meetups.
 
 ## The origin behind Tampa Devs
 
@@ -45,7 +45,7 @@ Vincent covers the inspiration and origin behind Tampa Devs.
 From Jacques perspective:
 
 - Turning the meetup into a non-profit.
-- Getting everyone onboard with things.
+- Getting everyone on board with things.
 - Finding the time.
 - Dealing with disputes within the community.
 
@@ -66,7 +66,7 @@ From Vincent's perspective:
 
 From Brian's perspective:
 
-- Running conferences is very very difficult.
+- Running conferences is very, very difficult.
 
 From Jacques perspective:
 
@@ -75,7 +75,10 @@ From Jacques perspective:
 
 ### Dessert Time
 
-Vincent got his ear pierced! German is back in the gym. Brian is excited about playing a new video game. Jacques has been enjoying his remarkable tablet.
+Vincent talks about getting his ear pierced!
+German is now back in the gym picking things up and putting them down.
+Brian is excited about the upcoming Halo release.
+Jacques has been enjoying his remarkable tablet.
 
 ## Social Media
 
