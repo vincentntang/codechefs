@@ -1,7 +1,7 @@
 ---
 title: "Building a software developer community"
-slug: "building_a_software_developer-community"
-cover: "016_dev_meetups.png"
+slug: "building-a-software-developer-community"
+cover: "code_chefs_podcast_art.png"
 date: 2021-10-28
 audioPath: 016_dev_meetups.mp3
 episodeNumber: 15
