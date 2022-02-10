@@ -4,7 +4,7 @@ slug: "building-a-software-developer-community"
 cover: "code_chefs_podcast_art.png"
 date: 2021-10-28
 audioPath: 016_dev_meetups.mp3
-episodeNumber: 15
+episodeNumber: 16
 fileSize: 124
 showLength: 58:34
 category: "meetups"
