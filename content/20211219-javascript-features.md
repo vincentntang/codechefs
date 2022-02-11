@@ -2,7 +2,7 @@
 title: "Javascript Features To Use in 2021"
 slug: "javascript-features"
 cover: "code_chefs_podcast_art.png"
-date: 2021-12-19
+date: 2021-08-30
 audioPath: 015_javascript_features.mp3
 episodeNumber: 15
 fileSize: 124
