@@ -20,7 +20,7 @@ In this episode, we dive into automatic code generation and what it is like to r
 
 ## What is CopyCat
 
-2:00
+02:00
 
 It is a Figma plugin to automate converting designs into React components.
 
@@ -30,9 +30,9 @@ Started for Swift UI but transitioned to UI
 
 ## General Technical Questions
 
-5:00 So, what is CopyCat?
+05:00 So, what is CopyCat?
 
-8:00
+08:00
 How does it work?
 
 13:00
