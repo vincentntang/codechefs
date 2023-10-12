@@ -22,7 +22,7 @@
     "babel-preset-gatsby-package": "^0.8.0-next.0",
     "cross-env": "^7.0.2",
     "folderify": "^1.1.0",
-    "grunt": "^0.4.5",
+    "grunt": "^1.5.3",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-release": "^0.13.0",
